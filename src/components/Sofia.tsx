@@ -1,0 +1,51 @@
+import Reveal from "./Reveal";
+import SofiaDashboard from "./SofiaDashboard";
+import { SOFIA_LINK } from "../config/site";
+
+const BULLETS = [
+  "WhatsApp 24/7",
+  "Atención de llamadas",
+  "Preguntas frecuentes",
+  "Calificación de pacientes",
+  "Agenda automática",
+  "Seguimiento",
+  "Varias conversaciones simultáneas",
+];
+
+export default function Sofia() {
+  return (
+    <section id="sofia" className="bg-navy text-cream">
+      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(50px,6vw,80px)] grid gap-[clamp(34px,6vw,80px)] items-start [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
+        <div>
+          <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-[22px]">Conocé a Sofia</p>
+          <h2 className="text-[clamp(32px,4.6vw,56px)] leading-[1.08] text-cream mb-[26px] [text-wrap:pretty]">
+            Tu recepcionista virtual que nunca duerme.
+          </h2>
+          <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/78 max-w-[34em] mb-[34px]">
+            Sofia es una recepcionista con IA especializada en clínicas dentales y estéticas. Atiende
+            consultas, responde preguntas, hace seguimiento y agenda pacientes automáticamente.
+          </p>
+          <a
+            href={SOFIA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gold text-navy px-7 py-4 rounded-full text-[15px] font-medium hover:bg-cream"
+          >
+            Solicitar demo de Sofia
+          </a>
+        </div>
+        <ul className="list-none m-0 p-0 grid gap-y-0.5 gap-x-7 [grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+          {BULLETS.map((b) => (
+            <li key={b} className="py-3.5 border-b border-cream/[0.14] text-[15.5px]">
+              {b}
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+
+      <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(78px,11vw,150px)]">
+        <SofiaDashboard />
+      </Reveal>
+    </section>
+  );
+}
