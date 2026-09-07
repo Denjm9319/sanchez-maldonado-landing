@@ -117,7 +117,7 @@ export default function Projects() {
         <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-[clamp(38px,5vw,64px)]">
           Ideas convertidas en sistemas digitales.
         </h2>
-        <div className="grid gap-[clamp(22px,3vw,34px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))]">
+        <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {PROJECTS.map((p) => (
             <article key={p.id} className="bg-white rounded-[16px] overflow-hidden border border-navy/[0.08]">
               <button
@@ -146,7 +146,7 @@ export default function Projects() {
         <p className="text-[11px] tracking-[0.3em] uppercase text-teal mt-[clamp(56px,7vw,90px)] mb-6">
           Más conceptos
         </p>
-        <div className="grid gap-[clamp(18px,2.4vw,26px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
+        <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {CONCEPTS.map((c) => (
             <button
               key={c.id}
