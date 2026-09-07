@@ -114,9 +114,13 @@ export default function Projects() {
     <section id="proyectos" className="bg-creamDeep border-t border-b border-navy/[0.08]">
       <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)]">
         <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Proyectos</p>
-        <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-[clamp(38px,5vw,64px)]">
+        <h1 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-5 max-w-[18em]">
           Ideas convertidas en sistemas digitales.
-        </h2>
+        </h1>
+        <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+          Una muestra de cómo pensamos cada sistema: web, IA y automatización trabajando juntos según
+          lo que necesita cada negocio.
+        </p>
         <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {PROJECTS.map((p) => (
             <article key={p.id} className="bg-white rounded-[16px] overflow-hidden border border-navy/[0.08]">

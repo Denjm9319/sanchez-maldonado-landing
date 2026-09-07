@@ -28,12 +28,13 @@ export const PRICING = {
 };
 
 export const NAV_LINKS = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#sofia", label: "Sofia" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#proceso", label: "Cómo trabajamos" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#sofia", label: "Sofia" },
+  { href: "/proyectos", label: "Proyectos" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/#proceso", label: "Cómo trabajamos" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export interface Project {

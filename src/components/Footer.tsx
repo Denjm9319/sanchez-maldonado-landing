@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-xl text-cream">Sanchez &amp; Maldonado</p>
           <p className="text-[10.5px] tracking-[0.22em] uppercase text-gold mt-1.5">AI Solutions</p>
-          <p className="mt-[18px] leading-[1.7] text-[15px] max-w-[26em]">
+          <p className="mt-[18px] leading-[1.7] text-[15px] max-w-[26em] text-cream/80">
             Diseño, marketing e inteligencia artificial para negocios que quieren crecer.
           </p>
         </div>
