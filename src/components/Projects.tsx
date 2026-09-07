@@ -119,7 +119,7 @@ export default function Projects() {
         </h2>
         <div className="grid gap-[clamp(22px,3vw,34px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))]">
           {PROJECTS.map((p) => (
-            <article key={p.id} className="bg-white rounded-[18px] overflow-hidden border border-navy/[0.08]">
+            <article key={p.id} className="bg-white rounded-[16px] overflow-hidden border border-navy/[0.08]">
               <button
                 type="button"
                 onClick={() => setOpenId(p.id)}
@@ -134,10 +134,10 @@ export default function Projects() {
                   className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
                 />
               </button>
-              <div className="pt-[26px] px-6 pb-[30px]">
-                <span className="text-[10.5px] tracking-[0.2em] uppercase text-gold">Concept / Demo</span>
-                <h3 className="text-[22px] mt-3 mb-2.5">{p.title}</h3>
-                <p className="text-[14.5px] text-secondary leading-[1.65]">{p.description}</p>
+              <div className="pt-[18px] px-5 pb-[22px]">
+                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">Concept / Demo</span>
+                <h3 className="text-[17px] mt-2 mb-1">{p.title}</h3>
+                <p className="text-[13.5px] text-secondary leading-[1.55]">{p.description}</p>
               </div>
             </article>
           ))}
