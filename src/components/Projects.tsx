@@ -11,6 +11,8 @@ import hotelFull from "../assets/projects/hotel-full.webp";
 import zenithShot from "../assets/projects/zenith-shot.png";
 import auraShot from "../assets/projects/aura-shot.png";
 import securifyShot from "../assets/projects/securify-shot.png";
+import dental2Shot from "../assets/projects/dental2-shot.png";
+import certboostShot from "../assets/projects/certboost-shot.png";
 
 const PROJECTS = [
   {
@@ -75,6 +77,30 @@ const CONCEPTS = [
       "Landing de producto SaaS enfocada en confianza, con estadísticas de uso destacadas y un único CTA de registro.",
     capabilities: ["Web & Conversion", "Social proof numérico", "CTA de conversión"],
     url: "https://secure-start-show.lovable.app/",
+  },
+  {
+    id: "dental2",
+    title: "Dental Health",
+    thumb: dental2Shot,
+    alt: "Concept de landing para clínica dental",
+    rubro: "Clínica dental",
+    objetivo: "Generar consultas y citas para tratamientos estéticos y de urgencia.",
+    description:
+      "Landing de clínica dental con galería de casos, servicios (carillas, coronas, blanqueamiento, implantes) y llamadas a la acción para pedir cita o consulta gratuita.",
+    capabilities: ["Web & Conversion", "Galería de casos", "Agendamiento"],
+    url: "https://lucid-dental-layout.lovable.app/",
+  },
+  {
+    id: "certboost",
+    title: "Design Rocket Certificates",
+    thumb: certboostShot,
+    alt: "Concept de landing para certificaciones online",
+    rubro: "Edtech / Certificaciones online",
+    objetivo: "Convertir visitantes en solicitudes de certificado, apoyándose en el respaldo de evaluadores expertos.",
+    description:
+      "Landing de producto para certificar habilidades de diseño, con propuesta de valor clara, evaluación por expertos y un sello de verificación pública.",
+    capabilities: ["Web & Conversion", "Prueba social", "CTA de conversión"],
+    url: "https://certificate-booster.lovable.app/",
   },
 ];
 
