@@ -39,6 +39,7 @@ const PILLARS = [
 export default function Pillars() {
   return (
     <Reveal
+      id="pilares"
       aria-label="Atraer, atender y convertir"
       className="border-t border-b border-navy/[0.09]"
       style={{ display: "block" }}

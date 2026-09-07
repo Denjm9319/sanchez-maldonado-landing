@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import Process from "../components/Process";
 import { WHATSAPP_LINK } from "../config/site";
 
 const TEAM = [
@@ -67,6 +68,8 @@ export default function NosotrosPage() {
           ))}
         </div>
       </Reveal>
+
+      <Process />
 
       <section className="bg-creamDeep border-t border-b border-navy/[0.08]">
         <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(64px,8vw,110px)]">

@@ -75,7 +75,7 @@ export default function Hero() {
             Contanos sobre tu negocio
           </a>
           <a
-            href="#servicios"
+            href="#pilares"
             className="border border-navy/22 text-navy px-[26px] py-4 rounded-full text-[15px] bg-white/50 hover:border-navy hover:bg-white"
           >
             Ver qué hacemos ↓
