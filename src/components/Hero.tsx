@@ -60,13 +60,12 @@ export default function Hero() {
         style={{ willChange: "transform, opacity" }}
       >
         <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-6">AI · Design · Growth</p>
-        <h1 className="text-[clamp(38px,6.4vw,76px)] leading-[1.04] max-w-[16em] [text-wrap:pretty] mb-7">
-          Convertimos atención en oportunidades
-          <br />y oportunidades en clientes.
+        <h1 className="text-[clamp(38px,6.4vw,76px)] leading-[1.04] max-w-[17em] [text-wrap:pretty] mb-7">
+          Dejá de perder clientes por consultas que nadie responde a tiempo.
         </h1>
         <p className="text-[clamp(16px,1.5vw,19px)] leading-relaxed text-body max-w-[44em] mb-9">
-          Diseñamos sitios web, campañas, agentes de IA y automatizaciones que ayudan a tu negocio a
-          atraer más oportunidades, atenderlas mejor y convertirlas en clientes.
+          Implementamos sistemas de captación, atención y seguimiento que convierten más consultas en
+          ventas, incluso cuando tu equipo no está disponible.
         </p>
         <div className="flex flex-wrap gap-3 items-center mb-8">
           <a
