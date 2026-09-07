@@ -4,6 +4,10 @@ const STEPS = [
   { n: "01 — Entendemos", text: "Analizamos el negocio y dónde se pierden oportunidades.", active: true },
   { n: "02 — Diseñamos", text: "Definimos qué combinación de web, Ads, IA o automatización tiene sentido." },
   { n: "03 — Implementamos", text: "Construimos y ponemos el sistema a funcionar." },
+  {
+    n: "04 — Optimizamos",
+    text: "Medimos resultados, detectamos fricción y ajustamos el sistema según el uso real.",
+  },
 ];
 
 export default function Process() {

@@ -24,7 +24,7 @@ export const SOCIAL_LINKS = {
 
 export const PRICING = {
   web: "Desde USD 1200",
-  agents: "Desde USD 330/mes",
+  agents: "Desde USD 330/mes + implementación",
 };
 
 export const NAV_LINKS = [

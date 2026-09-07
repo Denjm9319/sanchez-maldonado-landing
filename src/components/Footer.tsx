@@ -28,7 +28,6 @@ export default function Footer() {
           <a href={SOCIAL_LINKS.linkedin} className="text-cream/85 hover:text-gold">
             LinkedIn
           </a>
-          <span className="text-xs text-cream/40">placeholder — links a definir</span>
         </div>
       </div>
       <div className="border-t border-cream/10">

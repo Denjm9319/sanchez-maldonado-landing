@@ -10,7 +10,10 @@ export default function Pricing() {
         </h2>
         <div className="grid gap-[clamp(20px,2.5vw,28px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))]">
           <div className="bg-white border border-navy/[0.09] rounded-[20px] p-[34px] px-7 flex flex-col gap-4">
-            <h3 className="text-2xl">Web &amp; Conversion</h3>
+            <p className="font-display italic text-[14.5px] text-gold">
+              &ldquo;Necesito captar más oportunidades&rdquo;
+            </p>
+            <h3 className="text-2xl -mt-1.5">Web &amp; Conversion</h3>
             <p className="text-secondary text-[15px] leading-[1.65] flex-1">
               Sitio premium, estructura de conversión y contenido listo para captar oportunidades.
             </p>
@@ -23,7 +26,10 @@ export default function Pricing() {
             </a>
           </div>
           <div className="bg-navy text-cream rounded-[20px] p-[34px] px-7 flex flex-col gap-4">
-            <h3 className="text-2xl text-cream">AI Agents</h3>
+            <p className="font-display italic text-[14.5px] text-gold">
+              &ldquo;Necesito atender mejor las consultas&rdquo;
+            </p>
+            <h3 className="text-2xl text-cream -mt-1.5">AI Agents</h3>
             <p className="text-cream/78 text-[15px] leading-[1.65] flex-1">
               Agentes de chat o voz —incluida Sofia— entrenados con la información de tu negocio.
             </p>
@@ -38,7 +44,10 @@ export default function Pricing() {
             </a>
           </div>
           <div className="bg-white border border-navy/[0.09] rounded-[20px] p-[34px] px-7 flex flex-col gap-4">
-            <h3 className="text-2xl">Growth Systems</h3>
+            <p className="font-display italic text-[14.5px] text-gold">
+              &ldquo;Necesito integrar todo el proceso&rdquo;
+            </p>
+            <h3 className="text-2xl -mt-1.5">Growth Systems</h3>
             <p className="text-secondary text-[15px] leading-[1.65] flex-1">
               Web + Ads + IA + automatizaciones funcionando como un solo sistema comercial.
             </p>

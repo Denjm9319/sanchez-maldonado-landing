@@ -169,7 +169,7 @@ export default function Contact() {
               disabled={status === "sending"}
               className="bg-gold text-navy border-none px-[26px] py-4 rounded-full text-[15px] font-medium cursor-pointer justify-self-start hover:bg-cream disabled:opacity-60"
             >
-              {status === "sending" ? "Enviando…" : "Enviar mensaje"}
+              {status === "sending" ? "Enviando…" : "Analizar mi negocio"}
             </button>
           </form>
         )}

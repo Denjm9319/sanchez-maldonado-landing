@@ -7,6 +7,7 @@ import Sofia from "./components/Sofia";
 import OtherBusinesses from "./components/OtherBusinesses";
 import Projects from "./components/Projects";
 import Process from "./components/Process";
+import Team from "./components/Team";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
@@ -26,6 +27,7 @@ export default function App() {
         <OtherBusinesses />
         <Projects />
         <Process />
+        <Team />
         <Pricing />
         <FAQ />
         <Contact />
