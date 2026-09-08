@@ -6,6 +6,7 @@ import ScrollManager from "./components/ScrollManager";
 import Home from "./pages/Home";
 import Proyectos from "./pages/Proyectos";
 import Nosotros from "./pages/Nosotros";
+import Productos from "./pages/Productos";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/productos" element={<Productos />} />
           <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
       </main>
