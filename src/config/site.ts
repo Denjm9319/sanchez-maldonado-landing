@@ -1,10 +1,10 @@
 export const WHATSAPP_NUMBER = "542254538861";
 
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "Hola, vi la web de Sanchez & Maldonado y me gustaría contarles un poco sobre mi negocio para ver qué solución podría tener sentido implementar.";
+  "Hola, vi la web de DeXa y me gustaría contarles un poco sobre mi negocio para ver qué solución podría tener sentido implementar.";
 
 export const SOFIA_MESSAGE =
-  "Hola, vi la web de Sanchez & Maldonado y quiero conocer la demo de Sofia para mi negocio.";
+  "Hola, vi la web de DeXa y quiero conocer la demo de Sofia para mi negocio.";
 
 export function waLink(message: string = WHATSAPP_DEFAULT_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

@@ -13,7 +13,7 @@ const PRODUCTS = [
     price: "USD 59 · pago único",
     image: sofiaInstallerImg,
     tagline:
-      "Te doy el código completo del sistema que uso para armar agentes de voz como Sofia. Vos lo instalás, lo configurás y lo operás con tus propias cuentas.",
+      "Con un solo comando corriendo en Claude Code activás el instalador en 1 click: solo vas siguiendo las instrucciones que te va diciendo Claude. Te doy el código completo del sistema que uso para armar agentes de voz como Sofia — vos lo configurás y lo operás con tus propias cuentas.",
     audience: [
       "Sabés usar Claude Code (o estás dispuesto a aprender).",
       "Tenés o podés crear cuentas propias en los servicios necesarios (telefonía, IA, calendario/CRM).",
@@ -21,11 +21,10 @@ const PRODUCTS = [
       "No necesitás que alguien te resuelva los problemas — te arreglás solo con la documentación.",
     ],
     includes: [
+      "Un solo comando para activar el instalador en Claude Code, siguiendo las instrucciones que te va indicando",
       "El código fuente completo del sistema",
       "Los prompts ya armados y probados en llamadas reales",
-      "Guía paso a paso para instalarse con Claude Code, sin escribir código a mano",
       "Documentación de cada pieza: qué hace, cómo se conecta, qué configurar",
-      "Todo con un solo prompt de instalación",
     ],
     excludes: [
       "Soporte técnico continuo",

@@ -42,7 +42,7 @@ export default function NosotrosPage() {
       <Reveal className="max-w-[1180px] mx-auto px-6 pt-[132px] pb-[clamp(60px,8vw,110px)]">
         <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Quiénes somos</p>
         <h1 className="text-[clamp(32px,4.6vw,54px)] leading-[1.1] mb-[clamp(20px,3vw,28px)] max-w-[20em]">
-          Detrás de Sánchez &amp; Maldonado.
+          Detrás de DeXa.
         </h1>
         <p className="font-display italic text-[clamp(18px,2vw,22px)] text-teal leading-[1.5] max-w-[36em] mb-[clamp(40px,5vw,64px)] [text-wrap:pretty]">
           No implementamos tecnología porque sí. Primero entendemos dónde está la fricción del negocio

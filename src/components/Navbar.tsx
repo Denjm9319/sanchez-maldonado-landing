@@ -33,7 +33,7 @@ export default function Navbar() {
           className="pointer-events-auto w-full max-w-[1180px] bg-white/72 backdrop-blur-2xl border border-navy/10 rounded-full shadow-[0_8px_30px_rgba(20,43,61,0.08)] py-2.5 pl-5 pr-3 flex items-center gap-4"
         >
           <Link to="/#top" className="flex flex-col leading-[1.05] text-navy flex-none">
-            <span className="font-display text-base tracking-tight">Sanchez &amp; Maldonado</span>
+            <span className="font-display text-base tracking-tight">DeXa</span>
             <span className="text-[9.5px] tracking-[0.22em] uppercase text-secondary mt-0.5">
               AI Solutions
             </span>
