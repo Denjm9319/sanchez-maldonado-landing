@@ -2,16 +2,7 @@ import { useState } from "react";
 import Reveal from "../components/Reveal";
 import ProductModal from "../components/ProductModal";
 import { waLink } from "../config/site";
-
-function IconCode() {
-  return (
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-      <path d="M8.5 8 4 12l4.5 4M15.5 8l4.5 4-4.5 4M13.5 6.5l-3 11" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-const TINTS = ["bg-navy/[0.055]", "bg-teal/[0.08]", "bg-gold/[0.12]"];
+import sofiaInstallerImg from "../assets/services/sofia-installer.webp";
 
 const PRODUCTS = [
   {
@@ -20,7 +11,7 @@ const PRODUCTS = [
     title: "Instalador de Sofia (Voz IA)",
     teaser: "El código completo para correr tu propia recepcionista de voz con IA.",
     price: "USD 59 · pago único",
-    Icon: IconCode,
+    image: sofiaInstallerImg,
     tagline:
       "Te doy el código completo del sistema que uso para armar agentes de voz como Sofia. Vos lo instalás, lo configurás y lo operás con tus propias cuentas.",
     audience: [
@@ -65,7 +56,7 @@ export default function ProductosPage() {
           único, código real, sin intermediarios.
         </p>
         <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
-          {PRODUCTS.map((p, i) => (
+          {PRODUCTS.map((p) => (
             <button
               key={p.id}
               type="button"
@@ -73,12 +64,14 @@ export default function ProductosPage() {
               aria-haspopup="dialog"
               className="group text-left bg-white rounded-[16px] overflow-hidden border border-navy/[0.08] p-0 cursor-pointer"
             >
-              <span
-                className={`flex items-center justify-center aspect-[4/3] ${TINTS[i % TINTS.length]} text-navy`}
-              >
-                <span className="group-hover:scale-110 transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)]">
-                  <p.Icon />
-                </span>
+              <span className="block aspect-[4/3] overflow-hidden bg-cream">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
+                />
               </span>
               <span className="block pt-[18px] px-5 pb-[22px]">
                 <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">{p.n}</span>
