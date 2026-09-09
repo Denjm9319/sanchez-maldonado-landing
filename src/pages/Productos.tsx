@@ -10,7 +10,7 @@ const PRODUCTS = [
     n: "01",
     title: "Instalador de Sofia (Voz IA)",
     teaser: "El código completo para correr tu propia recepcionista de voz con IA.",
-    price: "USD 59 · pago único",
+    price: "USD 99 · pago único",
     image: sofiaInstallerImg,
     tagline:
       "Con un solo comando corriendo en Claude Code activás el instalador en 1 click: solo vas siguiendo las instrucciones que te va diciendo Claude. Te doy el código completo del sistema que uso para armar agentes de voz como Sofia — vos lo configurás y lo operás con tus propias cuentas.",
@@ -35,7 +35,7 @@ const PRODUCTS = [
     why: "No a todos les sirve pagar una mensualidad por algo que pueden operar ellos mismos si tienen el conocimiento técnico. Esta versión te da exactamente lo que necesitás para hacerlo vos: el sistema real, probado, documentado — sin intermediarios.",
     disclaimer:
       "Este es un producto de autoinstalación, sin soporte incluido. Sos responsable de la configuración, el cumplimiento legal en tu jurisdicción, y la operación del sistema una vez instalado. Si en algún momento preferís que nos encarguemos de todo, podés pasarte a nuestro servicio gestionado cuando quieras.",
-    ctaMessage: "Hola, quiero comprar el instalador de Sofia (agente de voz con IA) por USD 59.",
+    ctaMessage: "Hola, quiero comprar el instalador de Sofia (agente de voz con IA) por USD 99.",
   },
 ];
 

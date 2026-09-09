@@ -91,12 +91,11 @@ export default function NosotrosPage() {
       <section className="bg-navy text-cream">
         <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(64px,8vw,110px)]">
           <h2 className="text-[clamp(26px,3.4vw,40px)] leading-[1.2] max-w-[24em] mb-6 [text-wrap:pretty]">
-            Estamos armando esta agencia desde cero, y lo documentamos en el camino.
+            Construimos esto en público, proyecto por proyecto.
           </h2>
           <p className="text-cream/78 text-[16.5px] leading-[1.8] max-w-[42em] mb-10">
-            Todavía estamos consiguiendo nuestros primeros clientes pagos. Preferimos contarlo así, en
-            vez de inflar resultados que no tenemos — es más útil para vos saber con quién estás
-            hablando, y es la única forma en la que nos interesa construir esto.
+            Cada sistema que ves en Proyectos es real: lo armamos para nuestro propio negocio o para
+            conocidos que confiaron en nosotros. Preferimos mostrar el trabajo antes que prometerlo.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

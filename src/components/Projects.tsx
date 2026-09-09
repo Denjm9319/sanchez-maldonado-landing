@@ -13,6 +13,48 @@ import auraShot from "../assets/projects/aura-shot.png";
 import securifyShot from "../assets/projects/securify-shot.png";
 import dental2Shot from "../assets/projects/dental2-shot.png";
 import certboostShot from "../assets/projects/certboost-shot.png";
+import sentidoDiarioShot from "../assets/projects/sentido-diario-shot.webp";
+import draTaniaShot from "../assets/projects/dra-tania-shot.webp";
+import arcariSilvinaShot from "../assets/projects/arcari-silvina-shot.webp";
+
+const REAL_PROJECTS = [
+  {
+    id: "sentido-diario",
+    title: "Sentido Diario",
+    thumb: sentidoDiarioShot,
+    alt: "Sitio real de Sentido Diario, clínica de estética facial",
+    rubro: "Estética facial y bienestar",
+    objetivo: "Generar reservas de tratamientos y vender productos de skincare directo por WhatsApp.",
+    description:
+      "Landing de clínica de estética con catálogo de tratamientos y productos, comparativas de antes/después y turnos coordinados por WhatsApp.",
+    capabilities: ["Web & Conversion", "Catálogo de productos", "Agendamiento por WhatsApp"],
+    url: "https://sentidodiario.com/",
+  },
+  {
+    id: "dra-tania",
+    title: "Dra. Tania Mielnikowicz",
+    thumb: draTaniaShot,
+    alt: "Sitio real de la Dra. Tania Mielnikowicz, ginecóloga",
+    rubro: "Ginecología y medicina reproductiva",
+    objetivo: "Generar turnos mostrando trayectoria y prueba social real antes de pedir el contacto.",
+    description:
+      "Sitio profesional para una ginecóloga especializada en fertilidad, con formación, testimonios verificados y turnos coordinados por WhatsApp en sus tres consultorios.",
+    capabilities: ["Web & Conversion", "Prueba social real", "Agendamiento por WhatsApp"],
+    url: "https://drataniamielnikowicz.vercel.app/",
+  },
+  {
+    id: "arcari-silvina",
+    title: "Silvina Arcari",
+    thumb: arcariSilvinaShot,
+    alt: "Sitio real de Silvina Arcari, psicóloga y sexóloga clínica",
+    rubro: "Psicología clínica y sexología",
+    objetivo: "Resolver objeciones comunes antes de la consulta y agendar sesiones online o presenciales.",
+    description:
+      "Sitio profesional para una psicóloga y sexóloga clínica, con el enfoque explicado en detalle, testimonios y FAQ que despeja las dudas más frecuentes antes de agendar.",
+    capabilities: ["Web & Conversion", "FAQ de objeciones", "Agendamiento por WhatsApp"],
+    url: "https://arcarisilvina.com/",
+  },
+];
 
 const PROJECTS = [
   {
@@ -107,16 +149,55 @@ const CONCEPTS = [
 export default function Projects() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [openConceptId, setOpenConceptId] = useState<string | null>(null);
+  const [openRealId, setOpenRealId] = useState<string | null>(null);
   const active = PROJECTS.find((p) => p.id === openId) ?? null;
   const activeConcept = CONCEPTS.find((c) => c.id === openConceptId) ?? null;
+  const activeReal = REAL_PROJECTS.find((r) => r.id === openRealId) ?? null;
 
   return (
     <section id="proyectos" className="bg-creamDeep border-t border-b border-navy/[0.08]">
-      <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Proyectos</p>
+      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(56px,7vw,90px)]">
+        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Trabajo real</p>
         <h1 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-5 max-w-[18em]">
-          Ideas convertidas en sistemas digitales.
+          Proyectos que ya están en producción.
         </h1>
+        <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+          Sitios reales que armamos para nuestro propio negocio y para conocidos que confiaron en
+          nosotros. Podés visitarlos ahora mismo.
+        </p>
+        <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
+          {REAL_PROJECTS.map((r) => (
+            <button
+              key={r.id}
+              type="button"
+              onClick={() => setOpenRealId(r.id)}
+              aria-haspopup="dialog"
+              className="group text-left bg-white rounded-[16px] overflow-hidden border border-navy/[0.08] p-0 cursor-pointer"
+            >
+              <span className="block aspect-[4/3] overflow-hidden bg-cream">
+                <img
+                  src={r.thumb}
+                  alt={r.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
+                />
+              </span>
+              <span className="block pt-[18px] px-5 pb-[22px]">
+                <span className="text-[10px] tracking-[0.2em] uppercase text-teal block">Proyecto real</span>
+                <span className="text-[17px] mt-2 block">{r.title}</span>
+                <span className="text-[13.5px] text-secondary block mt-1">{r.rubro}</span>
+              </span>
+            </button>
+          ))}
+        </div>
+      </Reveal>
+
+      <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(78px,11vw,150px)]">
+        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Conceptos y demos</p>
+        <h2 className="text-[clamp(26px,3.6vw,42px)] leading-[1.12] mb-5 max-w-[18em]">
+          Ideas convertidas en sistemas digitales.
+        </h2>
         <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
           Una muestra de cómo pensamos cada sistema: web, IA y automatización trabajando juntos según
           lo que necesita cada negocio.
@@ -188,6 +269,19 @@ export default function Projects() {
           capabilities={activeConcept.capabilities}
           url={activeConcept.url}
           onClose={() => setOpenConceptId(null)}
+        />
+      )}
+      {activeReal && (
+        <ConceptModal
+          title={activeReal.title}
+          rubro={activeReal.rubro}
+          objetivo={activeReal.objetivo}
+          description={activeReal.description}
+          capabilities={activeReal.capabilities}
+          url={activeReal.url}
+          badge="Proyecto real"
+          ctaLabel="Ver sitio en vivo"
+          onClose={() => setOpenRealId(null)}
         />
       )}
     </section>

@@ -8,6 +8,8 @@ interface ConceptModalProps {
   capabilities: string[];
   url: string;
   onClose: () => void;
+  badge?: string;
+  ctaLabel?: string;
 }
 
 export default function ConceptModal({
@@ -18,6 +20,8 @@ export default function ConceptModal({
   capabilities,
   url,
   onClose,
+  badge = "Concept / Demo",
+  ctaLabel = "Ver demo en vivo",
 }: ConceptModalProps) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -48,7 +52,7 @@ export default function ConceptModal({
           ×
         </button>
 
-        <span className="text-[10.5px] tracking-[0.2em] uppercase text-gold">Concept / Demo</span>
+        <span className="text-[10.5px] tracking-[0.2em] uppercase text-gold">{badge}</span>
         <h3 className="text-[26px] mt-2 mb-5 pr-10">{title}</h3>
 
         <dl className="grid gap-[18px] text-[14.5px]">
@@ -87,7 +91,7 @@ export default function ConceptModal({
           rel="noopener noreferrer"
           className="mt-8 inline-flex bg-navy text-cream px-6 py-3.5 rounded-full text-[14.5px] hover:bg-teal"
         >
-          Ver demo en vivo
+          {ctaLabel}
         </a>
       </div>
     </div>
