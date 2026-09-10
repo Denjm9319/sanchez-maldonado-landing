@@ -16,6 +16,7 @@ import certboostShot from "../assets/projects/certboost-shot.png";
 import sentidoDiarioShot from "../assets/projects/sentido-diario-shot.webp";
 import draTaniaShot from "../assets/projects/dra-tania-shot.webp";
 import arcariSilvinaShot from "../assets/projects/arcari-silvina-shot.webp";
+import marcelaBritoShot from "../assets/projects/marcela-brito-shot.webp";
 
 const REAL_PROJECTS = [
   {
@@ -53,6 +54,18 @@ const REAL_PROJECTS = [
       "Sitio profesional para una psicóloga y sexóloga clínica, con el enfoque explicado en detalle, testimonios y FAQ que despeja las dudas más frecuentes antes de agendar.",
     capabilities: ["Web & Conversion", "FAQ de objeciones", "Agendamiento por WhatsApp"],
     url: "https://arcarisilvina.com/",
+  },
+  {
+    id: "marcela-brito",
+    title: "Dra. Marcela Brito",
+    thumb: marcelaBritoShot,
+    alt: "Sitio real de la Dra. Marcela Brito, odontóloga en Valeria del Mar",
+    rubro: "Odontología",
+    objetivo: "Generar turnos por WhatsApp mostrando trayectoria y atendiendo tanto a vecinos como a turistas con urgencias.",
+    description:
+      "Sitio profesional para una odontóloga con más de 20 años de trayectoria en Valeria del Mar, con tratamientos, ubicación con mapa, coberturas aceptadas y turnos coordinados por WhatsApp.",
+    capabilities: ["Web & Conversion", "Ubicación con mapa", "Agendamiento por WhatsApp"],
+    url: "https://dramarcelabrito.vercel.app/",
   },
 ];
 
