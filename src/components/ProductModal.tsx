@@ -25,6 +25,7 @@ interface ProductModalProps {
   why: string;
   disclaimer: string;
   ctaLink: string;
+  ctaLabel?: string;
   onClose: () => void;
 }
 
@@ -38,6 +39,7 @@ export default function ProductModal({
   why,
   disclaimer,
   ctaLink,
+  ctaLabel = "Quiero el código →",
   onClose,
 }: ProductModalProps) {
   useEffect(() => {
@@ -135,7 +137,7 @@ export default function ProductModal({
           rel="noopener noreferrer"
           className="mt-8 inline-flex bg-navy text-cream px-6 py-3.5 rounded-full text-[14.5px] hover:bg-teal"
         >
-          Quiero el código →
+          {ctaLabel}
         </a>
       </div>
     </div>

@@ -4,6 +4,7 @@ import ProductModal from "../components/ProductModal";
 import { waLink } from "../config/site";
 import { useSEO } from "../hooks/useSEO";
 import sofiaInstallerImg from "../assets/services/sofia-installer.webp";
+import promptsPackImg from "../assets/products/prompts-alta-conversion.webp";
 
 const PRODUCTS = [
   {
@@ -37,6 +38,38 @@ const PRODUCTS = [
     disclaimer:
       "Este es un producto de autoinstalación, sin soporte incluido. Sos responsable de la configuración, el cumplimiento legal en tu jurisdicción, y la operación del sistema una vez instalado. Si en algún momento preferís que nos encarguemos de todo, podés pasarte a nuestro servicio gestionado cuando quieras.",
     ctaMessage: "Hola, quiero comprar el instalador de Sofia (agente de voz con IA) por USD 99.",
+  },
+  {
+    id: "prompts-alta-conversion",
+    n: "02",
+    title: "+150 Prompts de Alta Conversión",
+    teaser: "Prompts listos para armar páginas con efectos 3D y motion que convierten.",
+    price: "USD 29 · pago único",
+    image: promptsPackImg,
+    tagline:
+      "Más de 150 prompts ya probados para generar páginas de alta conversión con efectos 3D y animaciones (motion), pensados para pegar directo en tu herramienta de IA favorita y saltarte las horas de prueba y error hasta que un efecto se vea bien y no roto.",
+    audience: [
+      "Diseñadores y desarrolladores que arman landings o sitios con IA y quieren que se vean caros, no genéricos.",
+      "Freelancers y agencias que necesitan entregar más rápido sin perder el efecto 'wow' visual.",
+      "Emprendedores que arman su propia web con herramientas de IA y no saben cómo pedir efectos 3D o animaciones sin que salgan rotos.",
+      "Cualquiera que ya probó pedirle 'hacé un efecto 3D lindo' a una IA y recibió algo plano o que no funcionaba.",
+    ],
+    includes: [
+      "Más de 150 prompts organizados por categoría: hero sections, efectos 3D, secciones premium, copy de conversión y wireframes.",
+      "Los prompts en texto plano, listos para copiar y pegar en tu herramienta de IA.",
+      "Una guía corta de cómo adaptar cada prompt a tu proyecto y tu stack.",
+    ],
+    excludes: [
+      "Soporte técnico ni corrección de tus proyectos.",
+      "El código ya armado — son prompts, vos los corrés en tu propia herramienta de IA.",
+      "Garantía de que un efecto se vea idéntico en toda herramienta (cada una interpreta distinto).",
+      "Diseño personalizado para tu marca.",
+    ],
+    why: "Muchos de estos efectos nos llevaron horas de prueba y error para que se vean bien y no rotos. Esta es la versión resuelta: los prompts que ya probamos, para que vos no tengas que perder ese tiempo.",
+    disclaimer:
+      "Es un producto digital de autoinstalación: no incluye soporte ni personalización. El resultado final depende de la herramienta de IA que uses y de cómo adaptes cada prompt a tu proyecto. Al ser un producto digital, no se aceptan devoluciones una vez entregado el acceso.",
+    ctaMessage: "Hola, quiero comprar el pack de +150 prompts de alta conversión por USD 29.",
+    ctaLabel: "Quiero los prompts →",
   },
 ];
 
@@ -105,6 +138,7 @@ export default function ProductosPage() {
           why={active.why}
           disclaimer={active.disclaimer}
           ctaLink={waLink(active.ctaMessage)}
+          ctaLabel={active.ctaLabel}
           onClose={() => setOpenId(null)}
         />
       )}
