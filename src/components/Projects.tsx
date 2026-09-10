@@ -1,13 +1,6 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
-import Lightbox from "./Lightbox";
 import ConceptModal from "./ConceptModal";
-import clinicaDentalThumb from "../assets/projects/clinica-dental-thumb.webp";
-import clinicaDentalFull from "../assets/projects/clinica-dental-full.webp";
-import inmobiliariaThumb from "../assets/projects/inmobiliaria-thumb.webp";
-import inmobiliariaFull from "../assets/projects/inmobiliaria-full.webp";
-import hotelThumb from "../assets/projects/hotel-thumb.webp";
-import hotelFull from "../assets/projects/hotel-full.webp";
 import zenithShot from "../assets/projects/zenith-shot.png";
 import auraShot from "../assets/projects/aura-shot.png";
 import securifyShot from "../assets/projects/securify-shot.png";
@@ -66,33 +59,6 @@ const REAL_PROJECTS = [
       "Sitio profesional para una odontóloga con más de 20 años de trayectoria en Valeria del Mar, con tratamientos, ubicación con mapa, coberturas aceptadas y turnos coordinados por WhatsApp.",
     capabilities: ["Web & Conversion", "Ubicación con mapa", "Agendamiento por WhatsApp"],
     url: "https://dramarcelabrito.vercel.app/",
-  },
-];
-
-const PROJECTS = [
-  {
-    id: "clinica-dental",
-    title: "Clínica Dental",
-    description: "Landing + Sofia + reservas: la consulta entra por WhatsApp y sale agendada.",
-    thumb: clinicaDentalThumb,
-    full: clinicaDentalFull,
-    alt: "Concept de landing para clínica dental",
-  },
-  {
-    id: "inmobiliaria",
-    title: "Inmobiliaria",
-    description: "Web + WhatsApp + gestión de leads con seguimiento automático.",
-    thumb: inmobiliariaThumb,
-    full: inmobiliariaFull,
-    alt: "Concept de web para inmobiliaria",
-  },
-  {
-    id: "hotel",
-    title: "Hotel Boutique",
-    description: "Web + asistente de reservas que responde disponibilidad al instante.",
-    thumb: hotelThumb,
-    full: hotelFull,
-    alt: "Concept de web para hotel boutique",
   },
 ];
 
@@ -160,23 +126,22 @@ const CONCEPTS = [
 ];
 
 export default function Projects() {
-  const [openId, setOpenId] = useState<string | null>(null);
   const [openConceptId, setOpenConceptId] = useState<string | null>(null);
   const [openRealId, setOpenRealId] = useState<string | null>(null);
-  const active = PROJECTS.find((p) => p.id === openId) ?? null;
   const activeConcept = CONCEPTS.find((c) => c.id === openConceptId) ?? null;
   const activeReal = REAL_PROJECTS.find((r) => r.id === openRealId) ?? null;
 
   return (
     <section id="proyectos" className="bg-creamDeep border-t border-b border-navy/[0.08]">
-      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(56px,7vw,90px)]">
+      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(78px,11vw,150px)]">
         <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Trabajo real</p>
         <h1 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-5 max-w-[18em]">
           Proyectos que ya están en producción.
         </h1>
         <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
           Sitios reales que armamos para nuestro propio negocio y para conocidos que confiaron en
-          nosotros. Podés visitarlos ahora mismo.
+          nosotros, más demos funcionales que probamos por rubro. Todo construido desde código y ya
+          en producción — podés visitarlos ahora mismo.
         </p>
         <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {REAL_PROJECTS.map((r) => (
@@ -202,42 +167,6 @@ export default function Projects() {
                 <span className="text-[13.5px] text-secondary block mt-1">{r.rubro}</span>
               </span>
             </button>
-          ))}
-        </div>
-      </Reveal>
-
-      <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(78px,11vw,150px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Conceptos y demos</p>
-        <h2 className="text-[clamp(26px,3.6vw,42px)] leading-[1.12] mb-5 max-w-[18em]">
-          Ideas convertidas en sistemas digitales.
-        </h2>
-        <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
-          Una muestra de cómo pensamos cada sistema: web, IA y automatización trabajando juntos según
-          lo que necesita cada negocio.
-        </p>
-        <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
-          {PROJECTS.map((p) => (
-            <article key={p.id} className="bg-white rounded-[16px] overflow-hidden border border-navy/[0.08]">
-              <button
-                type="button"
-                onClick={() => setOpenId(p.id)}
-                aria-label={`Ampliar captura del proyecto ${p.title}`}
-                className="group block w-full p-0 border-none bg-cream cursor-zoom-in aspect-[4/3] overflow-hidden"
-              >
-                <img
-                  src={p.thumb}
-                  alt={p.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
-                />
-              </button>
-              <div className="pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">Concept / Demo</span>
-                <h3 className="text-[17px] mt-2 mb-1">{p.title}</h3>
-                <p className="text-[13.5px] text-secondary leading-[1.55]">{p.description}</p>
-              </div>
-            </article>
           ))}
           {CONCEPTS.map((c) => (
             <button
@@ -266,7 +195,6 @@ export default function Projects() {
         </div>
       </Reveal>
 
-      {active && <Lightbox src={active.full} alt={active.alt} onClose={() => setOpenId(null)} />}
       {activeConcept && (
         <ConceptModal
           title={activeConcept.title}
