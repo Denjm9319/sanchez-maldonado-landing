@@ -6,6 +6,18 @@ import { useSEO } from "../hooks/useSEO";
 import { BLOG_POSTS } from "../content/blog";
 import { SITE_NAME, SITE_URL, waLink } from "../config/site";
 
+marked.use({
+  renderer: {
+    link({ href, title, tokens }) {
+      const text = this.parser.parseInline(tokens);
+      const titleAttr = title ? ` title="${title}"` : "";
+      const external = /^https?:\/\//.test(href);
+      const externalAttrs = external ? ' target="_blank" rel="noopener noreferrer"' : "";
+      return `<a href="${href}"${titleAttr}${externalAttrs}>${text}</a>`;
+    },
+  },
+});
+
 function formatDate(iso: string) {
   return new Date(iso + "T00:00:00").toLocaleDateString("es-AR", {
     day: "numeric",
@@ -128,34 +140,36 @@ export default function BlogPostPage() {
         />
       </Reveal>
 
-      <section className="bg-navy text-cream">
-        <Reveal className="max-w-[760px] mx-auto px-6 py-[clamp(56px,7vw,88px)] text-center">
-          <h2 className="text-[clamp(24px,3vw,32px)] leading-[1.25] mb-5 max-w-[20em] mx-auto [text-wrap:pretty]">
-            ¿Querés detectar qué parte de la atención de tu negocio podría automatizarse?
-          </h2>
-          <p className="text-cream/78 text-[15.5px] leading-[1.8] max-w-[38em] mx-auto mb-9">
-            Analizamos tu proceso actual y te decimos con honestidad qué conviene automatizar, qué debería
-            seguir en manos del equipo, y cuál sería el punto de partida más razonable.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {/* Apunta a la demo en vivo de Sofia hasta subir el audio de la charla real */}
-            <Link
-              to="/#sofia"
-              className="border border-cream/30 text-cream px-6 py-3.5 rounded-full text-[14.5px] hover:border-cream"
-            >
-              Escuchá a Sofía
-            </Link>
-            <a
-              href={waLink(demoMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gold text-navy px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-cream"
-            >
-              Solicitar diagnóstico gratis
-            </a>
-          </div>
-        </Reveal>
-      </section>
+      {!post.hideDefaultCta && (
+        <section className="bg-navy text-cream">
+          <Reveal className="max-w-[760px] mx-auto px-6 py-[clamp(56px,7vw,88px)] text-center">
+            <h2 className="text-[clamp(24px,3vw,32px)] leading-[1.25] mb-5 max-w-[20em] mx-auto [text-wrap:pretty]">
+              ¿Querés detectar qué parte de la atención de tu negocio podría automatizarse?
+            </h2>
+            <p className="text-cream/78 text-[15.5px] leading-[1.8] max-w-[38em] mx-auto mb-9">
+              Analizamos tu proceso actual y te decimos con honestidad qué conviene automatizar, qué debería
+              seguir en manos del equipo, y cuál sería el punto de partida más razonable.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {/* Apunta a la demo en vivo de Sofia hasta subir el audio de la charla real */}
+              <Link
+                to="/#sofia"
+                className="border border-cream/30 text-cream px-6 py-3.5 rounded-full text-[14.5px] hover:border-cream"
+              >
+                Escuchá a Sofía
+              </Link>
+              <a
+                href={waLink(demoMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gold text-navy px-6 py-3.5 rounded-full text-[14.5px] font-medium hover:bg-cream"
+              >
+                Solicitar diagnóstico gratis
+              </a>
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       <Reveal className="max-w-[760px] mx-auto px-6 py-[clamp(56px,7vw,88px)]">
         <h2 className="text-[clamp(24px,3vw,32px)] leading-[1.2] mb-8">Preguntas frecuentes</h2>
