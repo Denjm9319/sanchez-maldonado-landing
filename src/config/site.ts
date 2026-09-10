@@ -1,3 +1,6 @@
+export const SITE_URL = "https://dexasolutions.vercel.app";
+export const SITE_NAME = "DeXa";
+
 export const WHATSAPP_NUMBER = "542254538861";
 
 export const WHATSAPP_DEFAULT_MESSAGE =
@@ -33,6 +36,7 @@ export const NAV_LINKS = [
   { href: "/proyectos#proyectos", label: "Proyectos" },
   { href: "/productos", label: "Productos" },
   { href: "/nosotros", label: "Nosotros" },
+  { href: "/blog", label: "Blog" },
   { href: "/nosotros#proceso", label: "Cómo trabajamos" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#contacto", label: "Contacto" },

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useSEO } from "../hooks/useSEO";
 import Hero from "../components/Hero";
 import Problem from "../components/Problem";
 import Pillars from "../components/Pillars";
@@ -10,6 +11,13 @@ import Contact from "../components/Contact";
 import Reveal from "../components/Reveal";
 
 export default function Home() {
+  useSEO({
+    title: "DeXa | Agentes de IA, WhatsApp y webs que atienden por vos",
+    description:
+      "Diseñamos sitios web, campañas, agentes de IA y automatizaciones que ayudan a negocios a atraer, atender y convertir más clientes.",
+    path: "/",
+  });
+
   return (
     <>
       <Hero />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CONTACT_EMAIL, SOCIAL_LINKS, WHATSAPP_LINK } from "../config/site";
 
 export default function Footer() {
@@ -10,6 +11,18 @@ export default function Footer() {
           <p className="mt-[18px] leading-[1.7] text-[15px] max-w-[26em] text-cream/80">
             Diseño, marketing e inteligencia artificial para negocios que quieren crecer.
           </p>
+        </div>
+        <div className="grid gap-2.5 content-start text-[14.5px]">
+          <p className="text-[11px] tracking-[0.2em] uppercase text-cream/45 mb-1">Explorar</p>
+          <Link to="/proyectos" className="text-cream/85 hover:text-gold">
+            Proyectos
+          </Link>
+          <Link to="/productos" className="text-cream/85 hover:text-gold">
+            Productos
+          </Link>
+          <Link to="/blog" className="text-cream/85 hover:text-gold">
+            Blog
+          </Link>
         </div>
         <div className="grid gap-2.5 content-start text-[14.5px]">
           <p className="text-[11px] tracking-[0.2em] uppercase text-cream/45 mb-1">Contacto</p>

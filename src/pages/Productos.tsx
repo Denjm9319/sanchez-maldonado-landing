@@ -2,6 +2,7 @@ import { useState } from "react";
 import Reveal from "../components/Reveal";
 import ProductModal from "../components/ProductModal";
 import { waLink } from "../config/site";
+import { useSEO } from "../hooks/useSEO";
 import sofiaInstallerImg from "../assets/services/sofia-installer.webp";
 
 const PRODUCTS = [
@@ -42,6 +43,13 @@ const PRODUCTS = [
 export default function ProductosPage() {
   const [openId, setOpenId] = useState<string | null>(null);
   const active = PRODUCTS.find((p) => p.id === openId) ?? null;
+
+  useSEO({
+    title: "Productos",
+    description:
+      "Sistemas de IA que podés instalarte vos mismo: el instalador de Sofia, la recepcionista de voz con IA, con código real y sin intermediarios.",
+    path: "/productos",
+  });
 
   return (
     <>

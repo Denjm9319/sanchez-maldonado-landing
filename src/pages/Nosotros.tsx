@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Process from "../components/Process";
 import { WHATSAPP_LINK } from "../config/site";
+import { useSEO } from "../hooks/useSEO";
 
 const TEAM = [
   { name: "Alexa Sánchez", role: "UX/UI · Inteligencia Artificial · Desarrollo" },
@@ -37,6 +38,13 @@ const PRINCIPLES = [
 ];
 
 export default function NosotrosPage() {
+  useSEO({
+    title: "Nosotros",
+    description:
+      "DeXa es la agencia de dos personas detrás de cada sitio, agente de IA y automatización que ves en Proyectos. Conocé quiénes somos y cómo trabajamos.",
+    path: "/nosotros",
+  });
+
   return (
     <>
       <Reveal className="max-w-[1180px] mx-auto px-6 pt-[132px] pb-[clamp(60px,8vw,110px)]">
