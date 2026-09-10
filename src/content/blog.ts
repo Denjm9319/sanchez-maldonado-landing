@@ -1890,4 +1890,623 @@ En DeXa diseñamos webs, agentes de IA, automatizaciones y sistemas de seguimien
 
 No se trata de sumar tecnología porque está de moda. Se trata de construir un sistema que ayude a tu equipo a responder mejor, dar seguimiento y convertir más consultas en clientes.`,
   },
+  {
+    slug: "tipos-automatizaciones-inteligencia-artificial",
+    title: "Tipos de automatizaciones con inteligencia artificial: para qué sirven, dónde aplicarlas y qué valor aportan",
+    seoTitle: "Tipos de automatizaciones con IA para empresas: usos, ejemplos y valor",
+    metaDescription:
+      "Conocé los principales tipos de automatizaciones con IA, qué procesos resuelven, cómo se aplican y qué valor pueden generar en una empresa.",
+    targetKeyword: "tipos de automatizaciones con inteligencia artificial",
+    secondaryKeywords: [
+      "automatizaciones para empresas",
+      "agentes de IA",
+      "automatización de ventas",
+      "automatización de atención al cliente",
+      "automatización de procesos",
+    ],
+    publishedAt: "2026-09-14",
+    readingMinutes: 24,
+    excerpt:
+      "La pregunta ya no es qué puede hacer la IA, sino qué proceso concreto conviene automatizar y cuánto valor generaría. Un recorrido por 13 tipos de automatización — desde captura de consultas hasta dashboards — con ejemplos, valor esperado y rangos de precio reales.",
+    faq: [
+      {
+        q: "¿Cuál es la automatización más solicitada?",
+        a: "Depende del tipo de operación, pero la atención conversacional, el seguimiento comercial, la clasificación de consultas, la agenda y el procesamiento de documentos tienen aplicación en una gran variedad de empresas.",
+      },
+      {
+        q: "¿Toda automatización necesita inteligencia artificial?",
+        a: "No. Si el proceso tiene reglas claras, una automatización tradicional suele ser más económica y predecible. La IA resulta útil cuando hay que interpretar lenguaje, documentos o situaciones variables.",
+      },
+      {
+        q: "¿Qué diferencia hay entre un chatbot y un agente de IA?",
+        a: "Un chatbot puede limitarse a responder o seguir opciones. Un agente puede interpretar una intención y utilizar herramientas para ejecutar acciones autorizadas, como consultar una agenda o registrar información.",
+      },
+      {
+        q: "¿Se puede automatizar un proceso completo?",
+        a: "Sí, pero conviene dividirlo en etapas y definir qué decisiones necesitan control humano. La automatización completa no siempre es la alternativa más segura ni más rentable.",
+      },
+      {
+        q: "¿Cómo sé si una automatización se paga sola?",
+        a: "Comparando la inversión con el tiempo recuperado, los errores evitados, la capacidad adicional y las oportunidades que hoy se pierden. Conviene definir el indicador antes de implementar.",
+      },
+      {
+        q: "¿Por qué se cobra mantenimiento?",
+        a: "Porque los sistemas cambian, las integraciones pueden fallar, la información debe actualizarse y los flujos necesitan monitoreo y optimización. Además, algunos servicios generan costos de uso.",
+      },
+      {
+        q: "¿Cuánto tarda una implementación?",
+        a: "Una automatización sencilla puede requerir pocos días. Los proyectos con varios canales, sistemas, datos sensibles y pruebas pueden requerir varias semanas. El plazo depende tanto de la construcción como de la entrega y aprobación de información.",
+      },
+    ],
+    body: `La pregunta ya no es solamente qué puede hacer la inteligencia artificial. La pregunta útil para una empresa es otra:
+
+> ¿Qué proceso concreto podemos mejorar, cuánto valor generaría y qué nivel de autonomía debería tener?
+
+Una automatización puede ser tan simple como registrar un formulario y avisar a un vendedor. También puede conectar varios sistemas, interpretar mensajes, consultar información, tomar acciones autorizadas y pedir intervención humana cuando aparece una excepción.
+
+En 2026, la tendencia se está desplazando desde herramientas aisladas hacia agentes especializados en tareas y flujos integrados. Gartner proyectó que el 40 % de las aplicaciones empresariales incorporaría agentes específicos para tareas hacia finales de 2026, frente a menos del 5 % en 2025. Sin embargo, incorporar IA no garantiza resultados: los estudios de adopción muestran que el valor aparece con mayor claridad cuando las empresas rediseñan procesos, asignan responsables y miden resultados.
+
+Por eso, esta guía no está organizada por rubros. Está organizada por tipos de automatización, para que puedas reconocer cuáles tienen sentido dentro de tu operación.
+
+## Automatización tradicional, automatización con IA y agentes: ¿son lo mismo?
+
+No. Aunque muchas veces se utilizan como sinónimos, resuelven problemas diferentes.
+
+### Automatización basada en reglas
+
+Funciona con instrucciones predefinidas:
+
+> Si ocurre A, ejecutar B.
+
+Por ejemplo, cuando alguien completa un formulario, se registra el contacto, se envía un correo y se crea una tarea para el equipo comercial.
+
+Es ideal para procesos repetitivos, previsibles y con reglas claras.
+
+### Automatización asistida por IA
+
+Agrega capacidades como comprender texto, clasificar información, resumir documentos o generar un borrador.
+
+Por ejemplo, puede leer una consulta, detectar qué necesita la persona, resumirla y asignarla al responsable adecuado.
+
+### Agentes de IA
+
+Además de interpretar información, pueden seleccionar y ejecutar acciones mediante herramientas autorizadas. Por ejemplo, consultar una agenda, proponer horarios, registrar el turno y enviar una confirmación.
+
+Esto aumenta la capacidad del sistema, pero también exige controles: fuentes verificadas, permisos, registros, pruebas y derivación humana.
+
+## Los tipos de automatización con mayor aplicación empresarial
+
+### 1. Captura, clasificación y distribución de consultas
+
+Esta automatización recibe contactos desde formularios, WhatsApp, redes, correo, anuncios o llamadas y organiza cada oportunidad según reglas del negocio.
+
+Puede hacer lo siguiente:
+
+* Registrar nombre, canal y motivo de consulta.
+* Detectar servicio de interés.
+* Clasificar urgencia, presupuesto o ubicación.
+* Eliminar duplicados.
+* Asignar un responsable.
+* Notificar al equipo.
+* Crear una tarea de seguimiento.
+* Conservar la fuente original del contacto.
+
+**¿Para qué sirve?** Evita que las consultas queden repartidas entre teléfonos, bandejas de entrada y planillas. También reduce el tiempo utilizado en revisar y redistribuir contactos manualmente.
+
+Valor que puede aportar:
+
+* Menor tiempo de primera respuesta.
+* Menos oportunidades olvidadas.
+* Reparto ordenado del trabajo.
+* Trazabilidad desde la campaña hasta la venta.
+* Mejor información para priorizar.
+
+Ejemplos de uso: clínicas, inmobiliarias, hoteles, empresas B2B, estudios profesionales, comercios y servicios técnicos.
+
+### 2. Atención conversacional por WhatsApp, web y redes
+
+Los agentes conversacionales atienden consultas en lenguaje natural desde uno o varios canales.
+
+Pueden utilizarse para:
+
+* Responder preguntas frecuentes.
+* Informar horarios, sedes y servicios.
+* Recopilar datos.
+* Consultar información autorizada.
+* Orientar al usuario hacia el siguiente paso.
+* Detectar intención comercial.
+* Derivar la conversación con contexto.
+* Atender fuera del horario habitual.
+
+**¿Para qué sirve?** Absorbe una parte de las conversaciones repetitivas y permite que el equipo se concentre en excepciones, reclamos o ventas complejas.
+
+Valor que puede aportar:
+
+* Disponibilidad más amplia.
+* Respuestas iniciales consistentes.
+* Reducción de tareas repetitivas.
+* Mayor velocidad de atención.
+* Recuperación de consultas que llegan fuera de horario.
+
+El valor no consiste en que la IA responda absolutamente todo. Consiste en que resuelva lo autorizado y sepa cuándo derivar.
+
+### 3. Agentes de voz para llamadas entrantes y salientes
+
+Un agente de voz puede atender llamadas, comprender respuestas, consultar datos y ejecutar acciones dentro de un alcance definido.
+
+Casos frecuentes:
+
+* Recepción de llamadas.
+* Confirmación de turnos o reservas.
+* Precalificación de interesados.
+* Recuperación de consultas.
+* Encuestas posteriores al servicio.
+* Recordatorios de vencimientos.
+* Actualización de datos.
+* Transferencia a una persona.
+
+**¿Para qué sirve?** Ayuda a manejar volúmenes que un equipo pequeño no puede atender de forma consistente y recupera conversaciones que se perderían por llamadas no contestadas.
+
+Valor que puede aportar:
+
+* Más llamadas atendidas.
+* Cobertura fuera de horario.
+* Menor carga operativa.
+* Información registrada automáticamente.
+* Posibilidad de medir motivos, resultados y derivaciones.
+
+La telefonía y los modelos de voz generan consumo variable. Por eso estos proyectos suelen combinar implementación, mantenimiento y minutos incluidos o facturados por uso.
+
+### 4. Agendamiento, confirmaciones y reducción de ausencias
+
+Esta automatización conecta la conversación con una agenda o sistema de reservas.
+
+Puede encargarse de:
+
+* Consultar disponibilidad real.
+* Proponer horarios.
+* Crear, modificar o cancelar una reserva según reglas.
+* Enviar confirmaciones.
+* Recordar la cita.
+* Solicitar confirmación.
+* Liberar un horario cancelado.
+* Contactar una lista de espera.
+* Avisar al equipo ante una excepción.
+
+**¿Para qué sirve?** Reduce las idas y vueltas necesarias para coordinar y evita depender de recordatorios manuales.
+
+Valor que puede aportar:
+
+* Menos tiempo administrativo.
+* Mayor ocupación de agenda.
+* Reducción de ausencias evitables.
+* Mejor experiencia para el cliente.
+* Disponibilidad actualizada para todo el equipo.
+
+Se aplica en salud, estética, consultoría, hotelería, gastronomía, educación, talleres y cualquier operación basada en citas o reservas.
+
+### 5. Seguimiento comercial y recuperación de oportunidades
+
+Muchos prospectos no compran en el primer contacto. Esta automatización crea seguimientos según lo ocurrido en la conversación.
+
+Puede activarse cuando:
+
+* Una persona pidió información y no respondió.
+* Recibió una propuesta pero no tomó una decisión.
+* Abandonó un formulario.
+* Faltó a una reunión.
+* Solicitó ser contactada más adelante.
+* Una oportunidad quedó sin actividad.
+* Finalizó un servicio y podría necesitar otro.
+
+**¿Para qué sirve?** Transforma el seguimiento en un proceso, en lugar de dejarlo librado a la memoria del vendedor.
+
+Valor que puede aportar:
+
+* Mayor aprovechamiento de los contactos existentes.
+* Pipeline más limpio.
+* Menos oportunidades estancadas.
+* Mensajes adaptados al momento del prospecto.
+* Más datos sobre motivos de pérdida.
+
+La frecuencia y el canal deben configurarse con criterio. Automatizar no significa hostigar.
+
+### 6. Calificación de prospectos y asistencia al equipo de ventas
+
+La IA puede analizar una consulta y preparar al vendedor antes de que intervenga.
+
+Puede:
+
+* Identificar necesidad, presupuesto, urgencia y autoridad de compra.
+* Puntuar oportunidades según criterios acordados.
+* Resumir conversaciones extensas.
+* Recomendar el próximo paso.
+* Preparar preguntas para la reunión.
+* Generar un borrador de respuesta.
+* Actualizar el estado comercial.
+* Alertar cuando aparece una oportunidad prioritaria.
+
+**¿Para qué sirve?** Permite que el equipo dedique más tiempo a conversar y menos a buscar información o completar registros.
+
+Valor que puede aportar:
+
+* Mejor preparación comercial.
+* Prioridad sobre oportunidades valiosas.
+* Respuestas más relevantes.
+* Registros más completos.
+* Ciclos de venta más ordenados.
+
+La puntuación no debería tratarse como una verdad absoluta. Es un criterio para asistir la decisión del vendedor.
+
+### 7. Presupuestos, propuestas y documentos comerciales
+
+Esta automatización toma datos estructurados y produce documentos o borradores siguiendo reglas y plantillas.
+
+Puede ayudar a:
+
+* Recopilar requerimientos.
+* Verificar que no falten datos.
+* Calcular importes mediante reglas.
+* Generar un presupuesto.
+* Preparar una propuesta personalizada.
+* Enviarla para revisión.
+* Solicitar aprobación o firma.
+* Registrar el estado.
+* Activar el onboarding después del pago.
+
+**¿Para qué sirve?** Reduce demoras comerciales y evita volver a escribir documentos similares desde cero.
+
+Valor que puede aportar:
+
+* Menor tiempo entre consulta y propuesta.
+* Presentación más consistente.
+* Menos errores de carga.
+* Mayor trazabilidad.
+* Transición más fluida hacia la entrega.
+
+Los precios, descuentos, condiciones y compromisos deberían provenir de reglas verificadas. La IA puede redactar; no debería inventar condiciones comerciales.
+
+### 8. Procesamiento de documentos, correos y datos no estructurados
+
+Una gran parte del trabajo administrativo consiste en leer información y trasladarla a otro sistema.
+
+La automatización puede:
+
+* Extraer datos de facturas, formularios o contratos.
+* Clasificar correos.
+* Resumir documentos.
+* Detectar campos faltantes.
+* Renombrar y archivar archivos.
+* Comparar versiones.
+* Crear tareas a partir del contenido.
+* Derivar excepciones para revisión.
+
+**¿Para qué sirve?** Convierte documentos y mensajes en información accionable sin exigir una revisión manual completa en cada caso.
+
+Valor que puede aportar:
+
+* Menos carga de datos.
+* Búsqueda más rápida.
+* Reducción de errores de transcripción.
+* Tiempos administrativos más cortos.
+* Mejor trazabilidad documental.
+
+En documentos sensibles conviene aplicar validaciones, control de acceso y revisión humana antes de ejecutar acciones irreversibles.
+
+### 9. Onboarding de clientes o colaboradores
+
+Cuando una persona compra o se incorpora al equipo, suele comenzar una cadena de tareas repetitivas.
+
+Puede automatizarse:
+
+* Mensaje de bienvenida.
+* Solicitud de información y archivos.
+* Creación de carpetas y registros.
+* Asignación de responsables.
+* Generación de tareas.
+* Firma de documentos.
+* Programación de reuniones.
+* Envío de materiales.
+* Recordatorios sobre pendientes.
+* Confirmación de que cada etapa fue completada.
+
+**¿Para qué sirve?** Evita comienzos desordenados y ofrece una experiencia consistente desde el primer día.
+
+Valor que puede aportar:
+
+* Menor tiempo hasta la puesta en marcha.
+* Menos información faltante.
+* Roles más claros.
+* Mejor experiencia del cliente o colaborador.
+* Reducción de coordinación manual.
+
+### 10. Soporte, tickets y gestión de incidentes
+
+Esta automatización recibe solicitudes, las clasifica y ayuda a resolverlas según su complejidad.
+
+Puede:
+
+* Identificar el tipo de problema.
+* Buscar respuestas en una base aprobada.
+* Solicitar datos de diagnóstico.
+* Asignar prioridad.
+* Crear un ticket.
+* Derivarlo al especialista correcto.
+* Informar avances.
+* Resumir la resolución.
+* Actualizar la base de conocimiento después de una revisión.
+
+**¿Para qué sirve?** Ordena el soporte y reduce el tiempo empleado en solicitudes repetitivas.
+
+Valor que puede aportar:
+
+* Tiempos de respuesta más cortos.
+* Menos interrupciones desorganizadas.
+* Historial de cada caso.
+* Distribución por especialidad.
+* Detección de problemas recurrentes.
+
+### 11. Reportes automáticos y dashboards accionables
+
+Un dashboard no debería ser una colección de gráficos que nadie consulta. Tiene que responder preguntas y activar decisiones.
+
+Puede integrar información sobre:
+
+* Consultas recibidas.
+* Fuente de cada oportunidad.
+* Tiempo de respuesta.
+* Reuniones o turnos.
+* Asistencia.
+* Propuestas.
+* Ventas.
+* Motivos de pérdida.
+* Consumo de agentes.
+* Tareas pendientes.
+* Rendimiento por período, canal o responsable.
+
+**¿Para qué sirve?** Evita reunir datos manualmente y permite detectar problemas antes de que se conviertan en una tendencia.
+
+Valor que puede aportar:
+
+* Decisiones basadas en información.
+* Ahorro en preparación de reportes.
+* Detección de cuellos de botella.
+* Rendición de cuentas.
+* Optimización continua.
+
+La automatización más útil no termina mostrando un número: indica quién debería revisarlo o qué acción corresponde.
+
+### 12. Automatización de marketing y contenido
+
+La IA puede acelerar distintas etapas de producción y distribución, pero requiere dirección estratégica y revisión.
+
+Puede asistir en:
+
+* Investigación de preguntas del público.
+* Clasificación de ideas.
+* Transformación de una pieza larga en formatos breves.
+* Borradores de correos y publicaciones.
+* Personalización por segmento.
+* Programación de campañas.
+* Etiquetado de contactos.
+* Secuencias según comportamiento.
+* Análisis de resultados.
+* Detección de contenidos que conviene actualizar.
+
+**¿Para qué sirve?** Reduce tareas mecánicas y permite reutilizar mejor el conocimiento del negocio.
+
+Valor que puede aportar:
+
+* Mayor consistencia de publicación.
+* Menor tiempo de producción.
+* Mensajes más relevantes por segmento.
+* Reutilización de contenidos.
+* Aprendizaje a partir del rendimiento.
+
+Publicar más no garantiza vender más. La automatización debe sostener una estrategia, una oferta y una voz de marca reconocible.
+
+### 13. Cobranza, vencimientos y administración recurrente
+
+Los flujos administrativos también pueden automatizarse sin entregar decisiones financieras a un modelo generativo.
+
+Ejemplos:
+
+* Avisos previos al vencimiento.
+* Confirmación de recepción de pago.
+* Alertas por facturas pendientes.
+* Conciliación de datos.
+* Actualización del estado del cliente.
+* Escalamiento de casos vencidos.
+* Renovación de servicios.
+* Avisos sobre consumo o excedentes.
+
+**¿Para qué sirve?** Reduce olvidos y mantiene ordenados procesos que se repiten cada semana o mes.
+
+Valor que puede aportar:
+
+* Mejor previsibilidad de cobro.
+* Menos seguimiento manual.
+* Registros actualizados.
+* Avisos consistentes.
+* Menor riesgo de prestar servicios sin control del estado de cuenta.
+
+Los cargos, suspensiones o cambios contractuales deben basarse en condiciones aprobadas y trazables.
+
+## Tabla comparativa: qué automatización elegir según el problema
+
+| Si hoy ocurre esto | Tipo de automatización | Valor principal | Indicador para medirla |
+| --- | --- | --- | --- |
+| Se pierden mensajes entre varios canales | Captura y distribución | Centralizar oportunidades | Consultas registradas vs. recibidas |
+| El equipo responde siempre lo mismo | Atención conversacional | Liberar tiempo operativo | Resoluciones sin intervención |
+| No se atienden todas las llamadas | Agente de voz | Ampliar cobertura | Llamadas atendidas y derivadas |
+| Coordinar horarios consume demasiado tiempo | Agenda y recordatorios | Simplificar reservas | Tiempo de coordinación y ausencias |
+| Los prospectos se enfrían | Seguimiento comercial | Recuperar oportunidades | Respuestas y conversiones recuperadas |
+| Ventas pierde tiempo clasificando | Calificación y asistencia | Priorizar mejor | Tiempo por lead y tasa de avance |
+| Los presupuestos tardan días | Propuestas automáticas | Acelerar respuesta | Tiempo hasta envío |
+| Se copian datos entre documentos y sistemas | Procesamiento documental | Reducir carga manual | Horas y errores evitados |
+| Cada cliente nuevo comienza de forma distinta | Onboarding | Estandarizar la entrega | Tiempo hasta activación |
+| El soporte llega desordenado | Tickets inteligentes | Ordenar y priorizar | Primera respuesta y resolución |
+| Los reportes se hacen a mano | Dashboard automático | Mejorar decisiones | Tiempo de reporte y acciones tomadas |
+| El contenido depende de empezar de cero | Marketing asistido | Reutilizar conocimiento | Tiempo por pieza y resultados |
+| Se olvidan vencimientos | Administración recurrente | Mejorar previsibilidad | Pagos a término y tareas evitadas |
+
+## ¿Qué automatizaciones están ganando más impulso?
+
+Más que una única herramienta, existen cinco movimientos relevantes:
+
+### Agentes especializados en una tarea
+
+Las empresas están pasando del asistente general que "hace de todo" a agentes con objetivos, herramientas y permisos específicos: clasificar consultas, agendar, preparar propuestas o gestionar tickets.
+
+### Flujos que combinan reglas e IA
+
+Las implementaciones más útiles no dependen enteramente de un modelo. Utilizan reglas para lo predecible e IA para interpretar lenguaje, documentos o excepciones.
+
+### Atención omnicanal con contexto
+
+El objetivo es que la información acompañe al contacto cuando pasa de la web a WhatsApp, de una llamada a un vendedor o de un agente automático a una persona.
+
+### IA conectada a fuentes reales
+
+En lugar de responder desde conocimiento general, el sistema consulta agendas, catálogos, bases aprobadas y registros empresariales.
+
+### Automatización con supervisión y medición
+
+La conversación dejó de concentrarse únicamente en lo que la IA puede hacer. Ahora importa cómo se controla, qué resultados produce y quién responde ante una excepción.
+
+## Cómo calcular el valor antes de automatizar
+
+El valor no se mide por la cantidad de pasos del flujo ni por lo sofisticada que parezca la tecnología.
+
+Una evaluación inicial puede considerar:
+
+### Tiempo recuperado
+
+Calculá cuántas veces ocurre la tarea, cuánto demora y cuánto cuesta la hora de las personas involucradas.
+
+Valor mensual aproximado del tiempo:
+
+> frecuencia mensual × minutos por tarea ÷ 60 × costo por hora
+
+### Oportunidades recuperadas
+
+Medí cuántas consultas no reciben respuesta, llegan fuera de horario o quedan sin seguimiento. Luego estimá qué proporción podría recuperarse y cuál es el margen de una venta.
+
+### Errores evitados
+
+Algunos procesos generan valor reduciendo duplicados, cargas incorrectas, citas olvidadas o documentos incompletos.
+
+### Velocidad
+
+Responder, cotizar o derivar más rápido puede mejorar la experiencia y evitar que el interesado elija otra opción.
+
+### Capacidad adicional
+
+Una automatización también puede permitir que el mismo equipo gestione más volumen sin aumentar la estructura al mismo ritmo.
+
+### Información para decidir
+
+Registrar correctamente cada paso permite descubrir qué canales, mensajes y procesos funcionan.
+
+### Ejemplo sencillo de cálculo
+
+Supongamos que un equipo recibe 600 consultas mensuales y dedica un promedio de cinco minutos a registrar, clasificar y asignar cada una.
+
+Eso representa 3.000 minutos, es decir, 50 horas mensuales.
+
+Si una automatización reduce un 70 % de esa carga, recuperaría aproximadamente 35 horas por mes. A ese ahorro habría que sumarle el valor de las consultas que antes quedaban sin asignar o sin seguimiento.
+
+El cálculo no demuestra por sí solo que el proyecto conviene. Pero permite comparar el costo de implementar con el costo actual de no resolver el problema.
+
+## Cuánto puede costar cada tipo de automatización
+
+Los siguientes valores son rangos orientativos en USD para implementaciones dirigidas a pequeñas y medianas empresas. No son una cotización ni una promesa de precio.
+
+| Tipo de solución | Implementación orientativa | Continuidad habitual | Variables principales |
+| --- | --- | --- | --- |
+| Captura y distribución de consultas | USD 400–1.500 | USD 50–300/mes | Canales, reglas y sistema de destino |
+| Seguimiento comercial | USD 700–2.500 | USD 150–700/mes | Secuencias, estados, canales y volumen |
+| Agente conversacional | USD 700–3.000 | USD 300–1.200 por ciclo + consumo | Conocimiento, canales e integraciones |
+| Agente de voz | USD 1.200–5.000 | USD 400–2.000 por ciclo + minutos | Telefonía, flujos, volumen y transferencias |
+| Agenda y recordatorios | USD 500–2.000 | USD 100–500/mes | Calendarios, reglas y confirmaciones |
+| Presupuestos y propuestas | USD 800–3.500 | USD 150–700/mes | Cálculos, plantillas, aprobaciones y firma |
+| Procesamiento documental | USD 1.000–6.000 | Según documentos y volumen | Formatos, precisión, validación y seguridad |
+| Onboarding automatizado | USD 700–3.000 | USD 100–600/mes | Etapas, documentos, roles e integraciones |
+| Soporte y tickets con IA | USD 1.000–5.000 | USD 300–1.500/mes + consumo | Canales, base de conocimiento y SLA |
+| Dashboard automatizado | USD 1.000–6.000 | USD 150–1.000/mes | Fuentes, calidad, permisos y frecuencia |
+| Sistema integral a medida | USD 3.000–20.000+ | Según soporte y uso | Módulos, usuarios, riesgo e integraciones |
+
+Una solución normalmente combina:
+
+* Diagnóstico y diseño.
+* Implementación.
+* Conexiones con herramientas existentes.
+* Pruebas.
+* Documentación y capacitación.
+* Mantenimiento.
+* Optimización.
+* Costos variables de plataformas, mensajes o minutos.
+
+Por eso dos automatizaciones con un nombre parecido pueden tener precios muy diferentes.
+
+## Cómo cobran las agencias de automatización
+
+Los modelos más comunes son:
+
+* **Implementación única:** se cobra el diseño y la construcción inicial.
+* **Implementación más mantenimiento:** agrega soporte, monitoreo y optimización periódica.
+* **Tarifa con uso incluido:** incorpora cierta cantidad de mensajes, minutos o ejecuciones.
+* **Base más consumo:** combina un importe fijo con excedentes variables.
+* **Proyecto por etapas:** se implementa y cobra cada módulo por separado.
+* **Precio basado en valor:** considera el impacto del problema resuelto, además del esfuerzo técnico.
+
+Para agentes y procesos en producción, el modelo híbrido suele ser el más sostenible: implementación inicial, mantenimiento periódico y consumo claramente definido.
+
+## Cómo elegir la primera automatización
+
+Antes de contratar herramientas, respondé:
+
+* ¿Qué tarea se repite con mayor frecuencia?
+* ¿Dónde se pierden más consultas, tiempo o dinero?
+* ¿Qué proceso tiene reglas suficientemente claras?
+* ¿Qué sistemas deben conectarse?
+* ¿Qué datos utiliza?
+* ¿Qué puede salir mal?
+* ¿Qué decisiones deben seguir siendo humanas?
+* ¿Qué indicador demostraría que funcionó?
+
+La primera automatización ideal suele reunir cuatro condiciones:
+
+* Ocurre muchas veces.
+* Consume tiempo o genera pérdidas.
+* Puede medirse.
+* Tiene un riesgo controlable.
+
+## Lo que no conviene automatizar sin controles
+
+Que algo sea técnicamente posible no significa que deba ejecutarse de forma autónoma.
+
+Requieren especial cuidado:
+
+* Diagnósticos y recomendaciones médicas.
+* Decisiones legales o financieras.
+* Descuentos, devoluciones y compensaciones.
+* Cambios contractuales.
+* Movimientos de dinero.
+* Eliminación de información.
+* Acceso a datos sensibles.
+* Publicaciones públicas sin revisión.
+* Decisiones sobre contratación o desvinculación.
+* Cualquier acción difícil de revertir.
+
+En estos casos se pueden automatizar la recopilación, el análisis o la preparación, manteniendo la aprobación final en manos de una persona.
+
+## La mejor automatización no es la más llamativa
+
+Una empresa no necesita incorporar todas estas soluciones. Necesita identificar dónde existe una fricción real y construir el sistema adecuado alrededor de ese problema.
+
+A veces el mayor valor proviene de un agente de voz que atiende llamadas. Otras veces, de un seguimiento que evita que los prospectos desaparezcan. Y en muchos negocios, una automatización sencilla que conecta un formulario con el proceso comercial genera más impacto que un proyecto técnicamente espectacular.
+
+En DeXa analizamos el recorrido completo de cada consulta y diseñamos webs, agentes de IA, automatizaciones y dashboards alrededor de la operación real del negocio.`,
+  },
 ];
