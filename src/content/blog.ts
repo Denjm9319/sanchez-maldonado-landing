@@ -2507,6 +2507,15 @@ Una empresa no necesita incorporar todas estas soluciones. Necesita identificar 
 
 A veces el mayor valor proviene de un agente de voz que atiende llamadas. Otras veces, de un seguimiento que evita que los prospectos desaparezcan. Y en muchos negocios, una automatización sencilla que conecta un formulario con el proceso comercial genera más impacto que un proyecto técnicamente espectacular.
 
-En DeXa analizamos el recorrido completo de cada consulta y diseñamos webs, agentes de IA, automatizaciones y dashboards alrededor de la operación real del negocio.`,
+En DeXa analizamos el recorrido completo de cada consulta y diseñamos webs, agentes de IA, automatizaciones y dashboards alrededor de la operación real del negocio.
+
+## Fuentes de referencia
+
+* [Gartner — "40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026"](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025)
+* [Google Cloud — "AI agent trends 2026"](https://cloud.google.com/resources/content/ai-agent-trends-2026)
+* [McKinsey — "The state of AI: How organizations are rewiring to capture value"](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value)
+* [NIST — "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile"](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence)
+
+*Nota sobre precios: los valores son orientativos, están expresados en USD y pueden variar según alcance, mercado, impuestos, volumen, consumo, herramientas, integraciones, soporte y nivel de personalización. La cotización final requiere un diagnóstico.*`,
   },
 ];
