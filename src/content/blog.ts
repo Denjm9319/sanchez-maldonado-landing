@@ -1398,4 +1398,496 @@ En DeXa trabajamos con un enfoque de autonomía controlada: definimos qué puede
 
 Sofía, nuestra agente de demostración para clínicas dentales, permite ver cómo puede atender consultas y acompañar oportunidades sin convertir cada conversación en una decisión autónoma sin límites.`,
   },
+  {
+    slug: "web-automatizacion-inteligencia-artificial",
+    title: "Web, automatización e inteligencia artificial: cómo construir un sistema digital que realmente venda",
+    seoTitle: "Web, automatización e inteligencia artificial: guía para vender más",
+    metaDescription:
+      "Descubrí cómo combinar una web estratégica, marketing, automatizaciones e inteligencia artificial para generar consultas, hacer seguimiento y convertir más clientes.",
+    targetKeyword: "web y automatización con inteligencia artificial",
+    secondaryKeywords: [
+      "página web que vende",
+      "automatizaciones para empresas",
+      "inteligencia artificial para negocios",
+      "agentes de IA",
+      "automatización de ventas",
+      "diseño web estratégico",
+    ],
+    publishedAt: "2026-09-13",
+    readingMinutes: 22,
+    excerpt:
+      "Tener web, redes y WhatsApp no es lo mismo que tener un sistema comercial. Te mostramos cómo unir estrategia, diseño web, automatización e inteligencia artificial para que las consultas se conviertan en clientes, con rangos de precios reales por tipo de proyecto.",
+    faq: [
+      {
+        q: "¿Necesito una web antes de implementar automatizaciones?",
+        a: "No siempre. Una automatización puede comenzar desde WhatsApp, formularios, correo u otros canales. Sin embargo, una web bien diseñada ayuda a explicar la oferta, captar datos y centralizar el recorrido comercial.",
+      },
+      {
+        q: "¿Una web moderna garantiza ventas?",
+        a: "No. La web necesita una oferta relevante, tráfico adecuado, mensaje claro, evidencia, una experiencia fácil y seguimiento. El diseño potencia esos elementos, pero no reemplaza la estrategia.",
+      },
+      {
+        q: "¿Qué automatización debería implementar primero?",
+        a: "La que resuelva una tarea frecuente, costosa y medible con reglas relativamente claras. La respuesta depende de cómo funciona hoy el negocio.",
+      },
+      {
+        q: "¿La IA puede atender sin intervención humana?",
+        a: "Puede resolver tareas autorizadas, pero debería derivar excepciones y decisiones sensibles. El nivel de autonomía debe definirse según el riesgo de cada acción.",
+      },
+      {
+        q: "¿Por qué los agentes de IA tienen un costo periódico?",
+        a: "Porque utilizan plataformas, modelos, mensajería, telefonía o infraestructura que generan consumo. Además, requieren monitoreo, soporte, ajustes y actualización de la información.",
+      },
+      {
+        q: "¿Qué diferencia hay entre mantenimiento y consumo?",
+        a: "El mantenimiento cubre la continuidad técnica, soporte y optimización. El consumo corresponde al uso variable del sistema, como minutos de voz, mensajes o ejecuciones.",
+      },
+      {
+        q: "¿Cuánto tarda una implementación?",
+        a: "Depende del alcance y de la velocidad con la que se entregue y apruebe la información. Una automatización sencilla puede resolverse en pocos días; una solución con múltiples integraciones y pruebas puede requerir varias semanas.",
+      },
+      {
+        q: "¿Puedo comenzar con una solución pequeña?",
+        a: "Sí. De hecho, suele ser recomendable empezar con un proceso concreto, medirlo y ampliar después de validar su funcionamiento.",
+      },
+    ],
+    body: `Tener una página web, publicar en redes sociales y responder mensajes por WhatsApp no significa necesariamente tener un sistema comercial.
+
+Un negocio puede recibir consultas todos los días y aun así perder oportunidades porque tarda en responder, no registra la información, no hace seguimiento o depende de la memoria de una persona. También puede tener una web visualmente atractiva que no deja claro qué ofrece, para quién es ni cuál es el siguiente paso.
+
+La tecnología genera resultados cuando sus partes trabajan juntas:
+
+* La estrategia atrae a las personas correctas.
+* La web comunica y convierte.
+* Las automatizaciones mueven la información.
+* La inteligencia artificial atiende, clasifica y asiste.
+* El equipo humano interviene donde aporta más valor.
+* Los datos permiten mejorar el sistema.
+
+En esta guía vamos a explicar cómo unir esas piezas, qué principios hacen que una web venda, qué automatizaciones pueden aplicarse en distintos rubros, cómo cambió la inteligencia artificial y cuánto suelen cobrar las agencias por este tipo de soluciones.
+
+## Una web no debería ser un folleto digital
+
+Durante años, muchas empresas trataron su página como una tarjeta de presentación: logo, descripción, algunas fotografías y datos de contacto.
+
+Eso puede servir para demostrar que el negocio existe, pero no necesariamente ayuda a convertir una visita en una consulta.
+
+Una web comercial debería cumplir al menos cinco funciones:
+
+* **Captar atención:** demostrar rápidamente que entiende el problema del visitante.
+* **Comunicar valor:** explicar qué resultado ofrece el negocio y por qué debería importar.
+* **Reducir incertidumbre:** responder dudas, mostrar evidencia y explicar el proceso.
+* **Facilitar la acción:** ofrecer un próximo paso claro y sencillo.
+* **Iniciar un sistema:** registrar la consulta, clasificarla y activar el seguimiento.
+
+El diseño es importante, pero su función no es decorar. Tiene que ordenar la información y ayudar a que la persona avance.
+
+## Cómo hacer una web que venda
+
+No existe un color, una animación o una plantilla que garantice ventas. Lo que sí existen son principios que reducen la confusión y aumentan las probabilidades de conversión.
+
+### 1. Una promesa clara en los primeros segundos
+
+Cuando alguien entra a la web debería comprender:
+
+* Qué hacés.
+* Para quién lo hacés.
+* Qué resultado ayudás a conseguir.
+* Qué debe hacer si le interesa.
+
+Un encabezado como "Soluciones innovadoras para potenciar tu futuro" puede sonar profesional, pero no explica nada concreto.
+
+En cambio:
+
+> "Ayudamos a negocios de servicios a convertir más consultas en clientes con webs, automatización e inteligencia artificial."
+
+La segunda opción delimita el público, la solución y el beneficio.
+
+### 2. Hablar del problema antes que de la tecnología
+
+La mayoría de los clientes no está buscando una integración, un webhook o un modelo de lenguaje. Está intentando resolver algo más cercano:
+
+* Llegan consultas fuera de horario.
+* El equipo tarda en responder.
+* Los prospectos desaparecen después de pedir información.
+* Se cargan datos manualmente en varios sistemas.
+* Las campañas generan contactos que nadie sigue.
+* No se sabe qué canal produce ventas.
+
+La tecnología tiene que presentarse como el mecanismo para resolver esos problemas, no como el protagonista de la conversación.
+
+### 3. Un recorrido fácil de entender
+
+Una estructura comercial sencilla podría seguir este orden:
+
+1. Problema y resultado.
+2. Explicación de la solución.
+3. Beneficios concretos.
+4. Servicios o alternativas.
+5. Demostraciones, proyectos o evidencia.
+6. Metodología de trabajo.
+7. Preguntas frecuentes.
+8. Llamada a la acción.
+
+La persona no debería tener que adivinar dónde encontrar información ni qué botón presionar.
+
+### 4. Evidencia antes que exageraciones
+
+Las afirmaciones grandilocuentes generan desconfianza cuando no tienen respaldo. Es mejor mostrar:
+
+* Proyectos reales o demostrativos claramente identificados.
+* Capturas del sistema.
+* Audios o videos de una demostración.
+* Explicación del proceso.
+* Métricas verificables cuando existan.
+* Testimonios auténticos.
+* Límites y condiciones del servicio.
+
+Si todavía no hay casos reales, se pueden presentar prototipos y demos, siempre aclarando que son ejemplos. Una demostración honesta vale más que un resultado inventado.
+
+### 5. Llamadas a la acción específicas
+
+"Enviar" o "Más información" obligan al visitante a interpretar qué sucederá después.
+
+Es preferible utilizar acciones como:
+
+* "Solicitar un diagnóstico".
+* "Escuchar la demo".
+* "Analizar qué puedo automatizar".
+* "Hablar por WhatsApp".
+* "Pedir una propuesta".
+
+También conviene explicar qué ocurrirá después del clic: si responderán el mismo día, si habrá una llamada de diagnóstico o si primero se solicitarán algunos datos.
+
+### 6. Formularios que ayuden a clasificar sin espantar
+
+Un formulario puede solicitar:
+
+* Nombre.
+* Correo o WhatsApp.
+* Empresa.
+* Rubro.
+* Web o perfil social.
+* Principal problema.
+* Volumen aproximado de consultas.
+* Servicio de interés.
+
+No hace falta pedir veinte datos para iniciar una conversación. El objetivo es obtener la información mínima que permita responder de forma relevante.
+
+### 7. Velocidad, experiencia móvil y accesibilidad
+
+Una web lenta, difícil de leer o incómoda desde el teléfono pierde oportunidades antes de que el mensaje pueda hacer su trabajo.
+
+La experiencia debería revisarse en dispositivos reales, prestando atención a:
+
+* Velocidad de carga.
+* Estabilidad visual.
+* Respuesta al tocar botones y controles.
+* Tamaño del texto.
+* Contraste.
+* Navegación con teclado.
+* Formularios simples.
+* Enlaces y botones funcionales.
+
+Google recomienda pensar en una buena experiencia general de página y utilizar contenido útil, confiable y creado para personas. Las Core Web Vitals ayudan a medir aspectos de velocidad, respuesta y estabilidad, pero ninguna métrica aislada reemplaza una experiencia completa.
+
+## Los principios de marketing que hacen funcionar al sistema
+
+La automatización no corrige una oferta débil. Solo permite ejecutar con mayor velocidad aquello que ya fue diseñado.
+
+Antes de conectar herramientas conviene resolver estos fundamentos.
+
+### Cliente específico
+
+"Todo tipo de empresas" parece ampliar el mercado, pero suele debilitar el mensaje. La solución puede servir para varios rubros, aunque cada página, campaña o argumento debería hablarle a una situación reconocible.
+
+Por ejemplo:
+
+* Clínicas que pierden consultas fuera de horario.
+* Inmobiliarias que reciben interesados en decenas de propiedades.
+* Hoteles que responden repetidamente sobre disponibilidad y servicios.
+* Empresas de servicios que tardan en cotizar.
+* Centros de estética que necesitan confirmar y recordar turnos.
+
+### Problema costoso
+
+Un problema se vuelve comercialmente relevante cuando tiene consecuencias claras: horas de trabajo, oportunidades perdidas, demoras, errores, mala experiencia o falta de información.
+
+"Implementamos IA" es una característica. "Respondemos, clasificamos y damos seguimiento a las consultas que hoy se enfrían" describe un resultado potencial.
+
+### Oferta comprensible
+
+El cliente tiene que saber qué recibe después de pagar. Una oferta puede incluir:
+
+* Diagnóstico.
+* Diseño del flujo.
+* Implementación.
+* Integraciones.
+* Carga de información.
+* Pruebas.
+* Capacitación.
+* Lanzamiento.
+* Monitoreo.
+* Mantenimiento y optimización.
+
+La claridad aumenta el valor percibido y reduce conflictos durante el proyecto.
+
+### Menos fricción
+
+Cada paso innecesario reduce la probabilidad de avanzar. Una buena experiencia elimina formularios interminables, respuestas vagas, enlaces rotos, calendarios desactualizados y derivaciones sin contexto.
+
+### Seguimiento sistemático
+
+Muchos prospectos no compran en la primera conversación. Pueden estar comparando, esperando presupuesto, consultando con un socio o simplemente ocupados.
+
+El seguimiento no debería depender exclusivamente de que alguien lo recuerde. Puede programarse según el estado de la oportunidad, sin perseguir ni saturar a la persona.
+
+### Medición de punta a punta
+
+No alcanza con contar clics o mensajes. Conviene observar:
+
+* Fuente de la consulta.
+* Tiempo de primera respuesta.
+* Porcentaje de contactos calificados.
+* Reuniones o turnos solicitados.
+* Asistencia.
+* Propuestas enviadas.
+* Ventas cerradas.
+* Motivos de pérdida.
+* Costo por oportunidad y por cliente.
+
+Eso permite descubrir si el problema está en la atracción, la página, la atención, la oferta o el seguimiento.
+
+## Una web aislada y una web conectada no son lo mismo
+
+Imaginemos dos empresas que reciben el mismo formulario.
+
+En la primera, el mensaje llega a una casilla de correo. Alguien lo ve varias horas después, copia los datos a una planilla y responde manualmente. Si el prospecto no contesta, posiblemente nadie vuelva a contactarlo.
+
+En la segunda, el formulario:
+
+* Registra el contacto.
+* Identifica rubro y necesidad.
+* Notifica al responsable.
+* Envía una confirmación inmediata.
+* Propone el siguiente paso correspondiente.
+* Programa seguimiento si no hay respuesta.
+* Actualiza el estado de la oportunidad.
+* Incorpora el resultado al tablero de métricas.
+
+La página puede verse igual en ambos casos. La diferencia está detrás: una recibe datos; la otra inicia un proceso.
+
+## Automatizaciones útiles para diferentes rubros
+
+No todas las empresas necesitan un agente complejo. Muchas mejoras comienzan con procesos sencillos y bien elegidos.
+
+| Rubro | Problema frecuente | Automatización posible | Resultado esperado |
+| --- | --- | --- | --- |
+| Clínica dental o estética | Consultas y turnos fuera de horario | Agente de WhatsApp o voz, agenda, recordatorios y derivación | Respuesta más rápida y menos tareas repetitivas |
+| Inmobiliaria | Muchos interesados con requisitos distintos | Clasificación por zona, presupuesto y tipo de propiedad | Asignación más ordenada a cada asesor |
+| Hotel o alojamiento | Preguntas repetidas sobre disponibilidad y servicios | Asistente de consultas, captura de datos y seguimiento | Atención continua y mejor organización de reservas |
+| Estudio profesional | Leads sin diagnóstico inicial | Formulario inteligente, calificación y agendamiento | Reuniones con mayor contexto |
+| Empresa de servicios | Presupuestos que tardan demasiado | Captura de requerimientos y generación de borradores | Menor tiempo de respuesta comercial |
+| Comercio electrónico | Consultas sobre productos y pedidos | Respuestas desde catálogo, estado del pedido y escalamiento | Menos carga de soporte |
+| Academia o formación | Consultas repetidas y alumnos inactivos | Orientación, recordatorios y secuencias de reactivación | Más continuidad y menos seguimiento manual |
+| Empresa B2B | Prospectos sin seguimiento | Registro, clasificación, tareas y secuencias comerciales | Pipeline más visible y consistente |
+| Taller o servicio técnico | Pedidos sin información suficiente | Recepción guiada, clasificación y notificaciones de estado | Menos idas y vueltas |
+| Restaurante o eventos | Reservas y confirmaciones manuales | Captura de reservas, recordatorios y lista de espera | Menos ausencias y mejor ocupación |
+
+El objetivo no es automatizar todo. Conviene comenzar por tareas frecuentes, repetitivas, medibles y con reglas suficientemente claras.
+
+## La inteligencia artificial antes y ahora
+
+La IA no apareció con los chatbots modernos. Hace años que las empresas utilizan modelos para recomendar productos, detectar fraude, clasificar mensajes, predecir demanda o segmentar audiencias.
+
+Lo que cambió es la forma de interactuar con estos sistemas.
+
+### Antes: predicción y reglas detrás de escena
+
+Muchas soluciones anteriores funcionaban sobre datos estructurados y tareas específicas. Eran potentes, pero normalmente necesitaban equipos técnicos y no conversaban de manera natural con el usuario.
+
+Los primeros chatbots comerciales se apoyaban sobre árboles de decisión: si la persona seleccionaba una opción, el sistema mostraba la siguiente. Eran predecibles, aunque rígidos.
+
+### Ahora: lenguaje natural y capacidad de ejecutar acciones
+
+Los modelos generativos permiten interpretar diferentes formas de expresar una necesidad y producir respuestas más flexibles. Con integraciones adecuadas, además pueden:
+
+* Consultar información.
+* Resumir conversaciones.
+* Extraer datos.
+* Clasificar oportunidades.
+* Completar registros.
+* Generar borradores.
+* Coordinar agendas.
+* Activar flujos.
+* Transferir el caso a una persona.
+
+El salto importante no es solo que la IA pueda hablar. Es que puede participar en un proceso.
+
+## El nuevo riesgo: confundir fluidez con autoridad
+
+Una respuesta convincente puede ser incorrecta. El NIST identifica las confabulaciones —información falsa expresada con seguridad— entre los riesgos propios de la IA generativa.
+
+Por eso, un agente empresarial necesita:
+
+* Fuentes de información aprobadas.
+* Límites de autonomía.
+* Validación antes de acciones sensibles.
+* Derivación humana.
+* Registros y monitoreo.
+* Pruebas antes y después del lanzamiento.
+* Mecanismos para detener el sistema ante un incidente.
+
+La IA funciona mejor como parte de una operación diseñada, no como un empleado imaginario con permiso ilimitado.
+
+## Qué conviene automatizar primero
+
+Una buena priorización puede evaluar cada proceso según cinco preguntas:
+
+1. ¿Con qué frecuencia ocurre?
+2. ¿Cuánto tiempo consume?
+3. ¿Cuánto cuesta hacerlo mal o tarde?
+4. ¿Sus reglas son claras?
+5. ¿Podemos medir el resultado?
+
+Los mejores primeros casos suelen ser aquellos de alto volumen, baja ambigüedad y consecuencias controlables.
+
+Ejemplos:
+
+* Confirmar que una consulta fue recibida.
+* Clasificar el motivo del contacto.
+* Registrar datos en un sistema.
+* Recordar una cita.
+* Avisar al responsable correspondiente.
+* Recuperar una oportunidad sin respuesta.
+* Preparar un borrador para revisión humana.
+
+Las decisiones irreversibles, médicas, legales, financieras o comerciales sensibles requieren controles adicionales y, muchas veces, aprobación humana.
+
+## Cuánto cuesta una web, una automatización o un agente de IA
+
+No existe una tarifa universal. El precio depende del alcance, la complejidad, las integraciones, el volumen, el diseño, el riesgo, la capacitación y el soporte posterior.
+
+Como referencia internacional, Clutch muestra que los proyectos de diseño web realizados por agencias pueden abarcar desde algunos miles hasta decenas de miles de dólares. En IA de voz, los proveedores suelen combinar una tarifa de plataforma con consumo por minuto; las agencias agregan el trabajo de diagnóstico, implementación, integración, pruebas, soporte y optimización.
+
+La siguiente tabla presenta rangos orientativos para pequeñas y medianas empresas. No constituye una cotización ni implica que todos los proyectos necesiten cada componente.
+
+| Solución | Implementación orientativa | Continuidad habitual | Qué modifica el precio |
+| --- | --- | --- | --- |
+| Landing estratégica | USD 800–1.500 | USD 100–300/mes opcional | Copy, diseño, formularios, analítica e integraciones |
+| Web comercial de varias secciones | USD 1.500–5.000 | USD 150–600/mes | Cantidad de páginas, contenido, animaciones, SEO y funcionalidades |
+| Automatización simple entre herramientas | USD 500–1.500 | USD 50–300/mes | Cantidad de pasos, frecuencia y manejo de errores |
+| Captura y seguimiento de oportunidades | USD 900–3.000 | USD 200–800/mes | Canales, reglas, estados, mensajes y volumen |
+| Agente de WhatsApp con IA | USD 700–3.000 | USD 300–1.200 por ciclo + consumo | Base de conocimiento, integraciones, volumen y soporte |
+| Agente de chat y voz | USD 1.200–5.000 | USD 600–2.000 por ciclo + consumo | Telefonía, minutos, flujos, transferencias y complejidad |
+| Dashboard e integración de datos | USD 1.000–6.000 | USD 150–1.000/mes | Fuentes, calidad de datos, permisos y actualización |
+| Sistema interno a medida | USD 3.000–20.000+ | Según alcance y soporte | Usuarios, módulos, seguridad e integraciones |
+
+Los rangos amplios tienen una razón: instalar una herramienta no equivale a diseñar una solución operativa.
+
+## Cómo cobran las agencias estas soluciones
+
+Los modelos más frecuentes son:
+
+### Proyecto cerrado
+
+Se define un entregable, un alcance y un precio de implementación. Funciona bien para una web o una automatización acotada.
+
+### Implementación más mantenimiento
+
+El cliente paga la construcción inicial y luego una tarifa periódica por soporte, monitoreo, optimización, hosting o mantenimiento.
+
+Es un modelo habitual cuando el sistema continúa operando después de su entrega.
+
+### Tarifa fija con uso incluido
+
+La mensualidad o el ciclo incluye una cantidad determinada de mensajes, minutos, ejecuciones o contactos. Los excedentes se cobran por separado.
+
+Esto da previsibilidad al cliente y protege al proveedor frente a aumentos de consumo.
+
+### Pago por uso
+
+Se factura por minuto, conversación, mensaje, ejecución u otra unidad. Puede resultar conveniente cuando el volumen varía mucho, aunque genera menos previsibilidad.
+
+### Modelo híbrido
+
+Combina una base fija por mantenimiento y disponibilidad con un componente variable por consumo. Suele ser el enfoque más equilibrado para agentes de IA.
+
+### Precio basado en valor
+
+El precio considera el impacto económico potencial de la solución, no solamente las horas necesarias para construirla. Es más común cuando existen métricas claras y un problema de alto valor.
+
+## Qué debería incluir una propuesta profesional
+
+Antes de comparar únicamente precios, conviene revisar si la propuesta contempla:
+
+* Objetivo y alcance.
+* Entregables.
+* Canales incluidos.
+* Integraciones.
+* Responsabilidades de cada parte.
+* Información que debe aportar el cliente.
+* Límites de la inteligencia artificial.
+* Pruebas y criterios de activación.
+* Capacitación.
+* Soporte y tiempos de respuesta.
+* Consumo incluido y excedentes.
+* Mantenimiento y optimización.
+* Propiedad de números, dominios y cuentas.
+* Tratamiento de cambios de alcance.
+* Procedimiento ante incidentes.
+* Forma de pago y renovación.
+
+Una propuesta más barata puede terminar siendo costosa si no contempla la operación posterior.
+
+## El sistema completo: atraer, convertir, atender y mejorar
+
+Una implementación madura puede visualizarse en cuatro capas.
+
+### 1. Atracción
+
+Contenido, posicionamiento orgánico, anuncios y recomendaciones llevan personas hacia el negocio.
+
+### 2. Conversión
+
+La web explica el valor, reduce objeciones, presenta evidencia y facilita el contacto.
+
+### 3. Atención y seguimiento
+
+Automatizaciones y agentes reciben, clasifican, responden, agendan, notifican y derivan.
+
+### 4. Aprendizaje
+
+Los datos muestran qué campañas, mensajes, servicios y procesos producen resultados. Esa información permite mejorar las tres capas anteriores.
+
+Cuando una capa falta, las demás pierden efectividad. Más publicidad no arregla una mala propuesta. Una web atractiva no compensa una atención lenta. Un agente rápido no puede salvar información equivocada. Un dashboard no sirve si nadie toma decisiones con sus datos.
+
+## Por dónde empezar sin complicar el negocio
+
+No hace falta transformar toda la empresa en un solo proyecto.
+
+Un camino razonable es:
+
+1. Mapear cómo llega una consulta desde el primer contacto hasta la venta.
+2. Identificar dónde se pierden tiempo y oportunidades.
+3. Medir el volumen y el costo del problema.
+4. Elegir un proceso concreto.
+5. Diseñar una primera versión controlada.
+6. Probarla con casos reales y excepciones.
+7. Capacitar al equipo.
+8. Lanzar, observar y optimizar.
+9. Ampliar únicamente cuando el proceso inicial funciona.
+
+La mejor automatización inicial no suele ser la más impresionante. Es la que resuelve un cuello de botella real y genera evidencia para decidir el siguiente paso.
+
+## Convertí herramientas separadas en un sistema comercial
+
+Una web puede atraer y convertir. Una automatización puede evitar tareas repetitivas. Un agente de IA puede responder y clasificar. Un dashboard puede mostrar qué está ocurriendo.
+
+Pero el verdadero valor aparece cuando todas esas piezas siguen una estrategia común.
+
+En DeXa diseñamos webs, agentes de IA, automatizaciones y sistemas de seguimiento para negocios de servicios. Comenzamos por entender cómo funciona tu operación, dónde se pierden oportunidades y qué solución tiene sentido implementar primero.
+
+No se trata de sumar tecnología porque está de moda. Se trata de construir un sistema que ayude a tu equipo a responder mejor, dar seguimiento y convertir más consultas en clientes.`,
+  },
 ];

@@ -101,7 +101,7 @@ export default function BlogPostPage() {
   }
 
   const html = marked.parse(post.body, { async: false }) as string;
-  const demoMessage = `Hola, leí el artículo "${post.title}" en el blog de DeXa y quiero pedir un diagnóstico gratuito para mi clínica.`;
+  const demoMessage = `Hola, leí el artículo "${post.title}" en el blog de DeXa y quiero pedir un diagnóstico gratuito para mi negocio.`;
 
   return (
     <article className="pt-[64px]">
@@ -131,7 +131,7 @@ export default function BlogPostPage() {
       <section className="bg-navy text-cream">
         <Reveal className="max-w-[760px] mx-auto px-6 py-[clamp(56px,7vw,88px)] text-center">
           <h2 className="text-[clamp(24px,3vw,32px)] leading-[1.25] mb-5 max-w-[20em] mx-auto [text-wrap:pretty]">
-            ¿Querés detectar qué parte de la atención de tu clínica podría automatizarse?
+            ¿Querés detectar qué parte de la atención de tu negocio podría automatizarse?
           </h2>
           <p className="text-cream/78 text-[15.5px] leading-[1.8] max-w-[38em] mx-auto mb-9">
             Analizamos tu proceso actual y te decimos con honestidad qué conviene automatizar, qué debería
