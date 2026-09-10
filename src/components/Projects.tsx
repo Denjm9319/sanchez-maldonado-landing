@@ -239,12 +239,6 @@ export default function Projects() {
               </div>
             </article>
           ))}
-        </div>
-
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mt-[clamp(56px,7vw,90px)] mb-6">
-          Más conceptos
-        </p>
-        <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {CONCEPTS.map((c) => (
             <button
               key={c.id}
