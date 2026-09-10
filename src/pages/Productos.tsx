@@ -43,21 +43,21 @@ const PRODUCTS = [
     id: "prompts-alta-conversion",
     n: "02",
     title: "+150 Prompts de Alta Conversión",
-    teaser: "Prompts listos para armar páginas con efectos 3D y motion que convierten.",
+    teaser: "Specs completas de páginas con efectos 3D y motion, listas para pegar en tu IA.",
     price: "USD 29 · pago único",
     image: promptsPackImg,
     tagline:
-      "Más de 150 prompts ya probados para generar páginas de alta conversión con efectos 3D y animaciones (motion), pensados para pegar directo en tu herramienta de IA favorita y saltarte las horas de prueba y error hasta que un efecto se vea bien y no roto.",
+      "Más de 150 prompts que no son ideas sueltas: cada uno es la especificación completa de una página o sección (fuentes, paleta de colores, animaciones scroll-driven, preloaders, hover effects, responsive) en React + TypeScript + Tailwind CSS + Vite, lista para pegar en tu herramienta de IA y obtener un resultado profesional de una sola vez.",
     audience: [
-      "Diseñadores y desarrolladores que arman landings o sitios con IA y quieren que se vean caros, no genéricos.",
-      "Freelancers y agencias que necesitan entregar más rápido sin perder el efecto 'wow' visual.",
+      "Diseñadores y desarrolladores que arman landings o sitios con IA y quieren que se vean premium, no genéricos.",
+      "Freelancers y agencias que necesitan entregar más rápido sin perder el nivel de detalle ni el efecto 'wow' visual.",
       "Emprendedores que arman su propia web con herramientas de IA y no saben cómo pedir efectos 3D o animaciones sin que salgan rotos.",
-      "Cualquiera que ya probó pedirle 'hacé un efecto 3D lindo' a una IA y recibió algo plano o que no funcionaba.",
+      "Cualquiera que ya probó pedirle 'hacé un efecto 3D lindo' a una IA y recibió algo plano, genérico o que no funcionaba.",
     ],
     includes: [
-      "Más de 150 prompts organizados por categoría: hero sections, efectos 3D, secciones premium, copy de conversión y wireframes.",
-      "Los prompts en texto plano, listos para copiar y pegar en tu herramienta de IA.",
-      "Una guía corta de cómo adaptar cada prompt a tu proyecto y tu stack.",
+      "Más de 150 prompts, cada uno para un estilo o rubro distinto: real estate de lujo, SaaS, e-commerce, web3, fintech, dashboards, portfolios, agencias y más.",
+      "Cada prompt es una especificación completa (no un efecto suelto): tipografías, paleta exacta, animaciones con sus tiempos, secciones y comportamiento responsive ya definidos.",
+      "Stack consistente en los 150+: React + TypeScript + Tailwind CSS + Vite, listo para correr en Claude Code, Cursor o cualquier herramienta de generación de código con IA.",
     ],
     excludes: [
       "Soporte técnico ni corrección de tus proyectos.",
@@ -65,7 +65,7 @@ const PRODUCTS = [
       "Garantía de que un efecto se vea idéntico en toda herramienta (cada una interpreta distinto).",
       "Diseño personalizado para tu marca.",
     ],
-    why: "Muchos de estos efectos nos llevaron horas de prueba y error para que se vean bien y no rotos. Esta es la versión resuelta: los prompts que ya probamos, para que vos no tengas que perder ese tiempo.",
+    why: "Armar una página con animaciones scroll-driven, preloaders y efectos 3D desde cero lleva horas de prueba y error hasta que algo se vea bien y no roto. Estos son los mismos prompts que usamos nosotros para resolver eso — ya probados, con cada detalle definido, para que vos no tengas que iterar veinte veces.",
     disclaimer:
       "Es un producto digital de autoinstalación: no incluye soporte ni personalización. El resultado final depende de la herramienta de IA que uses y de cómo adaptes cada prompt a tu proyecto. Al ser un producto digital, no se aceptan devoluciones una vez entregado el acceso.",
     ctaMessage: "Hola, quiero comprar el pack de +150 prompts de alta conversión por USD 29.",
