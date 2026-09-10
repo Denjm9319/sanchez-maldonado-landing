@@ -48,7 +48,7 @@ export default function BlogPostPage() {
   const post = BLOG_POSTS.find((p) => p.slug === slug);
 
   useSEO({
-    title: post ? post.title : "Artículo no encontrado",
+    title: post ? (post.seoTitle ?? post.title) : "Artículo no encontrado",
     description: post ? post.metaDescription : "Este artículo no existe o fue movido.",
     path: `/blog/${slug ?? ""}`,
     type: "article",
@@ -59,6 +59,7 @@ export default function BlogPostPage() {
             "@type": "BlogPosting",
             headline: post.title,
             description: post.metaDescription,
+            ...(post.secondaryKeywords ? { keywords: post.secondaryKeywords.join(", ") } : {}),
             datePublished: post.publishedAt,
             dateModified: post.publishedAt,
             author: { "@type": "Person", name: "Denis Maldonado" },
