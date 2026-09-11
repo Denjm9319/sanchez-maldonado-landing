@@ -19,6 +19,7 @@ export default {
       fontFamily: {
         display: ["Fraunces", "Georgia", "serif"],
         sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
+        heroDisplay: ["Space Grotesk", "Inter", "sans-serif"],
       },
       keyframes: {
         dash: { from: { strokeDashoffset: "620" }, to: { strokeDashoffset: "0" } },

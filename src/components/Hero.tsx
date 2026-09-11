@@ -1,22 +1,13 @@
 import { useEffect, useRef } from "react";
 import heroVideo from "../assets/video/hero-liquid.mp4";
 import heroPoster from "../assets/video/hero-poster.jpg";
+import Reveal from "./Reveal";
+import ScrollVideo from "./ScrollVideo";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 
 export default function Hero() {
   const contentRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const reduce = useReducedMotion();
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video && !reduce) {
-      const p = video.play();
-      if (p && p.catch) p.catch(() => {});
-    } else if (video) {
-      video.pause();
-    }
-  }, [reduce]);
 
   useEffect(() => {
     if (reduce) return;
@@ -35,53 +26,55 @@ export default function Hero() {
   return (
     <section
       aria-label="Inicio"
-      className="relative min-h-[100svh] flex items-center overflow-hidden bg-[linear-gradient(120deg,#FAF7F2_0%,#f3ece1_60%,#e9dfd0_100%)]"
+      className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#0a0a0a]"
     >
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-        tabIndex={-1}
-        poster={heroPoster}
-        src={heroVideo}
-        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-      />
+      <ScrollVideo src={heroVideo} poster={heroPoster} />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(100deg,rgba(250,247,242,0.92)_0%,rgba(250,247,242,0.78)_45%,rgba(250,247,242,0.42)_100%)]"
+        className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10"
       />
       <div
         ref={contentRef}
         className="relative w-full max-w-[1180px] mx-auto px-6 pt-[132px] pb-[88px]"
         style={{ willChange: "transform, opacity" }}
       >
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-6">AI · Design · Growth</p>
-        <h1 className="text-[clamp(38px,6.4vw,76px)] leading-[1.04] max-w-[17em] [text-wrap:pretty] mb-7">
-          Dejá de perder clientes por consultas que nadie responde a tiempo.
+        <Reveal>
+          <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-6">
+            Sistemas que atienden por vos, las 24 horas
+          </p>
+        </Reveal>
+        <h1 className="font-heroDisplay font-medium text-[clamp(38px,6.4vw,76px)] leading-[1.04] max-w-[17em] [text-wrap:pretty] mb-7 text-white">
+          <Reveal className="block" style={{ transitionDelay: "0ms" }}>
+            Perdés clientes.
+          </Reveal>
+          <Reveal className="block" style={{ transitionDelay: "150ms" }}>
+            Todos los días.
+          </Reveal>
+          <Reveal className="block" style={{ transitionDelay: "300ms" }}>
+            Sin darte cuenta.
+          </Reveal>
         </h1>
-        <p className="text-[clamp(16px,1.5vw,19px)] leading-relaxed text-body max-w-[44em] mb-9">
-          Implementamos sistemas de captación, atención y seguimiento que convierten más consultas en
-          ventas, incluso cuando tu equipo no está disponible.
-        </p>
-        <div className="flex flex-wrap gap-3 items-center mb-8">
+        <Reveal style={{ transitionDelay: "450ms" }}>
+          <p className="text-[clamp(16px,1.5vw,19px)] leading-relaxed text-white/70 max-w-[44em] mb-9">
+            Implementamos sistemas de captación, atención y seguimiento que convierten más consultas en
+            ventas, incluso cuando tu equipo no está disponible.
+          </p>
+        </Reveal>
+        <Reveal style={{ transitionDelay: "550ms" }} className="flex flex-wrap gap-3 items-center mb-8">
           <a
             href="#contacto"
-            className="bg-navy text-cream px-7 py-4 rounded-full text-[15px] font-medium hover:bg-teal"
+            className="bg-gold text-navy px-7 py-4 rounded-full text-[15px] font-medium hover:bg-cream"
           >
             Contanos sobre tu negocio
           </a>
           <a
             href="#pilares"
-            className="border border-navy/22 text-navy px-[26px] py-4 rounded-full text-[15px] bg-white/50 hover:border-navy hover:bg-white"
+            className="border border-white/30 text-white px-[26px] py-4 rounded-full text-[15px] bg-white/5 hover:border-white hover:bg-white/10"
           >
             Ver qué hacemos ↓
           </a>
-        </div>
-        <p className="text-xs tracking-[0.18em] uppercase text-secondary">Web · Ads · IA · Automatización</p>
+        </Reveal>
+        <p className="text-xs tracking-[0.18em] uppercase text-white/40">Web · Ads · IA · Automatización</p>
       </div>
     </section>
   );
