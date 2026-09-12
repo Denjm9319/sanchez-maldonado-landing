@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { CONTACT_EMAIL, SOCIAL_LINKS, WHATSAPP_LINK } from "../config/site";
+import { SOCIAL_LINKS, WHATSAPP_LINK } from "../config/site";
 
 export default function Footer() {
   const { pathname } = useLocation();
@@ -36,9 +36,6 @@ export default function Footer() {
           <p className="text-[11px] tracking-[0.2em] uppercase text-cream/45 mb-1">Contacto</p>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-cream/85 hover:text-gold">
             Hablar por WhatsApp
-          </a>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-cream/85 hover:text-gold">
-            {CONTACT_EMAIL}
           </a>
         </div>
         <div className="grid gap-2.5 content-start text-[14.5px]">

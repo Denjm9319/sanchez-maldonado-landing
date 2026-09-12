@@ -16,10 +16,6 @@ export function waLink(message: string = WHATSAPP_DEFAULT_MESSAGE): string {
 export const WHATSAPP_LINK = waLink();
 export const SOFIA_LINK = waLink(SOFIA_MESSAGE);
 
-export const FORM_ENDPOINT = "https://formspree.io/f/mkjnvaql";
-
-export const CONTACT_EMAIL = "JavierMD135@gmail.com";
-
 export const SOCIAL_LINKS = {
   instagram: "#",
   linkedin: "#",
@@ -49,29 +45,6 @@ export interface Project {
   image: string;
   alt: string;
 }
-
-export const SERVICE_CHIPS = [
-  "Web",
-  "Ads",
-  "WhatsApp IA",
-  "Voz IA",
-  "Sofia",
-  "Automatización",
-  "AI Creative",
-  "No estoy seguro",
-];
-
-export const RUBROS = [
-  "Clínica dental",
-  "Clínica estética",
-  "Inmobiliaria",
-  "Gimnasio",
-  "Hotel",
-  "Concesionaria",
-  "Servicios profesionales",
-  "Ecommerce",
-  "Otro",
-];
 
 export const FAQ_ITEMS = [
   {
