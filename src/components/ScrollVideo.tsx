@@ -25,6 +25,7 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const framesRef = useRef<ImageBitmap[]>([]);
   const [framesReady, setFramesReady] = useState(false);
+  const [debugStatus, setDebugStatus] = useState("iniciando…");
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -35,12 +36,16 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
   }, [reduce, framesReady]);
 
   useEffect(() => {
-    if (reduce) return;
+    if (reduce) {
+      setDebugStatus("movimiento reducido activado en el sistema — no se intenta la animación");
+      return;
+    }
     let cancelled = false;
     let objectUrl: string | null = null;
 
     async function extract() {
       try {
+        setDebugStatus("descargando video…");
         const res = await fetch(src);
         const blob = await res.blob();
         if (cancelled) return;
@@ -74,6 +79,7 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
         const frames: ImageBitmap[] = [];
         for (let i = 0; i < frameCount; i++) {
           if (cancelled) break;
+          setDebugStatus(`extrayendo frame ${i + 1}/${frameCount}…`);
           const t = Math.min(i / (frameCount - 1), 0.999) * duration;
           await new Promise<void>((resolve) => {
             let done = false;
@@ -103,9 +109,13 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
         }
         framesRef.current = frames;
         setFramesReady(true);
+        setDebugStatus("listo ✓");
       } catch (err) {
         // Extraction failed or was cancelled — the <video> fallback stays visible permanently.
-        if (!cancelled) console.warn("ScrollVideo: frame extraction failed, falling back to plain video", err);
+        if (!cancelled) {
+          console.warn("ScrollVideo: frame extraction failed, falling back to plain video", err);
+          setDebugStatus(`error: ${err instanceof Error ? err.message : String(err)}`);
+        }
       }
     }
 
@@ -186,6 +196,10 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
         ref={canvasRef}
         className={`absolute inset-0 w-full h-full block ${framesReady ? "" : "invisible"}`}
       />
+      {/* Temporary on-page diagnostic — remove once the mobile/desktop looping report is resolved. */}
+      <div className="fixed left-3 bottom-3 z-[80] bg-black/80 text-white text-[11px] px-2.5 py-1.5 rounded-md font-sans pointer-events-none">
+        video: {debugStatus}
+      </div>
     </div>
   );
 }
