@@ -132,13 +132,13 @@ export default function Projects() {
   const activeReal = REAL_PROJECTS.find((r) => r.id === openRealId) ?? null;
 
   return (
-    <section id="proyectos" className="bg-creamDeep border-t border-b border-navy/[0.08]">
+    <section id="proyectos" className="bg-white/[0.03] border-t border-b border-white/10">
       <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(78px,11vw,150px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Trabajo real</p>
+        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Trabajo real</p>
         <h1 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-5 max-w-[18em]">
           Proyectos que ya están en producción.
         </h1>
-        <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
           Sitios reales que armamos para nuestro propio negocio y para conocidos que confiaron en
           nosotros, más demos funcionales que probamos por rubro. Todo construido desde código y ya
           en producción — podés visitarlos ahora mismo.
@@ -150,9 +150,9 @@ export default function Projects() {
               type="button"
               onClick={() => setOpenRealId(r.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white rounded-[16px] overflow-hidden border border-navy/[0.08] p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
             >
-              <span className="block aspect-[4/3] overflow-hidden bg-cream">
+              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
                   src={r.thumb}
                   alt={r.alt}
@@ -162,9 +162,9 @@ export default function Projects() {
                 />
               </span>
               <span className="block pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-teal block">Proyecto real</span>
+                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">Proyecto real</span>
                 <span className="text-[17px] mt-2 block">{r.title}</span>
-                <span className="text-[13.5px] text-secondary block mt-1">{r.rubro}</span>
+                <span className="text-[13.5px] text-cream/60 block mt-1">{r.rubro}</span>
               </span>
             </button>
           ))}
@@ -174,9 +174,9 @@ export default function Projects() {
               type="button"
               onClick={() => setOpenConceptId(c.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white rounded-[16px] overflow-hidden border border-navy/[0.08] p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
             >
-              <span className="block aspect-[4/3] overflow-hidden bg-cream">
+              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
                   src={c.thumb}
                   alt={c.alt}
@@ -188,7 +188,7 @@ export default function Projects() {
               <span className="block pt-[18px] px-5 pb-[22px]">
                 <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">Concept / Demo</span>
                 <span className="text-[17px] mt-2 block">{c.title}</span>
-                <span className="text-[13.5px] text-secondary block mt-1">{c.rubro}</span>
+                <span className="text-[13.5px] text-cream/60 block mt-1">{c.rubro}</span>
               </span>
             </button>
           ))}

@@ -85,7 +85,7 @@ export default function Services() {
   return (
     <>
       <Reveal id="servicios" className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Servicios</p>
+        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Servicios</p>
         <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] max-w-[20em] mb-[clamp(38px,5vw,64px)] [text-wrap:pretty]">
           Un sistema, no una lista de servicios sueltos.
         </h2>
@@ -96,9 +96,9 @@ export default function Services() {
               type="button"
               onClick={() => setOpenId(s.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white rounded-[16px] overflow-hidden border border-navy/[0.08] p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
             >
-              <span className="block aspect-[4/3] overflow-hidden bg-cream">
+              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
                   src={s.image}
                   alt={s.title}
@@ -109,9 +109,9 @@ export default function Services() {
               </span>
               <span className="block pt-[18px] px-5 pb-[22px]">
                 <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">{s.n}</span>
-                <h3 className="text-[17px] mt-2 mb-1 text-navy">{s.title}</h3>
-                <span className="text-[13.5px] text-secondary leading-[1.55] block">{s.text}</span>
-                <span className="text-[13px] text-teal mt-3 block group-hover:text-navy">Ver más →</span>
+                <h3 className="text-[17px] mt-2 mb-1">{s.title}</h3>
+                <span className="text-[13.5px] text-cream/65 leading-[1.55] block">{s.text}</span>
+                <span className="text-[13px] text-gold mt-3 block group-hover:text-cream">Ver más →</span>
               </span>
             </button>
           ))}

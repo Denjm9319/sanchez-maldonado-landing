@@ -29,24 +29,24 @@ function formatDate(iso: string) {
 function FaqAccordion({ items }: { items: { q: string; a: string }[] }) {
   const [open, setOpen] = useState<number>(-1);
   return (
-    <div className="border-t border-navy/[0.12]">
+    <div className="border-t border-white/[0.12]">
       {items.map((item, i) => {
         const expanded = open === i;
         return (
-          <div key={item.q} className="border-b border-navy/[0.12]">
+          <div key={item.q} className="border-b border-white/[0.12]">
             <button
               type="button"
               aria-expanded={expanded}
               onClick={() => setOpen(expanded ? -1 : i)}
-              className="w-full flex gap-[18px] items-center justify-between text-left bg-transparent border-none py-5 cursor-pointer text-[16px] font-display"
+              className="w-full flex gap-[18px] items-center justify-between text-left bg-transparent border-none py-5 cursor-pointer text-[16px] font-heroDisplay text-cream"
             >
               {item.q}
-              <span aria-hidden="true" className="text-teal font-sans text-xl flex-none">
+              <span aria-hidden="true" className="text-gold font-sans text-xl flex-none">
                 +
               </span>
             </button>
             {expanded && (
-              <p className="pb-5 text-secondary leading-[1.75] text-[15px] max-w-[46em]">{item.a}</p>
+              <p className="pb-5 text-cream/65 leading-[1.75] text-[15px] max-w-[46em]">{item.a}</p>
             )}
           </div>
         );
@@ -104,8 +104,8 @@ export default function BlogPostPage() {
     return (
       <Reveal className="max-w-[720px] mx-auto px-6 pt-[clamp(120px,14vw,180px)] pb-[clamp(90px,11vw,150px)] text-center">
         <h1 className="text-[clamp(28px,3.6vw,40px)] mb-5">No encontramos este artículo.</h1>
-        <p className="text-secondary mb-8">Puede que se haya movido o el link esté mal escrito.</p>
-        <Link to="/blog" className="text-teal font-medium">
+        <p className="text-cream/70 mb-8">Puede que se haya movido o el link esté mal escrito.</p>
+        <Link to="/blog" className="text-gold font-medium">
           ← Volver al blog
         </Link>
       </Reveal>
@@ -118,14 +118,14 @@ export default function BlogPostPage() {
   return (
     <article className="pt-[64px]">
       <Reveal className="max-w-[760px] mx-auto px-6 pt-[clamp(70px,9vw,120px)] pb-8">
-        <nav aria-label="Breadcrumb" className="text-[13px] text-secondary mb-8">
-          <Link to="/blog" className="hover:text-teal">
+        <nav aria-label="Breadcrumb" className="text-[13px] text-cream/50 mb-8">
+          <Link to="/blog" className="hover:text-gold">
             Blog
           </Link>
           <span className="mx-2">/</span>
           <span>{post.title}</span>
         </nav>
-        <p className="text-[11px] tracking-[0.15em] uppercase text-secondary mb-4">
+        <p className="text-[11px] tracking-[0.15em] uppercase text-cream/50 mb-4">
           {formatDate(post.publishedAt)} · {post.readingMinutes} min de lectura
         </p>
         <h1 className="text-[clamp(28px,3.8vw,44px)] leading-[1.16] max-w-[22em] [text-wrap:pretty]">
@@ -135,13 +135,13 @@ export default function BlogPostPage() {
 
       <Reveal className="max-w-[760px] mx-auto px-6 pb-[clamp(50px,6vw,72px)]">
         <div
-          className="prose prose-neutral max-w-none prose-headings:font-display prose-headings:text-navy prose-h2:text-[26px] prose-h3:text-[19px] prose-p:text-body prose-p:leading-[1.8] prose-li:text-body prose-a:text-teal prose-strong:text-navy prose-blockquote:border-teal prose-blockquote:text-secondary prose-table:text-[14.5px] prose-th:text-navy"
+          className="prose prose-invert max-w-none prose-headings:font-heroDisplay prose-h2:text-[26px] prose-h3:text-[19px] prose-p:leading-[1.8] prose-a:text-gold prose-strong:text-cream prose-blockquote:border-gold prose-blockquote:text-cream/70 prose-table:text-[14.5px] prose-th:text-cream"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </Reveal>
 
       {!post.hideDefaultCta && (
-        <section className="bg-navy text-cream">
+        <section className="bg-white/[0.03] border-t border-white/10 text-cream">
           <Reveal className="max-w-[760px] mx-auto px-6 py-[clamp(56px,7vw,88px)] text-center">
             <h2 className="text-[clamp(24px,3vw,32px)] leading-[1.25] mb-5 max-w-[20em] mx-auto [text-wrap:pretty]">
               ¿Querés detectar qué parte de la atención de tu negocio podría automatizarse?

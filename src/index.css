@@ -8,7 +8,7 @@
     overflow-x: hidden;
   }
   body {
-    @apply m-0 bg-cream text-navy font-sans antialiased;
+    @apply m-0 bg-ink text-cream font-sans antialiased;
     overflow-x: hidden;
   }
   [id] {
@@ -17,19 +17,19 @@
   h1,
   h2,
   h3 {
-    @apply font-display font-medium m-0 tracking-tight;
+    @apply font-heroDisplay font-medium m-0 tracking-tight;
   }
   p {
     @apply m-0;
   }
   a {
-    @apply text-teal;
+    @apply text-gold;
   }
   a:hover {
-    @apply text-navy;
+    @apply text-cream;
   }
   :focus-visible {
-    outline: 2px solid #0e7c7b;
+    outline: 2px solid #d6a75c;
     outline-offset: 3px;
     border-radius: 4px;
   }

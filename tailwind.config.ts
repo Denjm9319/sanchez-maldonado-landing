@@ -15,6 +15,7 @@ export default {
         body: "#445468",
         gold: "#D6A75C",
         whatsapp: "#25D366",
+        ink: "#0a0a0a",
       },
       fontFamily: {
         display: ["Fraunces", "Georgia", "serif"],

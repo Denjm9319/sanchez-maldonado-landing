@@ -87,11 +87,11 @@ export default function ProductosPage() {
   return (
     <>
       <Reveal className="max-w-[1180px] mx-auto px-6 pt-[132px] pb-[clamp(78px,11vw,150px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Productos</p>
+        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Productos</p>
         <h1 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-5 max-w-[20em] [text-wrap:pretty]">
           Sistemas que podés instalarte vos mismo.
         </h1>
-        <p className="text-[16.5px] text-body leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
           Para quien prefiere tener el control técnico total en vez de un servicio gestionado. Pago
           único, código real, sin intermediarios.
         </p>
@@ -102,9 +102,9 @@ export default function ProductosPage() {
               type="button"
               onClick={() => setOpenId(p.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white rounded-[16px] overflow-hidden border border-navy/[0.08] p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
             >
-              <span className="block aspect-[4/3] overflow-hidden bg-cream">
+              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -115,11 +115,11 @@ export default function ProductosPage() {
               </span>
               <span className="block pt-[18px] px-5 pb-[22px]">
                 <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">{p.n}</span>
-                <h3 className="text-[17px] mt-2 mb-1 text-navy">{p.title}</h3>
-                <span className="text-[13.5px] text-secondary leading-[1.55] block">{p.teaser}</span>
+                <h3 className="text-[17px] mt-2 mb-1">{p.title}</h3>
+                <span className="text-[13.5px] text-cream/65 leading-[1.55] block">{p.teaser}</span>
                 <span className="flex items-center justify-between mt-3">
-                  <span className="text-[13px] font-medium text-navy">{p.price}</span>
-                  <span className="text-[13px] text-teal group-hover:text-navy">Ver detalle →</span>
+                  <span className="text-[13px] font-medium text-cream">{p.price}</span>
+                  <span className="text-[13px] text-gold group-hover:text-cream">Ver detalle →</span>
                 </span>
               </span>
             </button>

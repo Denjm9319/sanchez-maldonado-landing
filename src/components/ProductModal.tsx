@@ -56,33 +56,33 @@ export default function ProductModal({
       aria-modal="true"
       aria-label={`Detalle del producto ${title}`}
       onClick={onClose}
-      className="fixed inset-0 z-[90] bg-navyDeep/90 backdrop-blur-md flex items-center justify-center p-[clamp(16px,4vw,56px)]"
+      className="fixed inset-0 z-[90] bg-black/80 backdrop-blur-md flex items-center justify-center p-[clamp(16px,4vw,56px)]"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-cream text-body rounded-[20px] max-w-[640px] w-full p-[clamp(28px,4vw,44px)] relative shadow-[0_30px_80px_rgba(0,0,0,0.45)] max-h-[85vh] overflow-y-auto"
+        className="bg-[#151515] text-cream/80 border border-white/10 rounded-[20px] max-w-[640px] w-full p-[clamp(28px,4vw,44px)] relative shadow-[0_30px_80px_rgba(0,0,0,0.45)] max-h-[85vh] overflow-y-auto"
       >
         <button
           type="button"
           aria-label="Cerrar"
           onClick={onClose}
-          className="absolute top-4 right-4 w-10 h-10 rounded-full border border-navy/15 bg-white text-navy text-lg leading-none cursor-pointer hover:bg-navy hover:text-cream"
+          className="absolute top-4 right-4 w-10 h-10 rounded-full border border-white/15 bg-white/10 text-cream text-lg leading-none cursor-pointer hover:bg-white/20"
         >
           ×
         </button>
 
         <span className="text-[10.5px] tracking-[0.2em] uppercase text-gold">Producto digital</span>
-        <h3 className="text-[26px] mt-2 mb-2 pr-10 text-navy">{title}</h3>
-        <p className="text-[15px] text-secondary leading-[1.6] mb-5">{tagline}</p>
-        <p className="font-display text-[22px] text-navy mb-7">{price}</p>
+        <h3 className="text-[26px] mt-2 mb-2 pr-10 text-cream">{title}</h3>
+        <p className="text-[15px] text-cream/65 leading-[1.6] mb-5">{tagline}</p>
+        <p className="font-heroDisplay text-[22px] text-gold mb-7">{price}</p>
 
         <div className="grid gap-7 text-[14.5px]">
           <div>
-            <p className="text-[11px] tracking-[0.15em] uppercase text-teal mb-3">Para quién es esto</p>
+            <p className="text-[11px] tracking-[0.15em] uppercase text-gold mb-3">Para quién es esto</p>
             <ul className="grid gap-2.5">
               {audience.map((item) => (
                 <li key={item} className="flex gap-2.5 items-start leading-[1.6]">
-                  <span className="mt-0.5 shrink-0 text-teal">
+                  <span className="mt-0.5 shrink-0 text-gold">
                     <IconCheck />
                   </span>
                   {item}
@@ -93,11 +93,11 @@ export default function ProductModal({
 
           <div className="grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))]">
             <div>
-              <p className="text-[11px] tracking-[0.15em] uppercase text-teal mb-3">Incluye</p>
+              <p className="text-[11px] tracking-[0.15em] uppercase text-gold mb-3">Incluye</p>
               <ul className="grid gap-2.5">
                 {includes.map((item) => (
                   <li key={item} className="flex gap-2.5 items-start leading-[1.55]">
-                    <span className="mt-0.5 shrink-0 text-teal">
+                    <span className="mt-0.5 shrink-0 text-gold">
                       <IconCheck />
                     </span>
                     {item}
@@ -106,11 +106,11 @@ export default function ProductModal({
               </ul>
             </div>
             <div>
-              <p className="text-[11px] tracking-[0.15em] uppercase text-secondary mb-3">No incluye</p>
-              <ul className="grid gap-2.5 text-secondary">
+              <p className="text-[11px] tracking-[0.15em] uppercase text-cream/50 mb-3">No incluye</p>
+              <ul className="grid gap-2.5 text-cream/50">
                 {excludes.map((item) => (
                   <li key={item} className="flex gap-2.5 items-start leading-[1.55]">
-                    <span className="mt-0.5 shrink-0 text-navy/40">
+                    <span className="mt-0.5 shrink-0 text-cream/30">
                       <IconCross />
                     </span>
                     {item}
@@ -121,13 +121,13 @@ export default function ProductModal({
           </div>
 
           <div>
-            <p className="text-[11px] tracking-[0.15em] uppercase text-teal mb-2">Por qué existe esta opción</p>
+            <p className="text-[11px] tracking-[0.15em] uppercase text-gold mb-2">Por qué existe esta opción</p>
             <p className="leading-[1.65]">{why}</p>
           </div>
 
-          <div className="border-l-[3px] border-gold bg-navy/[0.04] rounded-r-[10px] p-4 px-5">
-            <p className="text-[10.5px] tracking-[0.15em] uppercase text-navy/60 mb-2">Aviso importante</p>
-            <p className="text-[13.5px] leading-[1.6] text-secondary">{disclaimer}</p>
+          <div className="border-l-[3px] border-gold bg-white/5 rounded-r-[10px] p-4 px-5">
+            <p className="text-[10.5px] tracking-[0.15em] uppercase text-cream/50 mb-2">Aviso importante</p>
+            <p className="text-[13.5px] leading-[1.6] text-cream/60">{disclaimer}</p>
           </div>
         </div>
 
@@ -135,7 +135,7 @@ export default function ProductModal({
           href={ctaLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex bg-navy text-cream px-6 py-3.5 rounded-full text-[14.5px] hover:bg-teal"
+          className="mt-8 inline-flex bg-gold text-navy px-6 py-3.5 rounded-full text-[14.5px] hover:bg-cream"
         >
           {ctaLabel}
         </a>

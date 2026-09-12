@@ -18,14 +18,14 @@ export default function Process() {
         {STEPS.map((s) => (
           <div
             key={s.n}
-            className={`pt-[22px] border-t-2 ${s.active ? "border-navy" : "border-navy/20"}`}
+            className={`pt-[22px] border-t-2 ${s.active ? "border-gold" : "border-white/20"}`}
           >
-            <span className="font-display text-sm text-gold tracking-[0.08em]">{s.n}</span>
-            <p className="mt-3.5 text-body leading-[1.7] text-base">{s.text}</p>
+            <span className="font-heroDisplay text-sm text-gold tracking-[0.08em]">{s.n}</span>
+            <p className="mt-3.5 text-cream/70 leading-[1.7] text-base">{s.text}</p>
           </div>
         ))}
       </div>
-      <p className="mt-[clamp(30px,4vw,48px)] font-display text-[clamp(18px,2vw,22px)] text-teal">
+      <p className="mt-[clamp(30px,4vw,48px)] font-heroDisplay text-[clamp(18px,2vw,22px)] text-gold">
         Sin venderte tecnología que no necesitás.
       </p>
     </Reveal>

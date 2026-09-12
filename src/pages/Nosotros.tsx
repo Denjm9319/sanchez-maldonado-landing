@@ -48,11 +48,11 @@ export default function NosotrosPage() {
   return (
     <>
       <Reveal className="max-w-[1180px] mx-auto px-6 pt-[132px] pb-[clamp(60px,8vw,110px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Quiénes somos</p>
+        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Quiénes somos</p>
         <h1 className="text-[clamp(32px,4.6vw,54px)] leading-[1.1] mb-[clamp(20px,3vw,28px)] max-w-[20em]">
           Detrás de DeXa.
         </h1>
-        <p className="font-display italic text-[clamp(18px,2vw,22px)] text-teal leading-[1.5] max-w-[36em] mb-[clamp(40px,5vw,64px)] [text-wrap:pretty]">
+        <p className="font-display italic text-[clamp(18px,2vw,22px)] text-gold leading-[1.5] max-w-[36em] mb-[clamp(40px,5vw,64px)] [text-wrap:pretty]">
           No implementamos tecnología porque sí. Primero entendemos dónde está la fricción del negocio
           y después construimos la solución más simple que pueda generar impacto real.
         </p>
@@ -60,17 +60,17 @@ export default function NosotrosPage() {
           {TEAM.map((p) => (
             <div
               key={p.name}
-              className="bg-white border border-navy/[0.09] rounded-[20px] p-[30px] px-7 flex items-center gap-5"
+              className="bg-white/5 border border-white/15 rounded-[20px] p-[30px] px-7 flex items-center gap-5"
             >
               <span
                 aria-hidden="true"
-                className="shrink-0 w-14 h-14 rounded-full bg-navy text-cream font-display text-lg flex items-center justify-center"
+                className="shrink-0 w-14 h-14 rounded-full bg-gold text-navy font-heroDisplay text-lg flex items-center justify-center"
               >
                 {initials(p.name)}
               </span>
               <div>
                 <h3 className="text-xl">{p.name}</h3>
-                <p className="text-secondary text-[14px] leading-[1.5] mt-1">{p.role}</p>
+                <p className="text-cream/60 text-[14px] leading-[1.5] mt-1">{p.role}</p>
               </div>
             </div>
           ))}
@@ -79,24 +79,24 @@ export default function NosotrosPage() {
 
       <Process />
 
-      <section className="bg-creamDeep border-t border-b border-navy/[0.08]">
+      <section className="bg-white/[0.03] border-t border-b border-white/10">
         <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(64px,8vw,110px)]">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-teal mb-5">Cómo pensamos el trabajo</p>
+          <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Cómo pensamos el trabajo</p>
           <h2 className="text-[clamp(26px,3.4vw,40px)] leading-[1.15] mb-[clamp(38px,5vw,60px)] max-w-[22em]">
             Cuatro ideas que guían cada proyecto que aceptamos.
           </h2>
-          <div className="grid gap-px bg-navy/10 [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
+          <div className="grid gap-px bg-white/10 [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
             {PRINCIPLES.map((pr) => (
-              <div key={pr.title} className="bg-creamDeep p-7 px-5">
+              <div key={pr.title} className="bg-white/[0.03] p-7 px-5">
                 <h3 className="text-[18px] leading-[1.35] mb-2.5">{pr.title}</h3>
-                <p className="text-sm text-secondary leading-[1.6]">{pr.text}</p>
+                <p className="text-sm text-cream/60 leading-[1.6]">{pr.text}</p>
               </div>
             ))}
           </div>
         </Reveal>
       </section>
 
-      <section className="bg-navy text-cream">
+      <section className="bg-white/[0.03] border-t border-white/10 text-cream">
         <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(64px,8vw,110px)]">
           <h2 className="text-[clamp(26px,3.4vw,40px)] leading-[1.2] max-w-[24em] mb-6 [text-wrap:pretty]">
             Construimos esto en público, proyecto por proyecto.
