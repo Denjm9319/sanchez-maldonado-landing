@@ -146,7 +146,7 @@ export default function BlogPostPage() {
             <h2 className="text-[clamp(24px,3vw,32px)] leading-[1.25] mb-5 max-w-[20em] mx-auto [text-wrap:pretty]">
               ¿Querés detectar qué parte de la atención de tu negocio podría automatizarse?
             </h2>
-            <p className="text-cream/78 text-[15.5px] leading-[1.8] max-w-[38em] mx-auto mb-9">
+            <p className="text-cream/80 text-[15.5px] leading-[1.8] max-w-[38em] mx-auto mb-9">
               Analizamos tu proceso actual y te decimos con honestidad qué conviene automatizar, qué debería
               seguir en manos del equipo, y cuál sería el punto de partida más razonable.
             </p>

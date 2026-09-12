@@ -101,7 +101,7 @@ export default function NosotrosPage() {
           <h2 className="text-[clamp(26px,3.4vw,40px)] leading-[1.2] max-w-[24em] mb-6 [text-wrap:pretty]">
             Construimos esto en público, proyecto por proyecto.
           </h2>
-          <p className="text-cream/78 text-[16.5px] leading-[1.8] max-w-[42em] mb-10">
+          <p className="text-cream/80 text-[16.5px] leading-[1.8] max-w-[42em] mb-10">
             Cada sistema que ves en Proyectos es real: lo armamos para nuestro propio negocio o para
             conocidos que confiaron en nosotros. Preferimos mostrar el trabajo antes que prometerlo.
           </p>

@@ -30,7 +30,7 @@ export default function Navbar() {
       <header className="fixed top-3.5 inset-x-0 z-[60] flex justify-center px-3.5 pointer-events-none">
         <nav
           aria-label="Principal"
-          className="pointer-events-auto w-full max-w-[1180px] bg-white/72 backdrop-blur-2xl border border-navy/10 rounded-full shadow-[0_8px_30px_rgba(20,43,61,0.08)] py-2.5 pl-5 pr-3 flex items-center gap-4"
+          className="pointer-events-auto w-full max-w-[1180px] bg-white/90 backdrop-blur-2xl border border-navy/10 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.25)] py-2.5 pl-5 pr-3 flex items-center gap-4"
         >
           <Link to="/#top" className="flex flex-col leading-[1.05] text-navy flex-none">
             <span className="font-display text-base tracking-tight">DeXa</span>
@@ -62,7 +62,7 @@ export default function Navbar() {
               aria-label="Abrir menú"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="w-[42px] h-[42px] border border-navy/12 bg-white rounded-full cursor-pointer flex items-center justify-center flex-none"
+              className="w-[42px] h-[42px] border border-navy/10 bg-white rounded-full cursor-pointer flex items-center justify-center flex-none"
             >
               <span className="block w-4 h-2.5 border-t-[1.5px] border-b-[1.5px] border-navy" />
             </button>
@@ -71,12 +71,12 @@ export default function Navbar() {
       </header>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-[55] bg-cream/97 backdrop-blur-md flex flex-col justify-center gap-1.5 p-8">
+        <div className="fixed inset-0 z-[55] bg-cream/95 backdrop-blur-md flex flex-col justify-center gap-1.5 p-8">
           <button
             type="button"
             aria-label="Cerrar menú"
             onClick={() => setMenuOpen(false)}
-            className="absolute top-6 right-6 w-11 h-11 rounded-full border border-navy/12 bg-white cursor-pointer text-xl leading-none"
+            className="absolute top-6 right-6 w-11 h-11 rounded-full border border-navy/10 bg-white cursor-pointer text-xl leading-none"
           >
             ×
           </button>

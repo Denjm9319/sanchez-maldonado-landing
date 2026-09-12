@@ -20,7 +20,7 @@ export default function Sofia() {
           <h2 className="font-heroDisplay text-[clamp(32px,4.6vw,56px)] leading-[1.08] text-cream mb-[26px] [text-wrap:pretty]">
             Tu vendedor. Tu recepcionista. El empleado que nunca duerme.
           </h2>
-          <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/78 max-w-[34em] mb-[34px]">
+          <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/80 max-w-[34em] mb-[34px]">
             Sofia es un agente de IA especializado en clínicas dentales y estéticas que atiende por
             WhatsApp y por teléfono. Sostiene varias llamadas a la vez, puede llamar ella misma a tus
             pacientes, y se integra al CRM que ya uses — o armamos uno si todavía no tenés. También

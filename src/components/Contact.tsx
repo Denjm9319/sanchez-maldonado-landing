@@ -8,7 +8,7 @@ export default function Contact() {
         <h2 className="font-heroDisplay text-[clamp(32px,4.6vw,54px)] leading-[1.08] text-cream mb-6 [text-wrap:pretty]">
           Contanos qué querés mejorar.
         </h2>
-        <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/78 max-w-[32em] mx-auto mb-10">
+        <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/80 max-w-[32em] mx-auto mb-10">
           Escribinos por WhatsApp y contanos sobre tu negocio. Sin formularios ni vueltas — te
           respondemos directamente y vemos qué tendría sentido implementar.
         </p>

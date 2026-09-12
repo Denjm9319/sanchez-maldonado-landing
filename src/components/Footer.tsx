@@ -8,8 +8,8 @@ export default function Footer() {
     <footer
       className={
         isHome
-          ? "relative bg-black/30 backdrop-blur-[2px] text-cream/72"
-          : "bg-[#0a0a0a] text-cream/72"
+          ? "relative bg-black/30 backdrop-blur-[2px] text-cream/70"
+          : "bg-[#0a0a0a] text-cream/70"
       }
     >
       <div className="max-w-[1180px] mx-auto px-6 pt-[clamp(50px,7vw,84px)] pb-[clamp(30px,4vw,44px)] grid gap-[clamp(28px,4vw,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
