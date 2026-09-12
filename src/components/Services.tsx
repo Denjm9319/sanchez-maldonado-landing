@@ -89,14 +89,14 @@ export default function Services() {
         <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] max-w-[20em] mb-[clamp(38px,5vw,64px)] [text-wrap:pretty]">
           Un sistema, no una lista de servicios sueltos.
         </h2>
-        <div className="grid gap-[clamp(18px,2.4vw,26px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
+        <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:gap-[clamp(18px,2.4vw,26px)] sm:overflow-visible sm:[grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {SERVICES.map((s) => (
             <button
               key={s.id}
               type="button"
               onClick={() => setOpenId(s.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
             >
               <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img

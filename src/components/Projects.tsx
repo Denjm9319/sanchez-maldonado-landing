@@ -143,14 +143,14 @@ export default function Projects() {
           nosotros, más demos funcionales que probamos por rubro. Todo construido desde código y ya
           en producción — podés visitarlos ahora mismo.
         </p>
-        <div className="grid gap-[clamp(18px,2.4vw,26px)] justify-center [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
+        <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:gap-[clamp(18px,2.4vw,26px)] sm:justify-center sm:overflow-visible sm:[grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
           {REAL_PROJECTS.map((r) => (
             <button
               key={r.id}
               type="button"
               onClick={() => setOpenRealId(r.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
             >
               <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
@@ -174,7 +174,7 @@ export default function Projects() {
               type="button"
               onClick={() => setOpenConceptId(c.id)}
               aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
             >
               <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
