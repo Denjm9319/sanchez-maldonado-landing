@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import ScrollManager from "./components/ScrollManager";
+import AmbientBackground from "./components/AmbientBackground";
 import Home from "./pages/Home";
 import Proyectos from "./pages/Proyectos";
 import Nosotros from "./pages/Nosotros";
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <>
       <ScrollManager />
+      <AmbientBackground />
       <Navbar />
       <main id="top">
         <Routes>

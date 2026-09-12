@@ -30,19 +30,20 @@ export default function Navbar() {
       <header className="fixed top-3.5 inset-x-0 z-[60] flex justify-center px-3.5 pointer-events-none">
         <nav
           aria-label="Principal"
-          className="pointer-events-auto w-full max-w-[1180px] bg-white/90 backdrop-blur-2xl border border-navy/10 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.25)] py-2.5 pl-5 pr-3 flex items-center gap-4"
+          style={{ backgroundColor: "rgba(10,10,10,0.55)" }}
+          className="pointer-events-auto w-full max-w-[1180px] backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.35)] py-2.5 pl-5 pr-3 flex items-center gap-4"
         >
-          <Link to="/#top" className="flex flex-col leading-[1.05] text-navy flex-none">
-            <span className="font-display text-base tracking-tight">DeXa</span>
-            <span className="text-[9.5px] tracking-[0.22em] uppercase text-secondary mt-0.5">
+          <Link to="/#top" className="flex flex-col leading-[1.05] text-cream flex-none">
+            <span className="font-heroDisplay text-base tracking-tight">DeXa</span>
+            <span className="text-[9.5px] tracking-[0.22em] uppercase text-cream/60 mt-0.5">
               AI Solutions
             </span>
           </Link>
           <div className="flex-1" />
           {!narrow && (
-            <div className="flex gap-5 items-center text-[13.5px] text-navy">
+            <div className="flex gap-5 items-center text-[13.5px] text-cream">
               {NAV_LINKS.map((link) => (
-                <Link key={link.href} to={link.href} className="text-navy hover:text-teal">
+                <Link key={link.href} to={link.href} className="text-cream hover:text-gold">
                   {link.label}
                 </Link>
               ))}
@@ -52,7 +53,7 @@ export default function Navbar() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-none bg-navy text-cream px-5 py-2.5 rounded-full text-[13.5px] font-medium hover:bg-teal"
+            className="flex-none bg-gold text-navy px-5 py-2.5 rounded-full text-[13.5px] font-medium hover:bg-cream"
           >
             Hablemos
           </a>
@@ -62,21 +63,24 @@ export default function Navbar() {
               aria-label="Abrir menú"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="w-[42px] h-[42px] border border-navy/10 bg-white rounded-full cursor-pointer flex items-center justify-center flex-none"
+              className="w-[42px] h-[42px] border border-white/15 bg-white/10 rounded-full cursor-pointer flex items-center justify-center flex-none"
             >
-              <span className="block w-4 h-2.5 border-t-[1.5px] border-b-[1.5px] border-navy" />
+              <span className="block w-4 h-2.5 border-t-[1.5px] border-b-[1.5px] border-cream" />
             </button>
           )}
         </nav>
       </header>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-[55] bg-cream/95 backdrop-blur-md flex flex-col justify-center gap-1.5 p-8">
+        <div
+          style={{ backgroundColor: "rgba(10,10,10,0.95)" }}
+          className="fixed inset-0 z-[55] backdrop-blur-md flex flex-col justify-center gap-1.5 p-8"
+        >
           <button
             type="button"
             aria-label="Cerrar menú"
             onClick={() => setMenuOpen(false)}
-            className="absolute top-6 right-6 w-11 h-11 rounded-full border border-navy/10 bg-white cursor-pointer text-xl leading-none"
+            className="absolute top-6 right-6 w-11 h-11 rounded-full border border-white/15 bg-white/10 text-cream cursor-pointer text-xl leading-none"
           >
             ×
           </button>
@@ -85,7 +89,7 @@ export default function Navbar() {
               key={link.href}
               to={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-display text-3xl text-navy py-2.5"
+              className="font-heroDisplay text-3xl text-cream py-2.5 hover:text-gold"
             >
               {link.label}
             </Link>
@@ -94,7 +98,7 @@ export default function Navbar() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 bg-navy text-cream px-6 py-4 rounded-full text-center text-[15px]"
+            className="mt-4 bg-gold text-navy px-6 py-4 rounded-full text-center text-[15px] font-medium"
           >
             Hablemos por WhatsApp
           </a>
