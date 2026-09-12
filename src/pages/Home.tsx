@@ -18,10 +18,10 @@ export default function Home() {
   });
 
   return (
-    <div className="relative bg-[#0a0a0a]">
+    <div className="relative">
       <div className="fixed inset-0 -z-10" aria-hidden="true">
         <ScrollVideo src={heroVideo} />
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
       <Hero />
       <Sofia />

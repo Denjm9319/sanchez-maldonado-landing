@@ -170,10 +170,13 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
           preload="auto"
           poster={poster}
           src={src}
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
       )}
-      <canvas ref={canvasRef} className={`w-full h-full block ${framesReady ? "" : "invisible"}`} />
+      <canvas
+        ref={canvasRef}
+        className={`absolute inset-0 w-full h-full block ${framesReady ? "" : "invisible"}`}
+      />
     </div>
   );
 }

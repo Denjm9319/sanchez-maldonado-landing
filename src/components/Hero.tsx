@@ -24,7 +24,7 @@ export default function Hero() {
     <section aria-label="Inicio" className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent"
       />
       <div
         ref={contentRef}

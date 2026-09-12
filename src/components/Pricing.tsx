@@ -3,7 +3,7 @@ import { PRICING, WHATSAPP_LINK } from "../config/site";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative bg-black/35 backdrop-blur-[2px] border-t border-white/10">
+    <section id="pricing" className="relative bg-black/20 backdrop-blur-[2px] border-t border-white/10">
       <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)]">
         <h2 className="font-heroDisplay text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-[clamp(38px,5vw,60px)] max-w-[22em] text-white">
           Cada proyecto se arma según lo que el negocio necesita.

@@ -13,7 +13,7 @@ const BULLETS = [
 
 export default function Sofia() {
   return (
-    <section id="sofia" className="relative bg-black/35 backdrop-blur-[2px] text-cream">
+    <section id="sofia" className="relative bg-black/20 backdrop-blur-[2px] text-cream">
       <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)] grid gap-[clamp(34px,6vw,80px)] items-start [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
         <div>
           <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-[22px]">Conocé a Sofia</p>
