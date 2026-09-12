@@ -29,10 +29,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-navy text-cream">
+    <section id="contacto" className="relative bg-black/40 backdrop-blur-[2px] text-cream">
       <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)] grid gap-[clamp(36px,6vw,76px)] items-start [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
         <div>
-          <h2 className="text-[clamp(32px,4.6vw,54px)] leading-[1.08] text-cream mb-6 [text-wrap:pretty]">
+          <h2 className="font-heroDisplay text-[clamp(32px,4.6vw,54px)] leading-[1.08] text-cream mb-6 [text-wrap:pretty]">
             Contanos qué querés mejorar.
           </h2>
           <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/78 max-w-[32em] mb-9">

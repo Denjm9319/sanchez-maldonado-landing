@@ -1,5 +1,4 @@
 import Reveal from "./Reveal";
-import SofiaDashboard from "./SofiaDashboard";
 import { SOFIA_LINK } from "../config/site";
 
 const BULLETS = [
@@ -14,11 +13,11 @@ const BULLETS = [
 
 export default function Sofia() {
   return (
-    <section id="sofia" className="bg-navy text-cream">
-      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(50px,6vw,80px)] grid gap-[clamp(34px,6vw,80px)] items-start [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
+    <section id="sofia" className="relative bg-black/35 backdrop-blur-[2px] text-cream">
+      <Reveal className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)] grid gap-[clamp(34px,6vw,80px)] items-start [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
         <div>
           <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-[22px]">Conocé a Sofia</p>
-          <h2 className="text-[clamp(32px,4.6vw,56px)] leading-[1.08] text-cream mb-[26px] [text-wrap:pretty]">
+          <h2 className="font-heroDisplay text-[clamp(32px,4.6vw,56px)] leading-[1.08] text-cream mb-[26px] [text-wrap:pretty]">
             Tu recepcionista virtual que nunca duerme.
           </h2>
           <p className="text-[clamp(16px,1.4vw,18px)] leading-[1.75] text-cream/78 max-w-[34em] mb-[34px]">
@@ -41,10 +40,6 @@ export default function Sofia() {
             </li>
           ))}
         </ul>
-      </Reveal>
-
-      <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(78px,11vw,150px)]">
-        <SofiaDashboard />
       </Reveal>
     </section>
   );

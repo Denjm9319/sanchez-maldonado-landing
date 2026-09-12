@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { useSEO } from "../hooks/useSEO";
 import Hero from "../components/Hero";
-import Problem from "../components/Problem";
-import Pillars from "../components/Pillars";
 import Sofia from "../components/Sofia";
-import OtherBusinesses from "../components/OtherBusinesses";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Reveal from "../components/Reveal";
+import ScrollVideo from "../components/ScrollVideo";
+import heroVideo from "../assets/video/hero-aether.mp4";
 
 export default function Home() {
   useSEO({
@@ -19,26 +18,33 @@ export default function Home() {
   });
 
   return (
-    <>
+    <div className="relative bg-[#0a0a0a]">
+      <div className="fixed inset-0 -z-10" aria-hidden="true">
+        <ScrollVideo src={heroVideo} />
+        <div className="absolute inset-0 bg-black/55" />
+      </div>
       <Hero />
-      <Problem />
-      <Pillars />
       <Sofia />
-      <OtherBusinesses />
       <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(50px,6vw,76px)] flex flex-wrap gap-x-10 gap-y-3">
-        <Link to="/proyectos#servicios" className="font-display text-[19px] text-teal hover:text-navy">
+        <Link
+          to="/proyectos#servicios"
+          className="font-heroDisplay text-[19px] text-white/70 hover:text-gold"
+        >
           Ver servicios →
         </Link>
-        <Link to="/proyectos#proyectos" className="font-display text-[19px] text-teal hover:text-navy">
+        <Link
+          to="/proyectos#proyectos"
+          className="font-heroDisplay text-[19px] text-white/70 hover:text-gold"
+        >
           Ver proyectos y demos →
         </Link>
-        <Link to="/nosotros" className="font-display text-[19px] text-teal hover:text-navy">
+        <Link to="/nosotros" className="font-heroDisplay text-[19px] text-white/70 hover:text-gold">
           Conocé al equipo →
         </Link>
       </Reveal>
       <Pricing />
       <FAQ />
       <Contact />
-    </>
+    </div>
   );
 }

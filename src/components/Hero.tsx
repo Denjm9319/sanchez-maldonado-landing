@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
-import heroVideo from "../assets/video/hero-aether.mp4";
 import Reveal from "./Reveal";
-import ScrollVideo from "./ScrollVideo";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 
 export default function Hero() {
@@ -23,14 +21,10 @@ export default function Hero() {
   }, [reduce]);
 
   return (
-    <section
-      aria-label="Inicio"
-      className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#0a0a0a]"
-    >
-      <ScrollVideo src={heroVideo} />
+    <section aria-label="Inicio" className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10"
+        className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"
       />
       <div
         ref={contentRef}
@@ -67,7 +61,7 @@ export default function Hero() {
             Contanos sobre tu negocio
           </a>
           <a
-            href="#pilares"
+            href="#sofia"
             className="border border-white/30 text-white px-[26px] py-4 rounded-full text-[15px] bg-white/5 hover:border-white hover:bg-white/10"
           >
             Ver qué hacemos ↓

@@ -4,7 +4,7 @@ import { useReducedMotion } from "../hooks/useReducedMotion";
 interface ScrollVideoProps {
   src: string;
   poster?: string;
-  /** Pixels of scroll over which the video scrubs from first to last frame. */
+  /** Pixels of scroll over which the video scrubs from first to last frame. Defaults to the full page's scrollable height. */
   scrubRange?: number;
 }
 
@@ -129,7 +129,7 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
     window.addEventListener("resize", resize);
 
     const onScroll = () => {
-      const range = scrubRange ?? window.innerHeight * 1.05;
+      const range = scrubRange ?? Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
       targetProgress = Math.min(1, Math.max(0, window.scrollY / range));
     };
     onScroll();
