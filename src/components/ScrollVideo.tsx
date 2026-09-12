@@ -3,14 +3,14 @@ import { useReducedMotion } from "../hooks/useReducedMotion";
 
 interface ScrollVideoProps {
   src: string;
-  poster: string;
+  poster?: string;
   /** Pixels of scroll over which the video scrubs from first to last frame. */
   scrubRange?: number;
 }
 
-const MAX_FRAMES = 64;
-const MIN_FRAMES = 24;
-const EXTRACTION_FPS = 6;
+const MAX_FRAMES = 40;
+const MIN_FRAMES = 20;
+const EXTRACTION_FPS = 3;
 const MAX_FRAME_WIDTH = 960;
 
 /**

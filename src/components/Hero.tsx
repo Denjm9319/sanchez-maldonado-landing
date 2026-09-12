@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
-import heroVideo from "../assets/video/hero-liquid.mp4";
-import heroPoster from "../assets/video/hero-poster.jpg";
+import heroVideo from "../assets/video/hero-aether.mp4";
 import Reveal from "./Reveal";
 import ScrollVideo from "./ScrollVideo";
 import { useReducedMotion } from "../hooks/useReducedMotion";
@@ -28,7 +27,7 @@ export default function Hero() {
       aria-label="Inicio"
       className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#0a0a0a]"
     >
-      <ScrollVideo src={heroVideo} poster={heroPoster} />
+      <ScrollVideo src={heroVideo} />
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10"
