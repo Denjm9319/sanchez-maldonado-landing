@@ -74,12 +74,20 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
         const frames: ImageBitmap[] = [];
         for (let i = 0; i < frameCount; i++) {
           if (cancelled) break;
-          const t = (i / (frameCount - 1)) * duration;
+          const t = Math.min(i / (frameCount - 1), 0.999) * duration;
           await new Promise<void>((resolve) => {
-            const onSeeked = () => {
+            let done = false;
+            const finish = () => {
+              if (done) return;
+              done = true;
               source.removeEventListener("seeked", onSeeked);
+              clearTimeout(timeout);
               resolve();
             };
+            const onSeeked = () => finish();
+            // Some browsers never fire "seeked" for a target very close to the
+            // last frame — don't let one bad seek hang extraction forever.
+            const timeout = setTimeout(finish, 1500);
             source.addEventListener("seeked", onSeeked);
             source.currentTime = t;
           });
@@ -95,8 +103,9 @@ export default function ScrollVideo({ src, poster, scrubRange }: ScrollVideoProp
         }
         framesRef.current = frames;
         setFramesReady(true);
-      } catch {
+      } catch (err) {
         // Extraction failed or was cancelled — the <video> fallback stays visible permanently.
+        if (!cancelled) console.warn("ScrollVideo: frame extraction failed, falling back to plain video", err);
       }
     }
 

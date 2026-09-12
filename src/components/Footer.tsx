@@ -3,7 +3,7 @@ import { CONTACT_EMAIL, SOCIAL_LINKS, WHATSAPP_LINK } from "../config/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-navyDeep text-cream/72">
+    <footer className="bg-[#0a0a0a] text-cream/72">
       <div className="max-w-[1180px] mx-auto px-6 pt-[clamp(50px,7vw,84px)] pb-[clamp(30px,4vw,44px)] grid gap-[clamp(28px,4vw,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
         <div>
           <p className="font-display text-xl text-cream">DeXa</p>

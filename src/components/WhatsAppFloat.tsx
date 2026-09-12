@@ -30,7 +30,10 @@ export default function WhatsAppFloat() {
   };
 
   return (
-    <div className="fixed right-5 bottom-5 z-[70] flex items-center gap-2.5">
+    <div
+      className="fixed right-5 z-[70] flex items-center gap-2.5"
+      style={{ bottom: "calc(1.5rem + env(safe-area-inset-bottom))" }}
+    >
       {tip && (
         <span className="bg-white text-navy text-[13.5px] px-3.5 py-2.5 rounded-full shadow-[0_6px_20px_rgba(20,43,61,0.18)] animate-tipIn whitespace-nowrap">
           ¿Hablamos?
