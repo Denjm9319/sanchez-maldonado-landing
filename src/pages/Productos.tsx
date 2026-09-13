@@ -40,14 +40,14 @@ const PRODUCTS = [
     ctaMessage: "Hola, quiero comprar el instalador de Sofia (agente de voz con IA) por USD 99.",
   },
   {
-    id: "prompts-alta-conversion",
+    id: "comunidad-web-motion",
     n: "02",
-    title: "+150 Prompts de Alta Conversión",
-    teaser: "Specs completas de páginas con efectos 3D y motion, listas para pegar en tu IA.",
-    price: "USD 29 · pago único",
+    title: "Comunidad Web Motion",
+    teaser: "Tu atajo para crear webs que parecen de USD 1.000+, usando IA.",
+    price: "USD 39 · acceso de por vida",
     image: promptsPackImg,
     tagline:
-      "Más de 150 prompts que no son ideas sueltas: cada uno es la especificación completa de una página o sección (fuentes, paleta de colores, animaciones scroll-driven, preloaders, hover effects, responsive) en React + TypeScript + Tailwind CSS + Vite, lista para pegar en tu herramienta de IA y obtener un resultado profesional de una sola vez.",
+      "Más de 150 prompts para crear sitios premium con motion, efectos y estructura de alto nivel — cada uno la especificación completa de una página o sección (fuentes, paleta, animaciones scroll-driven, preloaders, hover effects, responsive), lista para pegar en tu herramienta de IA. Pero no comprás solo 150 prompts: entrás a una biblioteca que sigue creciendo, con comunidad y soporte incluido.",
     audience: [
       "Diseñadores y desarrolladores que arman landings o sitios con IA y quieren que se vean premium, no genéricos.",
       "Freelancers y agencias que necesitan entregar más rápido sin perder el nivel de detalle ni el efecto 'wow' visual.",
@@ -56,20 +56,20 @@ const PRODUCTS = [
     ],
     includes: [
       "Más de 150 prompts, cada uno para un estilo o rubro distinto: real estate de lujo, SaaS, e-commerce, web3, fintech, dashboards, portfolios, agencias y más.",
-      "Cada prompt es una especificación completa (no un efecto suelto): tipografías, paleta exacta, animaciones con sus tiempos, secciones y comportamiento responsive ya definidos.",
-      "Stack consistente en los 150+: React + TypeScript + Tailwind CSS + Vite, listo para correr en Claude Code, Cursor o cualquier herramienta de generación de código con IA.",
+      "Comunidad en WhatsApp con soporte constante para resolver dudas mientras armás tu sitio.",
+      "Manual de mejores prácticas para sacarle el máximo a cada prompt.",
+      "Actualizaciones futuras incluidas: la biblioteca sigue creciendo y accedés a todo lo nuevo sin pagar de nuevo.",
     ],
     excludes: [
-      "Soporte técnico ni corrección de tus proyectos.",
       "El código ya armado — son prompts, vos los corrés en tu propia herramienta de IA.",
       "Garantía de que un efecto se vea idéntico en toda herramienta (cada una interpreta distinto).",
-      "Diseño personalizado para tu marca.",
+      "Diseño personalizado para tu marca — la comunidad te orienta, no arma tu sitio por vos.",
     ],
-    why: "Armar una página con animaciones scroll-driven, preloaders y efectos 3D desde cero lleva horas de prueba y error hasta que algo se vea bien y no roto. Estos son los mismos prompts que usamos nosotros para resolver eso — ya probados, con cada detalle definido, para que vos no tengas que iterar veinte veces.",
+    why: "Armar una página con animaciones scroll-driven, preloaders y efectos 3D desde cero lleva horas de prueba y error hasta que algo se vea bien y no roto. Esto no es un pack cerrado que se termina en el momento de la compra: es una comunidad y una biblioteca que sigue sumando prompts nuevos, para que siempre tengas con qué resolver el próximo estilo que te pidan.",
     disclaimer:
-      "Es un producto digital de autoinstalación: no incluye soporte ni personalización. El resultado final depende de la herramienta de IA que uses y de cómo adaptes cada prompt a tu proyecto. Al ser un producto digital, no se aceptan devoluciones una vez entregado el acceso.",
-    ctaMessage: "Hola, quiero comprar el pack de +150 prompts de alta conversión por USD 29.",
-    ctaLabel: "Quiero los prompts →",
+      "Es un producto digital de acceso a biblioteca y comunidad. El resultado final depende de la herramienta de IA que uses y de cómo adaptes cada prompt a tu proyecto. Al ser un producto digital, no se aceptan devoluciones una vez entregado el acceso.",
+    ctaMessage: "Hola, quiero sumarme a la Comunidad Web Motion (acceso de por vida) por USD 39.",
+    ctaLabel: "Quiero mi acceso →",
   },
 ];
 
