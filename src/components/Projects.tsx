@@ -7,6 +7,7 @@ import securifyShot from "../assets/projects/securify-shot.png";
 import dental2Shot from "../assets/projects/dental2-shot.png";
 import certboostShot from "../assets/projects/certboost-shot.png";
 import blindGlamourShot from "../assets/projects/blind-glamour-shot.webp";
+import orvenShot from "../assets/projects/orven-shot.webp";
 import sentidoDiarioShot from "../assets/projects/sentido-diario-shot.webp";
 import draTaniaShot from "../assets/projects/dra-tania-shot.webp";
 import arcariSilvinaShot from "../assets/projects/arcari-silvina-shot.webp";
@@ -135,6 +136,18 @@ const CONCEPTS = [
       "Landing editorial para una marca de anteojos, con video de fondo que se controla con el scroll (se pausa y avanza cuadro a cuadro según bajás la página) y una card de producto que crece a medida que scrolleás.",
     capabilities: ["Web & Conversion", "Scroll-video a medida", "Ficha de producto"],
     url: "https://blind-by-glamour.vercel.app/",
+  },
+  {
+    id: "orven",
+    title: "Orven",
+    thumb: orvenShot,
+    alt: "Concept de landing para marca de anteojos de rendimiento",
+    rubro: "Deportivo / Eyewear de performance",
+    objetivo: "Comunicar especificaciones técnicas premium y generar deseo de compra.",
+    description:
+      "Landing con dos videos de fondo que se controlan con el scroll (uno se apaga con un cruce suave mientras el otro aparece) y paneles de especificaciones técnicas que entran y salen de pantalla a medida que scrolleás, con textos que se revelan palabra por palabra.",
+    capabilities: ["Web & Conversion", "Doble scroll-video", "Paneles de specs"],
+    url: "https://orven-rho.vercel.app/",
   },
 ];
 
