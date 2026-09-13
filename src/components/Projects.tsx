@@ -6,6 +6,7 @@ import auraShot from "../assets/projects/aura-shot.png";
 import securifyShot from "../assets/projects/securify-shot.png";
 import dental2Shot from "../assets/projects/dental2-shot.png";
 import certboostShot from "../assets/projects/certboost-shot.png";
+import blindGlamourShot from "../assets/projects/blind-glamour-shot.webp";
 import sentidoDiarioShot from "../assets/projects/sentido-diario-shot.webp";
 import draTaniaShot from "../assets/projects/dra-tania-shot.webp";
 import arcariSilvinaShot from "../assets/projects/arcari-silvina-shot.webp";
@@ -122,6 +123,18 @@ const CONCEPTS = [
       "Landing de producto para certificar habilidades de diseño, con propuesta de valor clara, evaluación por expertos y un sello de verificación pública.",
     capabilities: ["Web & Conversion", "Prueba social", "CTA de conversión"],
     url: "https://certificate-booster.lovable.app/",
+  },
+  {
+    id: "blind-glamour",
+    title: "Blind by Glamour",
+    thumb: blindGlamourShot,
+    alt: "Concept de landing para marca de anteojos de alta gama",
+    rubro: "Moda / Eyewear de lujo",
+    objetivo: "Generar deseo por la marca y llevar a la compra de un producto de alto valor.",
+    description:
+      "Landing editorial para una marca de anteojos, con video de fondo que se controla con el scroll (se pausa y avanza cuadro a cuadro según bajás la página) y una card de producto que crece a medida que scrolleás.",
+    capabilities: ["Web & Conversion", "Scroll-video a medida", "Ficha de producto"],
+    url: "https://blind-by-glamour.vercel.app/",
   },
 ];
 
