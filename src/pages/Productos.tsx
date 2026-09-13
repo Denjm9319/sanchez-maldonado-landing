@@ -5,6 +5,8 @@ import { waLink } from "../config/site";
 import { useSEO } from "../hooks/useSEO";
 import sofiaInstallerImg from "../assets/services/sofia-installer.webp";
 import promptsPackImg from "../assets/products/prompts-alta-conversion.webp";
+import comunidadDemoVideo from "../assets/products/comunidad-web-motion-demo.mp4";
+import comunidadDemoPoster from "../assets/products/comunidad-web-motion-poster.webp";
 
 const PRODUCTS = [
   {
@@ -46,6 +48,8 @@ const PRODUCTS = [
     teaser: "Tu atajo para crear webs que parecen de USD 1.000+, usando IA.",
     price: "USD 39 · acceso de por vida",
     image: promptsPackImg,
+    video: comunidadDemoVideo,
+    poster: comunidadDemoPoster,
     tagline:
       "Más de 150 prompts para crear sitios premium con motion, efectos y estructura de alto nivel — cada uno la especificación completa de una página o sección (fuentes, paleta, animaciones scroll-driven, preloaders, hover effects, responsive), lista para pegar en tu herramienta de IA. Pero no comprás solo 150 prompts: entrás a una biblioteca que sigue creciendo, con comunidad y soporte incluido.",
     audience: [
@@ -132,6 +136,8 @@ export default function ProductosPage() {
           title={active.title}
           tagline={active.tagline}
           price={active.price}
+          video={active.video}
+          poster={active.poster}
           audience={active.audience}
           includes={active.includes}
           excludes={active.excludes}

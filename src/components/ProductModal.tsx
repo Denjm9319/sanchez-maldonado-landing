@@ -19,6 +19,8 @@ interface ProductModalProps {
   title: string;
   tagline: string;
   price: string;
+  video?: string;
+  poster?: string;
   audience: string[];
   includes: string[];
   excludes: string[];
@@ -33,6 +35,8 @@ export default function ProductModal({
   title,
   tagline,
   price,
+  video,
+  poster,
   audience,
   includes,
   excludes,
@@ -73,6 +77,18 @@ export default function ProductModal({
 
         <span className="text-[10.5px] tracking-[0.2em] uppercase text-gold">Producto digital</span>
         <h3 className="text-[26px] mt-2 mb-2 pr-10 text-cream">{title}</h3>
+        {video && (
+          <video
+            src={video}
+            poster={poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            className="w-full rounded-[12px] border border-white/10 mb-5 bg-black"
+          />
+        )}
         <p className="text-[15px] text-cream/65 leading-[1.6] mb-5">{tagline}</p>
         <p className="font-heroDisplay text-[22px] text-gold mb-7">{price}</p>
 
