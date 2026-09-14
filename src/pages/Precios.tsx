@@ -106,14 +106,15 @@ function Beat({
   id,
   videoSrc,
   nextId,
-  loop = true,
+  segment,
   children,
 }: {
   id: string;
   videoSrc: string;
   nextId?: string;
-  /** false = play through once and rest on the last frame instead of looping. */
-  loop?: boolean;
+  /** Play only this [start, end] window of the video (seconds) and rest at
+   * `end` instead of looping the whole file. Omit to loop the whole file. */
+  segment?: [number, number];
   children: ReactNode;
 }) {
   const reduce = useReducedMotion();
@@ -129,28 +130,50 @@ function Beat({
     const section = sectionRef.current;
     const video = videoRef.current;
     if (!section || !video) return;
+
+    const onTimeUpdate = () => {
+      if (segment && video.currentTime >= segment[1]) {
+        video.pause();
+        video.currentTime = segment[1];
+      }
+    };
+    if (segment) video.addEventListener("timeupdate", onTimeUpdate);
+
+    const start = () => {
+      if (segment) video.currentTime = segment[0];
+      video.play().catch(() => {});
+    };
+
     const obs = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) video.play().catch(() => {});
-        else video.pause();
+        if (entry.isIntersecting) {
+          if (video.readyState >= 1) start();
+          else video.addEventListener("loadedmetadata", start, { once: true });
+        } else {
+          video.pause();
+        }
       },
       { threshold: 0.4 }
     );
     obs.observe(section);
-    return () => obs.disconnect();
-  }, [reduce]);
+    return () => {
+      obs.disconnect();
+      if (segment) video.removeEventListener("timeupdate", onTimeUpdate);
+    };
+  }, [reduce, segment]);
 
   return (
     <section
       ref={sectionRef}
       id={id}
-      className="relative h-full w-full shrink-0 snap-start scroll-mt-0 flex items-center justify-center overflow-hidden"
+      className="relative w-full snap-start scroll-mt-0 flex items-center justify-center overflow-hidden"
+      style={{ height: "var(--precios-vh)" }}
     >
       <video
         ref={videoRef}
         src={videoSrc}
         muted
-        loop={loop}
+        loop={!segment}
         playsInline
         preload="metadata"
         aria-hidden="true"
@@ -171,30 +194,33 @@ export default function Precios() {
     path: "/precios",
   });
 
-  const containerRef = useRef<HTMLDivElement>(null);
-
+  // Scroll-snap needs to apply to the page's own scroll — an earlier version
+  // wrapped the beats in their own `overflow-y:auto` box to get the same
+  // effect, but that gave the page two separate scrollbars (the page's own,
+  // plus that box's) at once, which looked broken. Scoping scroll-snap to
+  // `<html>` only while this page is mounted keeps a single, native
+  // scrollbar and cleans itself up on navigating away. Same reasoning as
+  // elsewhere on this page for the height: CSS vh/dvh units aren't reliable
+  // across mobile browsers/Tailwind's own class ordering, so each beat's
+  // height comes from a CSS var kept in sync with the real viewport size.
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    // Same reasoning as elsewhere on this page: CSS vh/dvh units are not
-    // reliable across mobile browsers/Tailwind's own class ordering, so the
-    // snap container's height is set directly from the real viewport size.
-    const resize = () => {
-      el.style.height = `${window.innerHeight}px`;
+    const html = document.documentElement;
+    const prevSnapType = html.style.scrollSnapType;
+    html.style.scrollSnapType = "y mandatory";
+    const setVh = () => html.style.setProperty("--precios-vh", `${window.innerHeight}px`);
+    setVh();
+    window.addEventListener("resize", setVh);
+    return () => {
+      html.style.scrollSnapType = prevSnapType;
+      html.style.removeProperty("--precios-vh");
+      window.removeEventListener("resize", setVh);
     };
-    resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full overflow-y-auto snap-y snap-mandatory bg-black"
-      style={{ scrollSnapType: "y mandatory" }}
-    >
-      {/* Beat 1: intro */}
-      <Beat id="precios-intro" videoSrc={bloomVideo1} nextId="precios-planes" loop={false}>
+    <div className="relative w-full bg-black">
+      {/* Beat 1: intro — plays the first half of the video, ends mid-motion */}
+      <Beat id="precios-intro" videoSrc={bloomVideo1} nextId="precios-planes" segment={[0, 3.5]}>
         <div className="max-w-[560px] mx-auto">
           <Reveal>
             <div className="bg-black/50 backdrop-blur-lg border border-white/15 rounded-[4px] p-8 sm:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.35)] text-center sm:text-left">
@@ -211,8 +237,8 @@ export default function Precios() {
         </div>
       </Beat>
 
-      {/* Beat 2: plans */}
-      <Beat id="precios-planes" videoSrc={bloomVideo1} nextId="precios-mission-0" loop={false}>
+      {/* Beat 2: plans — continues the same video from where the intro left off, through to the hand extending */}
+      <Beat id="precios-planes" videoSrc={bloomVideo1} nextId="precios-mission-0" segment={[3.5, 8]}>
         <Reveal className="w-full">
           <div className="flex sm:grid sm:grid-cols-3 sm:justify-items-center gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none px-6 sm:px-0 max-w-[940px] mx-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {PLANS.map((plan) => (
