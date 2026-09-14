@@ -22,7 +22,7 @@ export const SOCIAL_LINKS = {
 };
 
 export const PRICING = {
-  web: "Desde USD 1200",
+  web: "Desde USD 599",
   agents: "Desde USD 330/mes + implementación",
 };
 
