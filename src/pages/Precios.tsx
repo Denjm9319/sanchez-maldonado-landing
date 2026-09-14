@@ -106,11 +106,14 @@ function Beat({
   id,
   videoSrc,
   nextId,
+  loop = true,
   children,
 }: {
   id: string;
   videoSrc: string;
   nextId?: string;
+  /** false = play through once and rest on the last frame instead of looping. */
+  loop?: boolean;
   children: ReactNode;
 }) {
   const reduce = useReducedMotion();
@@ -147,7 +150,7 @@ function Beat({
         ref={videoRef}
         src={videoSrc}
         muted
-        loop
+        loop={loop}
         playsInline
         preload="metadata"
         aria-hidden="true"
@@ -191,7 +194,7 @@ export default function Precios() {
       style={{ scrollSnapType: "y mandatory" }}
     >
       {/* Beat 1: intro */}
-      <Beat id="precios-intro" videoSrc={bloomVideo1} nextId="precios-planes">
+      <Beat id="precios-intro" videoSrc={bloomVideo1} nextId="precios-planes" loop={false}>
         <div className="max-w-[560px] mx-auto">
           <Reveal>
             <div className="bg-black/50 backdrop-blur-lg border border-white/15 rounded-[4px] p-8 sm:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.35)] text-center sm:text-left">
@@ -209,7 +212,7 @@ export default function Precios() {
       </Beat>
 
       {/* Beat 2: plans */}
-      <Beat id="precios-planes" videoSrc={bloomVideo1} nextId="precios-mission-0">
+      <Beat id="precios-planes" videoSrc={bloomVideo1} nextId="precios-mission-0" loop={false}>
         <Reveal className="w-full">
           <div className="flex sm:grid sm:grid-cols-3 sm:justify-items-center gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none px-6 sm:px-0 max-w-[940px] mx-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {PLANS.map((plan) => (
