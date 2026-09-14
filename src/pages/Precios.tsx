@@ -1,9 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useSEO } from "../hooks/useSEO";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 import ScrollVideo from "../components/ScrollVideo";
 import { PRICING, WHATSAPP_LINK, waLink } from "../config/site";
-import heroVideo from "../assets/video/hero-aether.mp4";
+import bloomVideo1 from "../assets/video/precios-bloom-1.mp4";
+import bloomVideo2 from "../assets/video/precios-bloom-2.mp4";
+import bloomVideo3 from "../assets/video/precios-bloom-3.mp4";
+
+type VideoKey = "v1" | "v2" | "v3";
+const VIDEO_KEYS: VideoKey[] = ["v1", "v2", "v3"];
 
 const PLANS = [
   {
@@ -122,6 +127,10 @@ function missionWindow(p: number, inS: number, inE: number, holdE: number, outE:
   return { op, bl, y };
 }
 
+function getActiveVideoKey(p: number): VideoKey {
+  return p <= 0.333 ? "v1" : p <= 0.666 ? "v2" : "v3";
+}
+
 export default function Precios() {
   useSEO({
     title: "Precios",
@@ -138,21 +147,107 @@ export default function Precios() {
   const plansGroupRef = useRef<HTMLDivElement>(null);
   const missionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const [scrubRange, setScrubRange] = useState<number>();
 
-  useEffect(() => {
-    function update() {
-      if (containerRef.current) {
-        setScrubRange(Math.max(1, containerRef.current.offsetHeight - window.innerHeight));
-      }
-    }
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const videoRefs = useRef<Record<VideoKey, HTMLVideoElement | null>>({ v1: null, v2: null, v3: null });
+  const videoStateRef = useRef({
+    durations: { v1: 8, v2: 8, v3: 8 } as Record<VideoKey, number>,
+    seeking: { v1: false, v2: false, v3: false } as Record<VideoKey, boolean>,
+    pendingSeek: { v1: -1, v2: -1, v3: -1 } as Record<VideoKey, number>,
+  });
 
   useEffect(() => {
     if (reduce) return;
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
+    const offscreen = document.createElement("canvas");
+    const offCtx = offscreen.getContext("2d");
+    const state = videoStateRef.current;
+    const videos = videoRefs.current;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const resizeCanvas = () => {
+      canvas.width = canvas.clientWidth * dpr;
+      canvas.height = canvas.clientHeight * dpr;
+    };
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    function safeSeek(key: VideoKey, targetTime: number) {
+      const video = videos[key];
+      if (!video) return;
+      const dur = state.durations[key] || video.duration || 8;
+      const clamped = Math.max(0, Math.min(targetTime, dur - 0.05));
+      if (Math.abs(video.currentTime - clamped) < 0.01) return;
+      if (state.seeking[key]) {
+        state.pendingSeek[key] = clamped;
+        return;
+      }
+      state.seeking[key] = true;
+      state.pendingSeek[key] = -1;
+      video.currentTime = clamped;
+    }
+
+    function drawFrame(p: number) {
+      const key = getActiveVideoKey(p);
+      const video = videos[key];
+      if (!video || video.readyState < 2 || !offCtx) return;
+      const cW = canvas!.width / dpr;
+      const cH = canvas!.height / dpr;
+      if (cW === 0 || cH === 0) return;
+      const vW = video.videoWidth || 1920;
+      const vH = video.videoHeight || 1080;
+      const vA = vW / vH;
+      const cA = cW / cH;
+      let dW = cW,
+        dH = cH,
+        oX = 0,
+        oY = 0;
+      if (vA > cA) {
+        dW = cH * vA;
+        oX = (cW - dW) / 2;
+      } else {
+        dH = cW / vA;
+        oY = (cH - dH) / 2;
+      }
+      if (offscreen.width !== canvas!.width || offscreen.height !== canvas!.height) {
+        offscreen.width = canvas!.width;
+        offscreen.height = canvas!.height;
+      }
+      offCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      offCtx.clearRect(0, 0, cW, cH);
+      offCtx.drawImage(video, oX, oY, dW, dH);
+      ctx!.setTransform(1, 0, 0, 1, 0, 0);
+      ctx!.drawImage(offscreen, 0, 0);
+    }
+
+    const seekedHandlers: Partial<Record<VideoKey, () => void>> = {};
+    const metaHandlers: Partial<Record<VideoKey, () => void>> = {};
+
+    VIDEO_KEYS.forEach((key) => {
+      const video = videos[key];
+      if (!video) return;
+      const onSeeked = () => {
+        state.seeking[key] = false;
+        if (state.pendingSeek[key] >= 0) {
+          const t = state.pendingSeek[key];
+          state.pendingSeek[key] = -1;
+          safeSeek(key, t);
+        }
+      };
+      const onMeta = () => {
+        const d = video.duration;
+        if (d && !isNaN(d) && d > 0 && d !== Infinity) state.durations[key] = d;
+      };
+      seekedHandlers[key] = onSeeked;
+      metaHandlers[key] = onMeta;
+      video.addEventListener("seeked", onSeeked);
+      video.addEventListener("loadedmetadata", onMeta);
+      if (video.readyState >= 1) onMeta();
+    });
+
     let raf = 0;
     let current = 0;
 
@@ -164,30 +259,41 @@ export default function Precios() {
       return clamp01(-el.getBoundingClientRect().top / total);
     }
 
-      function updatePin() {
-        const el = containerRef.current;
-        const pin = pinRef.current;
-        if (!el || !pin) return;
-        const rect = el.getBoundingClientRect();
-        const vh = window.innerHeight;
-        if (rect.bottom <= vh) {
-          // Scrolled past the container: park the box at its bottom instead of
-          // staying glued to the viewport (position:sticky isn't usable here —
-          // this site's global overflow-x:hidden on <body> silently breaks it).
-          pin.style.position = "absolute";
-          pin.style.top = "";
-          pin.style.bottom = "0";
-        } else {
-          pin.style.position = "fixed";
-          pin.style.top = "0";
-          pin.style.bottom = "";
-        }
+    function updatePin() {
+      const el = containerRef.current;
+      const pin = pinRef.current;
+      if (!el || !pin) return;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      if (rect.bottom <= vh) {
+        // Scrolled past the container: park the box at its bottom instead of
+        // staying glued to the viewport (position:sticky isn't usable here —
+        // this site's global overflow-x:hidden on <body> silently breaks it).
+        pin.style.position = "absolute";
+        pin.style.top = "";
+        pin.style.bottom = "0";
+      } else {
+        pin.style.position = "fixed";
+        pin.style.top = "0";
+        pin.style.bottom = "";
       }
+    }
 
     function tick() {
       current += (getTarget() - current) * 0.09;
       const p = current;
       updatePin();
+
+      // Background video: 3 segments, one active third of the scroll each
+      const activeKey = getActiveVideoKey(p);
+      const localP =
+        activeKey === "v1"
+          ? clamp01(p * 3)
+          : activeKey === "v2"
+            ? clamp01((p - 0.333) * 3)
+            : clamp01((p - 0.666) * 3);
+      safeSeek(activeKey, localP * (videoStateRef.current.durations[activeKey] || 8));
+      drawFrame(p);
 
       // Intro card: fades/slides out over the first 15% of scroll
       const f = clamp01(p / 0.15);
@@ -244,7 +350,19 @@ export default function Precios() {
     }
 
     raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resizeCanvas);
+      VIDEO_KEYS.forEach((key) => {
+        const video = videos[key];
+        if (!video) return;
+        const onSeeked = seekedHandlers[key];
+        const onMeta = metaHandlers[key];
+        if (onSeeked) video.removeEventListener("seeked", onSeeked);
+        if (onMeta) video.removeEventListener("loadedmetadata", onMeta);
+      });
+    };
   }, [reduce]);
 
   function scrollToPlans() {
@@ -258,7 +376,7 @@ export default function Precios() {
       <section className="relative bg-black">
         <div className="relative min-h-[70vh]">
           <div className="absolute inset-0 -z-10">
-            <ScrollVideo src={heroVideo} />
+            <ScrollVideo src={bloomVideo1} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
           <div className="max-w-[640px] mx-auto px-6 pt-[160px] pb-[80px] text-center">
@@ -324,7 +442,22 @@ export default function Precios() {
   return (
     <div ref={containerRef} className="relative bg-black" style={{ height: `${CONTAINER_VH}vh` }}>
       <div ref={pinRef} className="fixed top-0 left-0 w-full h-screen overflow-hidden">
-        <ScrollVideo src={heroVideo} scrubRange={scrubRange} />
+        <div className="absolute inset-0 bg-[#0a0a0a]" aria-hidden="true">
+          {(["v1", "v2", "v3"] as VideoKey[]).map((key, i) => (
+            <video
+              key={key}
+              ref={(el) => {
+                videoRefs.current[key] = el;
+              }}
+              src={[bloomVideo1, bloomVideo2, bloomVideo3][i]}
+              muted
+              playsInline
+              preload="auto"
+              className="hidden"
+            />
+          ))}
+          <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" />
+        </div>
         <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
 
         {/* Intro card */}
