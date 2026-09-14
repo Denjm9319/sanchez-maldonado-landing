@@ -16,10 +16,11 @@ const SERVICES = [
     text: "Sitios premium orientados a conversión: estructura clara, carga rápida y una narrativa que genera confianza antes del primer contacto.",
     image: websiteImg,
     howItWorks:
-      "Diseñamos e implementamos el sitio completo — estructura, copy, velocidad y SEO técnico — listo para producción, en unas semanas según el alcance.",
+      "Diseñamos e implementamos el sitio completo — estructura, copy, velocidad y SEO técnico — desde una landing simple hasta un sitio con tienda online o en varios idiomas, listo para producción según el alcance.",
     bestFor: "Negocios que todavía no tienen web, o cuya web actual no refleja lo que realmente ofrecen.",
     notFor:
-      "Quien busca una tienda online compleja (e-commerce) o un sitio multi-idioma — eso lo evaluamos aparte.",
+      "Negocios que buscan la web más barata y rápida posible sin importar el resultado — nosotros construimos cada sitio a medida y lo probamos a fondo antes de entregarlo, no en serie.",
+    waMessage: "Hola, vi la web y quiero consultar sobre el servicio de Websites para mi negocio.",
   },
   {
     id: "ads",
@@ -32,6 +33,7 @@ const SERVICES = [
     bestFor: "Negocios que ya atienden bien una consulta y quieren más volumen de forma constante.",
     notFor:
       "Negocios que todavía no pueden responder rápido — ahí conviene primero un agente de IA antes de invertir en más tráfico.",
+    waMessage: "Hola, vi la web y quiero consultar sobre Performance Ads (Meta Ads) para mi negocio.",
   },
   {
     id: "chat",
@@ -43,6 +45,7 @@ const SERVICES = [
       "Un agente entrenado con la información real de tu negocio responde estos canales al instante, todo el día.",
     bestFor: "Negocios con alto volumen de consultas repetitivas: turnos, precios, disponibilidad.",
     notFor: "Reemplazar por completo a tu equipo — se ocupa de lo repetitivo, no de negociaciones complejas.",
+    waMessage: "Hola, vi la web y quiero consultar sobre un AI Chat Agent para mi negocio.",
   },
   {
     id: "voice",
@@ -53,6 +56,7 @@ const SERVICES = [
     howItWorks: "Un agente de voz atiende llamadas, califica a quien llama y agenda o deriva según corresponda.",
     bestFor: "Negocios donde el teléfono sigue siendo un canal fuerte: clínicas, hoteles, inmobiliarias.",
     notFor: "Negocios que casi no reciben llamadas — ahí el chat rinde más.",
+    waMessage: "Hola, vi la web y quiero consultar sobre un AI Voice Agent para mi negocio.",
   },
   {
     id: "automation",
@@ -64,6 +68,7 @@ const SERVICES = [
       "Conectamos las herramientas que ya usás — agenda, CRM, planillas, WhatsApp — para que la información fluya sola, sin carga manual.",
     bestFor: "Negocios que ya identificaron una tarea repetitiva puntual que les come tiempo.",
     notFor: "Un punto de partida — rinde más una vez que la web o el agente ya están funcionando.",
+    waMessage: "Hola, vi la web y quiero consultar sobre Automatizaciones para mi negocio.",
   },
   {
     id: "creative",
@@ -75,6 +80,7 @@ const SERVICES = [
       "Generamos imágenes y piezas visuales con IA, ajustadas a la identidad de tu marca, para redes o campañas.",
     bestFor: "Negocios que necesitan piezas frecuentes (posteos, anuncios) y no tienen diseñador propio.",
     notFor: "Reemplazar fotografía real de tu local, productos o equipo — eso siempre suma más confianza.",
+    waMessage: "Hola, vi la web y quiero consultar sobre AI Creative para mi negocio.",
   },
 ];
 
@@ -125,6 +131,7 @@ export default function Services() {
           howItWorks={active.howItWorks}
           bestFor={active.bestFor}
           notFor={active.notFor}
+          waMessage={active.waMessage}
           onClose={() => setOpenId(null)}
         />
       )}

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { waLink } from "../config/site";
 
 interface ServiceModalProps {
   title: string;
@@ -7,6 +7,7 @@ interface ServiceModalProps {
   howItWorks: string;
   bestFor: string;
   notFor: string;
+  waMessage: string;
   onClose: () => void;
 }
 
@@ -16,6 +17,7 @@ export default function ServiceModal({
   howItWorks,
   bestFor,
   notFor,
+  waMessage,
   onClose,
 }: ServiceModalProps) {
   useEffect(() => {
@@ -65,13 +67,15 @@ export default function ServiceModal({
           </div>
         </dl>
 
-        <Link
-          to="/#contacto"
+        <a
+          href={waLink(waMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={onClose}
-          className="mt-8 inline-flex bg-gold text-navy px-6 py-3.5 rounded-full text-[14.5px] hover:bg-cream"
+          className="mt-8 inline-flex bg-gold text-navy px-6 py-3.5 rounded-full text-[14.5px] hover:bg-[#c79656] transition-colors"
         >
           Consultar sobre este servicio
-        </Link>
+        </a>
       </div>
     </div>
   );
