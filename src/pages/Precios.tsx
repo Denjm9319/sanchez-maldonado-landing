@@ -261,6 +261,14 @@ export default function Precios() {
     // monitors (part of why the scroll felt heavy there).
     const dpr = 1;
     const resizeCanvas = () => {
+      // CSS "100vh"/"100dvh" isn't reliable here — on real mobile browsers
+      // 100vh overshoots the actually-visible area (it doesn't discount the
+      // address bar), and which of the two wins depends on Tailwind's own
+      // utility ordering, which isn't something to build on. Setting the
+      // pin's height directly from window.innerHeight sidesteps all of that
+      // and matches exactly what the scroll-progress math below already
+      // assumes.
+      if (pinRef.current) pinRef.current.style.height = `${window.innerHeight}px`;
       canvas.width = canvas.clientWidth * dpr;
       canvas.height = canvas.clientHeight * dpr;
     };
@@ -549,7 +557,7 @@ export default function Precios() {
 
   return (
     <div ref={containerRef} className="relative bg-black" style={{ height: `${CONTAINER_VH}vh` }}>
-      <div ref={pinRef} className="fixed top-0 left-0 w-full h-screen h-[100dvh] overflow-hidden">
+      <div ref={pinRef} className="fixed top-0 left-0 w-full h-screen overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a0a]" aria-hidden="true">
           {(["v1", "v2", "v3"] as VideoKey[]).map((key, i) => (
             <video
