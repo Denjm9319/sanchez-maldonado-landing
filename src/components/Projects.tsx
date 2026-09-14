@@ -18,6 +18,10 @@ import soulCanvasShot from "../assets/apps/soulcanvas-shot.webp";
 import learnHubShot from "../assets/apps/learnhub-shot.webp";
 import cozyPawsShot from "../assets/apps/cozypaws-shot.webp";
 import nexarAppShot from "../assets/apps/nexar-shot.webp";
+import dentaWebShot from "../assets/projects/denta-web-shot.webp";
+import cozyPawsWebShot from "../assets/projects/cozypaws-web-shot.webp";
+import uiRocketShot from "../assets/projects/uirocket-shot.webp";
+import learnlyShot from "../assets/projects/learnly-shot.webp";
 
 const REAL_PROJECTS = [
   {
@@ -154,6 +158,54 @@ const CONCEPTS = [
       "Landing con dos videos de fondo que se controlan con el scroll (uno se apaga con un cruce suave mientras el otro aparece) y paneles de especificaciones técnicas que entran y salen de pantalla a medida que scrolleás, con textos que se revelan palabra por palabra.",
     capabilities: ["Web & Conversion", "Doble scroll-video", "Paneles de specs"],
     url: "https://orven-rho.vercel.app/",
+  },
+  {
+    id: "denta-web",
+    title: "Denta Estética",
+    thumb: dentaWebShot,
+    alt: "Concept de landing para clínica dental estética",
+    rubro: "Clínica dental estética",
+    objetivo: "Generar consultas destacando un tratamiento puntual con una narrativa visual clara.",
+    description:
+      "Landing de pantalla completa sin scroll, con un video de fondo real de una sonrisa y una caja de anotación flotante que señala con una línea conectora animada un tratamiento puntual.",
+    capabilities: ["Web & Conversion", "Interacción por viewport", "Menú móvil a medida"],
+    url: "https://aesthetic-dental-clinic-sigma.vercel.app/",
+  },
+  {
+    id: "cozy-paws-web",
+    title: "CozyPaws Store",
+    thumb: cozyPawsWebShot,
+    alt: "Concept de landing e-commerce para tienda de mascotas",
+    rubro: "E-commerce / Mascotas",
+    objetivo: "Vender productos para mascotas con una primera impresión visual fuerte y sin fricción.",
+    description:
+      "Landing de una sola pantalla sin scroll, donde perros y gatos se asoman sobre paneles de color con el título grande entre ellos, y tarjetas de producto y reseñas en video flotando a los costados.",
+    capabilities: ["Landing sin scroll", "Animaciones de entrada", "E-commerce"],
+    url: "https://cozy-paws-web.vercel.app/",
+  },
+  {
+    id: "ui-rocket",
+    title: "UI Rocket",
+    thumb: uiRocketShot,
+    alt: "Concept de landing para SaaS educativo",
+    rubro: "SaaS / Educación en IA",
+    objetivo: "Convertir visitantes en alumnos de un curso mostrando el producto con una estética premium.",
+    description:
+      "Landing con hero a pantalla completa donde un video de fondo, un dashboard flotante con vidrio líquido y una imagen en primer plano se mueven a distinta velocidad con el scroll, generando profundidad tipo parallax de cine.",
+    capabilities: ["Scroll parallax a medida", "Web & Conversion", "Chat simulado"],
+    url: "https://growth-marketing-saas.vercel.app/",
+  },
+  {
+    id: "learnly",
+    title: "Learnly",
+    thumb: learnlyShot,
+    alt: "Concept de landing para plataforma educativa",
+    rubro: "Edtech",
+    objetivo: "Mostrar el catálogo de cursos de forma atractiva y llevar a la inscripción.",
+    description:
+      "Landing de plataforma educativa con un acordeón de tarjetas de cursos que se expanden al pasar el mouse, revelando módulo, cantidad de temas y categoría de cada uno.",
+    capabilities: ["Micro-interacciones CSS", "Menú móvil animado", "Carrusel táctil"],
+    url: "https://learnly-web-tan.vercel.app/",
   },
 ];
 
