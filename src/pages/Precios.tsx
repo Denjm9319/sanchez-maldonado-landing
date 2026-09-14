@@ -59,6 +59,11 @@ const MISSION_LINES = [
 ];
 
 const CONTAINER_VH = 500;
+// Cover-fit would zoom a landscape video in hard on a narrow phone screen
+// (crop ~75% off each side) and can land on an empty/dark patch of the
+// source footage. Capping the zoom relative to a plain "contain" fit keeps
+// the crop reasonable and avoids that.
+const MAX_ZOOM = 1.55;
 
 function clamp01(n: number) {
   return Math.min(1, Math.max(0, n));
@@ -155,6 +160,91 @@ export default function Precios() {
     seeking: { v1: false, v2: false, v3: false } as Record<VideoKey, boolean>,
     pendingSeek: { v1: -1, v2: -1, v3: -1 } as Record<VideoKey, number>,
   });
+  // Pre-extracted frames per video, drawn straight to canvas so scrubbing
+  // doesn't depend on live <video> seeks (which are slow/janky on scroll,
+  // especially on mobile). Kept in a ref, not state, so the rAF loop below
+  // picks them up mid-flight without needing to restart.
+  const framesRef = useRef<Record<VideoKey, ImageBitmap[]>>({ v1: [], v2: [], v3: [] });
+
+  useEffect(() => {
+    if (reduce) return;
+    let cancelled = false;
+    const sources: Record<VideoKey, string> = { v1: bloomVideo1, v2: bloomVideo2, v3: bloomVideo3 };
+
+    async function extractOne(key: VideoKey): Promise<ImageBitmap[]> {
+      const res = await fetch(sources[key]);
+      const blob = await res.blob();
+      if (cancelled) return [];
+      const objectUrl = URL.createObjectURL(blob);
+      try {
+        const source = document.createElement("video");
+        source.src = objectUrl;
+        source.muted = true;
+        source.playsInline = true;
+        await new Promise<void>((resolve, reject) => {
+          source.onloadedmetadata = () => resolve();
+          source.onerror = () => reject(new Error("video metadata failed"));
+        });
+        if (cancelled) return [];
+
+        const duration = source.duration;
+        const frameCount = Math.min(40, Math.max(20, Math.round(duration * 3)));
+        const scale = Math.min(1, 960 / source.videoWidth);
+        const w = Math.round(source.videoWidth * scale);
+        const h = Math.round(source.videoHeight * scale);
+        const off = document.createElement("canvas");
+        off.width = w;
+        off.height = h;
+        const offCtx2 = off.getContext("2d");
+        if (!offCtx2) return [];
+
+        const frames: ImageBitmap[] = [];
+        for (let i = 0; i < frameCount; i++) {
+          if (cancelled) break;
+          const t = Math.min(i / (frameCount - 1), 0.999) * duration;
+          await new Promise<void>((resolve) => {
+            let done = false;
+            const finish = () => {
+              if (done) return;
+              done = true;
+              source.removeEventListener("seeked", onSeeked);
+              clearTimeout(timeout);
+              resolve();
+            };
+            const onSeeked = () => finish();
+            const timeout = setTimeout(finish, 1500);
+            source.addEventListener("seeked", onSeeked);
+            source.currentTime = t;
+          });
+          if (cancelled) break;
+          offCtx2.clearRect(0, 0, w, h);
+          offCtx2.drawImage(source, 0, 0, w, h);
+          frames.push(await createImageBitmap(off));
+        }
+        return frames;
+      } finally {
+        URL.revokeObjectURL(objectUrl);
+      }
+    }
+
+    (async () => {
+      try {
+        const [v1, v2, v3] = await Promise.all([extractOne("v1"), extractOne("v2"), extractOne("v3")]);
+        if (cancelled) return;
+        framesRef.current = { v1, v2, v3 };
+      } catch (err) {
+        if (!cancelled) console.warn("Precios: frame extraction failed, falling back to live video seek", err);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      (Object.keys(framesRef.current) as VideoKey[]).forEach((key) => {
+        framesRef.current[key].forEach((f) => f.close());
+      });
+      framesRef.current = { v1: [], v2: [], v3: [] };
+    };
+  }, [reduce]);
 
   useEffect(() => {
     if (reduce) return;
@@ -190,35 +280,45 @@ export default function Precios() {
       video.currentTime = clamped;
     }
 
-    function drawFrame(p: number) {
+    function drawFrame(p: number, localP: number) {
       const key = getActiveVideoKey(p);
-      const video = videos[key];
-      if (!video || video.readyState < 2 || !offCtx) return;
+      if (!offCtx) return;
       const cW = canvas!.width / dpr;
       const cH = canvas!.height / dpr;
       if (cW === 0 || cH === 0) return;
-      const vW = video.videoWidth || 1920;
-      const vH = video.videoHeight || 1080;
-      const vA = vW / vH;
-      const cA = cW / cH;
-      let dW = cW,
-        dH = cH,
-        oX = 0,
-        oY = 0;
-      if (vA > cA) {
-        dW = cH * vA;
-        oX = (cW - dW) / 2;
+
+      const frames = framesRef.current[key];
+      let source: CanvasImageSource;
+      let sW: number, sH: number;
+      if (frames.length > 1) {
+        const idx = Math.min(frames.length - 1, Math.round(localP * (frames.length - 1)));
+        const frame = frames[idx];
+        source = frame;
+        sW = frame.width;
+        sH = frame.height;
       } else {
-        dH = cW / vA;
-        oY = (cH - dH) / 2;
+        const video = videos[key];
+        if (!video || video.readyState < 2) return;
+        source = video;
+        sW = video.videoWidth || 1920;
+        sH = video.videoHeight || 1080;
       }
+
+      const scaleContain = Math.min(cW / sW, cH / sH);
+      const scaleCover = Math.max(cW / sW, cH / sH);
+      const scale = Math.min(scaleCover, scaleContain * MAX_ZOOM);
+      const dW = sW * scale;
+      const dH = sH * scale;
+      const oX = (cW - dW) / 2;
+      const oY = (cH - dH) / 2;
+
       if (offscreen.width !== canvas!.width || offscreen.height !== canvas!.height) {
         offscreen.width = canvas!.width;
         offscreen.height = canvas!.height;
       }
       offCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
       offCtx.clearRect(0, 0, cW, cH);
-      offCtx.drawImage(video, oX, oY, dW, dH);
+      offCtx.drawImage(source, oX, oY, dW, dH);
       ctx!.setTransform(1, 0, 0, 1, 0, 0);
       ctx!.drawImage(offscreen, 0, 0);
     }
@@ -269,13 +369,18 @@ export default function Precios() {
         // Scrolled past the container: park the box at its bottom instead of
         // staying glued to the viewport (position:sticky isn't usable here —
         // this site's global overflow-x:hidden on <body> silently breaks it).
+        // `top` must be explicitly set to "auto" here — the "top-0" utility
+        // class is still applied underneath, and clearing the inline value
+        // to "" let that class win, which pinned the box to the top of the
+        // container instead of letting `bottom:0` place it. That's what made
+        // the whole page go black right as the final CTA should appear.
         pin.style.position = "absolute";
-        pin.style.top = "";
+        pin.style.top = "auto";
         pin.style.bottom = "0";
       } else {
         pin.style.position = "fixed";
         pin.style.top = "0";
-        pin.style.bottom = "";
+        pin.style.bottom = "auto";
       }
     }
 
@@ -292,8 +397,13 @@ export default function Precios() {
           : activeKey === "v2"
             ? clamp01((p - 0.333) * 3)
             : clamp01((p - 0.666) * 3);
-      safeSeek(activeKey, localP * (videoStateRef.current.durations[activeKey] || 8));
-      drawFrame(p);
+      // Once frames are extracted for this segment, drawFrame reads them
+      // directly and there's no need to keep seeking the live <video> — that
+      // seek is only a fallback while extraction is still in flight.
+      if (framesRef.current[activeKey].length <= 1) {
+        safeSeek(activeKey, localP * (videoStateRef.current.durations[activeKey] || 8));
+      }
+      drawFrame(p, localP);
 
       // Intro card: fades/slides out over the first 15% of scroll
       const f = clamp01(p / 0.15);
@@ -501,9 +611,9 @@ export default function Precios() {
         </div>
 
         {/* Plan cards */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[min(94vw,940px)]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full sm:w-[min(94vw,940px)]">
           <div ref={plansGroupRef} style={{ opacity: 0 }}>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
+          <div className="flex sm:grid sm:grid-cols-3 gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none px-6 sm:px-0 sm:justify-items-center [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {PLANS.map((plan, i) => (
               <div
                 key={plan.title}
@@ -511,7 +621,7 @@ export default function Precios() {
                   cardRefs.current[i] = el;
                 }}
                 style={{ opacity: 0, willChange: "transform, opacity, filter" }}
-                className={`w-[280px] max-w-full rounded-[4px] p-6 flex flex-col gap-3 border shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl ${
+                className={`w-[260px] sm:w-[280px] max-w-full shrink-0 snap-center rounded-[4px] p-6 flex flex-col gap-3 border shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl ${
                   plan.highlight ? "bg-black/50 border-gold/50" : "bg-black/50 border-white/15"
                 }`}
               >
@@ -536,7 +646,10 @@ export default function Precios() {
               </div>
             ))}
           </div>
-          <p className="mt-5 text-center text-[12.5px] text-white/45 max-w-[36em] mx-auto">
+          <p className="mt-3 sm:hidden text-center text-[11px] text-white/40 tracking-wide">
+            Deslizá para ver los 3 planes →
+          </p>
+          <p className="mt-5 text-center text-[12.5px] text-white/45 max-w-[36em] mx-auto px-6">
             El precio depende del alcance, integraciones, volumen y necesidades del negocio.
           </p>
           </div>
