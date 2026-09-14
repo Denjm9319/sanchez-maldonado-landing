@@ -18,6 +18,8 @@ import soulCanvasShot from "../assets/apps/soulcanvas-shot.webp";
 import learnHubShot from "../assets/apps/learnhub-shot.webp";
 import cozyPawsShot from "../assets/apps/cozypaws-shot.webp";
 import nexarAppShot from "../assets/apps/nexar-shot.webp";
+import vitalisShot from "../assets/apps/vitalis-shot.webp";
+import stearyShot from "../assets/apps/steary-shot.webp";
 import dentaWebShot from "../assets/projects/denta-web-shot.webp";
 import cozyPawsWebShot from "../assets/projects/cozypaws-web-shot.webp";
 import uiRocketShot from "../assets/projects/uirocket-shot.webp";
@@ -281,6 +283,30 @@ const APPS = [
       "Dashboard de productividad con video de fondo en loop, tarjetas de tareas con animación de aparición escalonada y un panel de comandos rápidos con entrada de voz simulada por un visualizador de onda de audio.",
     capabilities: ["Dashboard interactivo", "Micro-animaciones", "UI con video de fondo"],
     url: "https://nexar-productivity.vercel.app/",
+  },
+  {
+    id: "vitalis",
+    title: "Vitalis",
+    thumb: vitalisShot,
+    alt: "Concept de app de actividad física y bienestar",
+    rubro: "Fitness y bienestar",
+    objetivo: "Darle a un usuario una vista diaria clara de su actividad, hidratación y sueño.",
+    description:
+      "Panel diario de actividad con hidratación animada por vasos, barras de calorías y curva de peso — con controles reales (toggles, paginador, menú) en vez de elementos solo decorativos.",
+    capabilities: ["Interacciones reales", "Dashboard responsive", "UI pixel-perfect"],
+    url: "https://fitness-dashboard-six-lemon.vercel.app/",
+  },
+  {
+    id: "steary",
+    title: "Steary",
+    thumb: stearyShot,
+    alt: "Concept de app de biblioteca digital",
+    rubro: "Lectura / Biblioteca digital",
+    objetivo: "Que un lector descubra, guarde y siga leyendo sus libros sin fricción.",
+    description:
+      "Panel de biblioteca digital con estética de vidrio líquido, carrusel de libro destacado, buscador en vivo, favoritos y modo nocturno — cada botón responde de verdad, no es solo una maqueta visual.",
+    capabilities: ["Buscador y filtros en vivo", "Favoritos y descargas", "Modo nocturno"],
+    url: "https://reading-library-tau.vercel.app/",
   },
 ];
 
