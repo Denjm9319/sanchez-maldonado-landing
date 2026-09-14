@@ -12,6 +12,12 @@ import sentidoDiarioShot from "../assets/projects/sentido-diario-shot.webp";
 import draTaniaShot from "../assets/projects/dra-tania-shot.webp";
 import arcariSilvinaShot from "../assets/projects/arcari-silvina-shot.webp";
 import marcelaBritoShot from "../assets/projects/marcela-brito-shot.webp";
+import dentaShot from "../assets/apps/denta-shot.webp";
+import terraelixShot from "../assets/apps/terraelix-shot.webp";
+import soulCanvasShot from "../assets/apps/soulcanvas-shot.webp";
+import learnHubShot from "../assets/apps/learnhub-shot.webp";
+import cozyPawsShot from "../assets/apps/cozypaws-shot.webp";
+import nexarAppShot from "../assets/apps/nexar-shot.webp";
 
 const REAL_PROJECTS = [
   {
@@ -151,11 +157,88 @@ const CONCEPTS = [
   },
 ];
 
+const APPS = [
+  {
+    id: "denta",
+    title: "Denta",
+    thumb: dentaShot,
+    alt: "Concept de app para clínica dental",
+    rubro: "Clínica dental",
+    objetivo: "Mostrarle a un paciente sus opciones de tratamiento y agendar una cita sin fricción.",
+    description:
+      "Recorrido de una app de clínica dental con selección de tratamiento, onboarding animado de un procedimiento de carillas y una videoconsulta con chat en vivo con la doctora.",
+    capabilities: ["UI de producto", "Micro-interacciones", "Video-consulta simulada"],
+    url: "https://dental-care-app-tau.vercel.app/",
+  },
+  {
+    id: "terraelix",
+    title: "TerraElix",
+    thumb: terraelixShot,
+    alt: "Concept de app para venta de suplementos",
+    rubro: "Suplementos y nutrición",
+    objetivo: "Vender un producto de suplementos desde el celular con la menor fricción posible.",
+    description:
+      "Ficha de producto de suplementos dentro de un mockup de iPhone realista, con un carrusel 3D que hace zoom y desvanece los productos adyacentes al deslizar, y un selector de cantidad que recalcula el precio al instante.",
+    capabilities: ["Mobile-first UI", "Carrusel animado a medida", "Micro-interacciones"],
+    url: "https://supplement-shop-ashen.vercel.app/",
+  },
+  {
+    id: "soul-canvas",
+    title: "Soul Canvas",
+    thumb: soulCanvasShot,
+    alt: "Concept de app de bienestar mental y registro de ánimo",
+    rubro: "Salud mental y bienestar",
+    objetivo: "Acompañar el registro diario de ánimo con una experiencia visual calma y cuidada.",
+    description:
+      "Tres pantallas de una app de bienestar mental corriendo lado a lado, cada una con su propio video de fondo en loop y tarjetas de vidrio esmerilado que aparecen en cascada al cargar.",
+    capabilities: ["Mobile UI", "Video de fondo en loop", "Glassmorphism"],
+    url: "https://mood-tracker-phi-rust.vercel.app/",
+  },
+  {
+    id: "learn-hub",
+    title: "Learn Hub",
+    thumb: learnHubShot,
+    alt: "Concept de app de cursos online",
+    rubro: "Edtech / Cursos online",
+    objetivo: "Que un alumno descubra cursos y organice sus clases sin salir de la app.",
+    description:
+      "Showcase de una app de cursos online con onboarding en video, un feed de cursos con tarjetas en video que se reproducen en loop, y un calendario de clases interactivo.",
+    capabilities: ["Mobile UI", "Video en loop nativo", "Calendario interactivo"],
+    url: "https://learn-hub-sepia.vercel.app/",
+  },
+  {
+    id: "cozy-paws",
+    title: "CozyPaws",
+    thumb: cozyPawsShot,
+    alt: "Concept de app de e-commerce para mascotas",
+    rubro: "E-commerce / Mascotas",
+    objetivo: "Mostrar catálogo y generar compras de productos para mascotas desde el celular.",
+    description:
+      "Vitrina de una app de productos para mascotas, con animaciones de aparición en cascada para texto, fotos y tarjetas de producto, y un video autoplay de fondo en una de las pantallas.",
+    capabilities: ["Mobile-first UI", "Micro-animaciones en cascada", "Video autoplay embebido"],
+    url: "https://pet-products-pi.vercel.app/",
+  },
+  {
+    id: "nexar",
+    title: "Nexar",
+    thumb: nexarAppShot,
+    alt: "Concept de app de productividad",
+    rubro: "Productividad y gestión de tareas",
+    objetivo: "Darle a un usuario una vista rápida de su día y sus tareas pendientes.",
+    description:
+      "Dashboard de productividad con video de fondo en loop, tarjetas de tareas con animación de aparición escalonada y un panel de comandos rápidos con entrada de voz simulada por un visualizador de onda de audio.",
+    capabilities: ["Dashboard interactivo", "Micro-animaciones", "UI con video de fondo"],
+    url: "https://nexar-productivity.vercel.app/",
+  },
+];
+
 export default function Projects() {
   const [openConceptId, setOpenConceptId] = useState<string | null>(null);
   const [openRealId, setOpenRealId] = useState<string | null>(null);
+  const [openAppId, setOpenAppId] = useState<string | null>(null);
   const activeConcept = CONCEPTS.find((c) => c.id === openConceptId) ?? null;
   const activeReal = REAL_PROJECTS.find((r) => r.id === openRealId) ?? null;
+  const activeApp = APPS.find((a) => a.id === openAppId) ?? null;
 
   return (
     <section id="proyectos" className="bg-white/[0.03] border-t border-b border-white/10">
@@ -221,6 +304,43 @@ export default function Projects() {
         </div>
       </Reveal>
 
+      <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(78px,11vw,150px)]">
+        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Apps</p>
+        <h2 className="text-[clamp(26px,3.6vw,42px)] leading-[1.15] mb-5 max-w-[18em]">
+          También armamos apps, no solo webs.
+        </h2>
+        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+          Demos de apps completas por rubro — dashboards, e-commerce, salud, educación — para mostrar
+          cómo se vería tu propio producto antes de construirlo.
+        </p>
+        <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:gap-[clamp(18px,2.4vw,26px)] sm:justify-center sm:overflow-visible sm:[grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
+          {APPS.map((a) => (
+            <button
+              key={a.id}
+              type="button"
+              onClick={() => setOpenAppId(a.id)}
+              aria-haspopup="dialog"
+              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
+            >
+              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
+                <img
+                  src={a.thumb}
+                  alt={a.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
+                />
+              </span>
+              <span className="block pt-[18px] px-5 pb-[22px]">
+                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">App Demo</span>
+                <span className="text-[17px] mt-2 block">{a.title}</span>
+                <span className="text-[13.5px] text-cream/60 block mt-1">{a.rubro}</span>
+              </span>
+            </button>
+          ))}
+        </div>
+      </Reveal>
+
       {activeConcept && (
         <ConceptModal
           title={activeConcept.title}
@@ -243,6 +363,18 @@ export default function Projects() {
           badge="Proyecto real"
           ctaLabel="Ver sitio en vivo"
           onClose={() => setOpenRealId(null)}
+        />
+      )}
+      {activeApp && (
+        <ConceptModal
+          title={activeApp.title}
+          rubro={activeApp.rubro}
+          objetivo={activeApp.objetivo}
+          description={activeApp.description}
+          capabilities={activeApp.capabilities}
+          url={activeApp.url}
+          badge="App Demo"
+          onClose={() => setOpenAppId(null)}
         />
       )}
     </section>
