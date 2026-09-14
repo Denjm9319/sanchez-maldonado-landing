@@ -252,12 +252,14 @@ export default function Precios() {
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
 
-    const offscreen = document.createElement("canvas");
-    const offCtx = offscreen.getContext("2d");
     const state = videoStateRef.current;
     const videos = videoRefs.current;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // This canvas only ever shows a heavily blurred/tinted backdrop video —
+    // it doesn't need retina sharpness, and drawing a full-screen frame at
+    // 2x resolution every tick was real, measurable cost on high-DPI PC
+    // monitors (part of why the scroll felt heavy there).
+    const dpr = 1;
     const resizeCanvas = () => {
       canvas.width = canvas.clientWidth * dpr;
       canvas.height = canvas.clientHeight * dpr;
@@ -282,9 +284,8 @@ export default function Precios() {
 
     function drawFrame(p: number, localP: number) {
       const key = getActiveVideoKey(p);
-      if (!offCtx) return;
-      const cW = canvas!.width / dpr;
-      const cH = canvas!.height / dpr;
+      const cW = canvas!.width;
+      const cH = canvas!.height;
       if (cW === 0 || cH === 0) return;
 
       const frames = framesRef.current[key];
@@ -312,15 +313,12 @@ export default function Precios() {
       const oX = (cW - dW) / 2;
       const oY = (cH - dH) / 2;
 
-      if (offscreen.width !== canvas!.width || offscreen.height !== canvas!.height) {
-        offscreen.width = canvas!.width;
-        offscreen.height = canvas!.height;
-      }
-      offCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      offCtx.clearRect(0, 0, cW, cH);
-      offCtx.drawImage(source, oX, oY, dW, dH);
-      ctx!.setTransform(1, 0, 0, 1, 0, 0);
-      ctx!.drawImage(offscreen, 0, 0);
+      // Drawing straight to the visible canvas (no intermediate offscreen
+      // composite) — that extra full-frame buffer/copy was doubling the
+      // per-tick draw cost for no real benefit once frames come from stable
+      // pre-extracted bitmaps instead of a live, mid-seek <video>.
+      ctx!.clearRect(0, 0, cW, cH);
+      ctx!.drawImage(source, oX, oY, dW, dH);
     }
 
     const seekedHandlers: Partial<Record<VideoKey, () => void>> = {};
@@ -571,12 +569,12 @@ export default function Precios() {
         <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
 
         {/* Intro card */}
-        <div className="absolute left-6 bottom-6 sm:left-12 sm:bottom-12 z-20 w-[min(92vw,540px)]">
-          <div
-            ref={introRef}
-            className="bg-black/50 backdrop-blur-2xl border border-white/15 rounded-[4px] p-8 pb-24 sm:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.35)] relative"
-            style={{ willChange: "transform, opacity, filter" }}
-          >
+        <div
+          ref={introRef}
+          className="absolute left-6 bottom-6 sm:left-12 sm:bottom-12 z-20 w-[min(92vw,540px)]"
+          style={{ willChange: "transform, opacity, filter" }}
+        >
+          <div className="bg-black/50 backdrop-blur-2xl border border-white/15 rounded-[4px] p-8 pb-24 sm:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.35)] relative">
             <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">Precios</p>
             <h1 className="font-heroDisplay text-[clamp(30px,4.2vw,50px)] leading-[1.1] text-white mb-4 max-w-[10em]">
               Cada proyecto se arma según lo que el negocio necesita.
