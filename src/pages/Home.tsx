@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useSEO } from "../hooks/useSEO";
 import Hero from "../components/Hero";
 import Sofia from "../components/Sofia";
-import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Reveal from "../components/Reveal";
@@ -41,8 +40,10 @@ export default function Home() {
         <Link to="/nosotros" className="font-heroDisplay text-[19px] text-white/70 hover:text-gold">
           Conocé al equipo →
         </Link>
+        <Link to="/precios" className="font-heroDisplay text-[19px] text-white/70 hover:text-gold">
+          Ver precios →
+        </Link>
       </Reveal>
-      <Pricing />
       <FAQ />
       <Contact />
     </div>

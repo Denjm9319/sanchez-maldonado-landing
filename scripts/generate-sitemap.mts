@@ -8,6 +8,7 @@ const staticRoutes = [
   { path: "/", priority: "1.0" },
   { path: "/proyectos", priority: "0.8" },
   { path: "/productos", priority: "0.8" },
+  { path: "/precios", priority: "0.8" },
   { path: "/nosotros", priority: "0.6" },
   { path: "/blog", priority: "0.7" },
 ];

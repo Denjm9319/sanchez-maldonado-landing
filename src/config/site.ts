@@ -31,6 +31,7 @@ export const NAV_LINKS = [
   { href: "/#sofia", label: "Sofia" },
   { href: "/proyectos#proyectos", label: "Proyectos" },
   { href: "/productos", label: "Productos" },
+  { href: "/precios", label: "Precios" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/blog", label: "Blog" },
   { href: "/nosotros#proceso", label: "Cómo trabajamos" },

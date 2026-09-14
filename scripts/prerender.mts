@@ -49,6 +49,7 @@ const ROUTES = [
   "/",
   "/proyectos",
   "/productos",
+  "/precios",
   "/nosotros",
   "/blog",
   ...BLOG_POSTS.map((p) => `/blog/${p.slug}`),
