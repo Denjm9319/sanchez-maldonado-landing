@@ -549,7 +549,7 @@ export default function Precios() {
 
   return (
     <div ref={containerRef} className="relative bg-black" style={{ height: `${CONTAINER_VH}vh` }}>
-      <div ref={pinRef} className="fixed top-0 left-0 w-full h-screen overflow-hidden">
+      <div ref={pinRef} className="fixed top-0 left-0 w-full h-screen h-[100dvh] overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a0a]" aria-hidden="true">
           {(["v1", "v2", "v3"] as VideoKey[]).map((key, i) => (
             <video
@@ -574,7 +574,7 @@ export default function Precios() {
           className="absolute left-6 bottom-6 sm:left-12 sm:bottom-12 z-20 w-[min(92vw,540px)]"
           style={{ willChange: "transform, opacity, filter" }}
         >
-          <div className="bg-black/50 backdrop-blur-2xl border border-white/15 rounded-[4px] p-8 pb-24 sm:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.35)] relative">
+          <div className="bg-black/50 backdrop-blur-lg border border-white/15 rounded-[4px] p-8 pb-24 sm:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.35)] relative">
             <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">Precios</p>
             <h1 className="font-heroDisplay text-[clamp(30px,4.2vw,50px)] leading-[1.1] text-white mb-4 max-w-[10em]">
               Cada proyecto se arma según lo que el negocio necesita.
@@ -619,7 +619,7 @@ export default function Precios() {
                   cardRefs.current[i] = el;
                 }}
                 style={{ opacity: 0, willChange: "transform, opacity, filter" }}
-                className={`w-[260px] sm:w-[280px] max-w-full shrink-0 snap-center rounded-[4px] p-6 flex flex-col gap-3 border shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl ${
+                className={`w-[260px] sm:w-[280px] max-w-full shrink-0 snap-center rounded-[4px] p-6 flex flex-col gap-3 border shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur-lg ${
                   plan.highlight ? "bg-black/50 border-gold/50" : "bg-black/50 border-white/15"
                 }`}
               >
@@ -680,7 +680,7 @@ export default function Precios() {
           <div
             ref={ctaRef}
             style={{ opacity: 0, willChange: "transform, opacity, filter" }}
-            className="w-full max-w-[28rem] bg-black/45 backdrop-blur-2xl border border-white/15 p-8 sm:p-12 text-center"
+            className="w-full max-w-[28rem] bg-black/45 backdrop-blur-lg border border-white/15 p-8 sm:p-12 text-center"
           >
             <h2 className="font-heroDisplay text-[26px] sm:text-[32px] text-white mb-3">
               ¿Hablamos de tu proyecto?
