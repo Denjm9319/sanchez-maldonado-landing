@@ -26,6 +26,9 @@ import uiRocketShot from "../assets/projects/uirocket-shot.webp";
 import learnlyShot from "../assets/projects/learnly-shot.webp";
 import nimbusGridShot from "../assets/projects/nimbus-grid-shot.png";
 import bakeryFacilitiesShot from "../assets/projects/bakery-facilities-shot.webp";
+import estudioCobreShot from "../assets/projects/estudio-cobre-shot.png";
+import bentleyShot from "../assets/projects/bentley-shot.png";
+import costaSerenadeShot from "../assets/projects/costa-serenade-shot.webp";
 
 const REAL_PROJECTS = [
   {
@@ -234,6 +237,42 @@ const CONCEPTS = [
       "Landing con un slider de video a pantalla completa que se revela con el scroll (cada video crece desde una elipse hasta cubrir toda la pantalla), una galería de productos tipo masonry con animación de entrada y una sección institucional con texto que se ilumina palabra por palabra a medida que scrolleás.",
     capabilities: ["Scroll-video con clip-path", "Galería masonry animada", "Web & Conversion"],
     url: "https://bakery-facilities-nu.vercel.app/",
+  },
+  {
+    id: "calculadora-dexa",
+    title: "Calculadora DeXa",
+    thumb: estudioCobreShot,
+    alt: "Calculadora de presupuesto de DeXa para sitios web",
+    rubro: "Calculadora de presupuesto propia",
+    objetivo: "Que un visitante calcule solo, en segundos, cuánto costaría su sitio con DeXa y vea por qué conviene frente a una agencia o un freelancer.",
+    description:
+      "Calculadora interactiva de presupuesto con selector de tipo de servicio, slider de cantidad de páginas, extras de contenido y SEO, y urgencia de entrega — recalcula el precio en vivo desde el piso de USD 599 y lo compara al instante con el costo típico de una agencia y de un freelancer.",
+    capabilities: ["Calculadora interactiva", "Precio en vivo", "Web & Conversion"],
+    url: "https://estudio-cobre.vercel.app/",
+  },
+  {
+    id: "bentley",
+    title: "Beyond The Collection",
+    thumb: bentleyShot,
+    alt: "Concept de landing para colección de perfumes de lujo",
+    rubro: "Perfumería / Lujo",
+    objetivo: "Generar deseo por una colección de perfumes premium y llevar a la compra sin fricción.",
+    description:
+      "Landing editorial de pantalla completa con un video de fondo, un reveal en forma de elipse que se abre con el scroll y una vitrina circular de frascos que gira y se detiene en cada fragancia con su nombre y descripción.",
+    capabilities: ["Scroll-reveal a medida", "Vitrina circular animada", "Web & Conversion"],
+    url: "https://bentley-fragrance.vercel.app/",
+  },
+  {
+    id: "costa-serenade",
+    title: "Costa Serenade",
+    thumb: costaSerenadeShot,
+    alt: "Concept de landing para un grupo de nado en aguas abiertas en la costa de Liguria",
+    rubro: "Turismo / Experiencias de nado en aguas abiertas",
+    objetivo: "Transmitir una identidad de marca editorial y generar curiosidad para sumarse al grupo.",
+    description:
+      "Landing cinematográfica de una sola página para un grupo de nado en aguas abiertas, con un video de fondo que se scrubea cuadro a cuadro con el scroll, una apertura diagonal que revela un segundo video en loop, y un título que cambia de idioma letra por letra a medida que bajás.",
+    capabilities: ["Scroll-video cuadro a cuadro", "Apertura diagonal animada", "Tipografía cinética"],
+    url: "https://costa-serenade.vercel.app/",
   },
 ];
 
