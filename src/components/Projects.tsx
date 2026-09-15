@@ -24,6 +24,8 @@ import dentaWebShot from "../assets/projects/denta-web-shot.webp";
 import cozyPawsWebShot from "../assets/projects/cozypaws-web-shot.webp";
 import uiRocketShot from "../assets/projects/uirocket-shot.webp";
 import learnlyShot from "../assets/projects/learnly-shot.webp";
+import nimbusGridShot from "../assets/projects/nimbus-grid-shot.png";
+import bakeryFacilitiesShot from "../assets/projects/bakery-facilities-shot.webp";
 
 const REAL_PROJECTS = [
   {
@@ -208,6 +210,30 @@ const CONCEPTS = [
       "Landing de plataforma educativa con un acordeón de tarjetas de cursos que se expanden al pasar el mouse, revelando módulo, cantidad de temas y categoría de cada uno.",
     capabilities: ["Micro-interacciones CSS", "Menú móvil animado", "Carrusel táctil"],
     url: "https://learnly-web-tan.vercel.app/",
+  },
+  {
+    id: "nimbus-grid",
+    title: "Nimbus Grid",
+    thumb: nimbusGridShot,
+    alt: "Concept de landing para plataforma de almacenamiento en la nube",
+    rubro: "SaaS / Infraestructura en la nube B2B",
+    objetivo: "Transmitir seriedad técnica a equipos de IT y procurement para que confíen su almacenamiento a la plataforma.",
+    description:
+      "Landing de producto SaaS con una consola con pestañas que tipea comandos en vivo, un acordeón de secciones que se apila a medida que scrolleás, barras de precios que respiran con el scroll y un cubo 3D que explota en fragmentos al hacer clic.",
+    capabilities: ["Acordeón scroll-driven", "Cubo 3D interactivo", "Consola con efecto de tipeo"],
+    url: "https://nimbus-grid-rosy.vercel.app/",
+  },
+  {
+    id: "bakery-facilities",
+    title: "Bakery Facilities",
+    thumb: bakeryFacilitiesShot,
+    alt: "Concept de landing para empresa B2B de soluciones de panadería",
+    rubro: "Panadería industrial / Foodservice B2B",
+    objetivo: "Transmitir escala y calidad premium a compradores B2B (hoteles, restaurantes, retail) para que elijan al proveedor.",
+    description:
+      "Landing con un slider de video a pantalla completa que se revela con el scroll (cada video crece desde una elipse hasta cubrir toda la pantalla), una galería de productos tipo masonry con animación de entrada y una sección institucional con texto que se ilumina palabra por palabra a medida que scrolleás.",
+    capabilities: ["Scroll-video con clip-path", "Galería masonry animada", "Web & Conversion"],
+    url: "https://bakery-facilities-nu.vercel.app/",
   },
 ];
 
