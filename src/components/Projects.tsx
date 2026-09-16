@@ -29,6 +29,7 @@ import bakeryFacilitiesShot from "../assets/projects/bakery-facilities-shot.webp
 import estudioCobreShot from "../assets/projects/estudio-cobre-shot.png";
 import bentleyShot from "../assets/projects/bentley-shot.png";
 import costaSerenadeShot from "../assets/projects/costa-serenade-shot.webp";
+import velarShot from "../assets/projects/velar-shot.png";
 
 const REAL_PROJECTS = [
   {
@@ -273,6 +274,18 @@ const CONCEPTS = [
       "Landing cinematográfica de una sola página para un grupo de nado en aguas abiertas, con un video de fondo que se scrubea cuadro a cuadro con el scroll, una apertura diagonal que revela un segundo video en loop, y un título que cambia de idioma letra por letra a medida que bajás.",
     capabilities: ["Scroll-video cuadro a cuadro", "Apertura diagonal animada", "Tipografía cinética"],
     url: "https://costa-serenade.vercel.app/",
+  },
+  {
+    id: "velar",
+    title: "Velar.",
+    thumb: velarShot,
+    alt: "Concept de landing para marca inmobiliaria de lujo con casa animada por scroll",
+    rubro: "Inmobiliaria de lujo / Residencias premium",
+    objetivo: "Posicionar la marca como curadora de residencias irreemplazables y generar consultas de alto valor.",
+    description:
+      "Landing inmobiliaria con preloader tipo máquina de escribir, una foto de mansión que flota sobre la página y escala mientras subís el scroll hasta fundirse con una sección oscura de estadísticas, y una galería de video que se expande al pasar el mouse por cada propiedad.",
+    capabilities: ["Casa animada por scroll", "Preloader typewriter", "Galería de video hover-expand"],
+    url: "https://velar-sable.vercel.app/",
   },
 ];
 
