@@ -3628,4 +3628,455 @@ Podemos ayudarte con:
 
 Podés aprender a construirlo o podés delegarnos su implementación. Lo importante es no seguir dejando que cada consulta dependa de mensajes dispersos y de la memoria del equipo.`,
   },
+  {
+    slug: "que-tipo-de-sitio-web-necesita-tu-negocio",
+    title: "¿Qué tipo de sitio web necesita tu negocio? Guía para elegir sin gastar dos veces",
+    seoTitle: "Qué tipo de sitio web necesita tu negocio en 2026",
+    metaDescription:
+      "Comparamos landing pages, webs corporativas, tiendas online, blogs, membresías y sistemas a medida para que elijas la opción correcta para tu negocio.",
+    targetKeyword: "qué tipo de sitio web necesita mi negocio",
+    secondaryKeywords: [
+      "tipos de páginas web para empresas",
+      "landing page o sitio web",
+      "web corporativa",
+      "tienda online",
+      "página web para vender",
+      "plataforma web a medida",
+    ],
+    publishedAt: "2026-09-16",
+    readingMinutes: 24,
+    excerpt:
+      "Landing page, web corporativa, tienda online, blog, membresía o sistema a medida: antes de pensar en diseño hay que decidir qué trabajo tiene que hacer tu web dentro del negocio. Esta guía te ayuda a elegir sin construir de más ni de menos.",
+    hideDefaultCta: true,
+    faq: [
+      {
+        q: "¿Es mejor una landing page o una web completa?",
+        a: "Una landing es mejor para una oferta y una acción específica. Una web completa conviene cuando necesitás explicar varios servicios, desarrollar autoridad y trabajar distintas búsquedas.",
+      },
+      {
+        q: "¿Puedo comenzar con una landing y ampliarla después?",
+        a: "Sí, siempre que la tecnología y la estructura permitan crecer. Es una buena forma de validar el mensaje antes de realizar una inversión mayor.",
+      },
+      {
+        q: "¿WordPress sigue siendo una buena alternativa?",
+        a: "Sí, especialmente para contenido y sitios extensibles. Requiere mantenimiento, actualizaciones y una selección cuidadosa de temas y complementos.",
+      },
+      {
+        q: "¿Shopify sirve únicamente para productos físicos?",
+        a: "No. Puede utilizarse para distintos modelos de comercio, aunque conviene evaluar si sus funciones y costos encajan con el proceso de venta.",
+      },
+      {
+        q: "¿Necesito una solución hecha a medida?",
+        a: "Solo cuando una plataforma existente no resuelve adecuadamente un proceso importante y validado. El desarrollo personalizado no debería ser el punto de partida automático.",
+      },
+      {
+        q: "¿Una web con IA vende sola?",
+        a: "No. La IA puede atender, clasificar, buscar información o activar acciones, pero sigue necesitando una oferta relevante, datos confiables, límites y supervisión.",
+      },
+      {
+        q: "¿Qué debería conectar con un CRM?",
+        a: "Formularios, WhatsApp, campañas, agenda y otras fuentes de oportunidades, siempre que la integración tenga un propósito claro y respete los permisos necesarios.",
+      },
+      {
+        q: "¿Cuánto tarda crear una página web?",
+        a: "Depende del alcance, la entrega de contenido, las integraciones y las revisiones. Una landing puede resolverse en pocos días o semanas; una tienda o aplicación compleja requiere más tiempo.",
+      },
+      {
+        q: "¿Quién debería ser dueño del dominio y las cuentas?",
+        a: "El cliente debería mantener titularidad y control sobre sus activos esenciales, otorgando al proveedor los accesos necesarios para trabajar.",
+      },
+      {
+        q: "¿Cómo sé si mi web actual debe rediseñarse?",
+        a: "Si no comunica con claridad, no funciona correctamente en móviles, pierde consultas, no puede medirse o no se integra con la operación, conviene realizar una auditoría antes de decidir.",
+      },
+    ],
+    body: `La mayoría de los negocios ya sabe que necesita presencia online. La decisión difícil es otra: ¿qué tipo de sitio web tiene sentido construir según el objetivo, el proceso comercial y la etapa actual del negocio?
+
+Una landing page puede ser perfecta para validar una oferta y desastrosa para una empresa con diez servicios. Una tienda online puede simplificar cientos de ventas o agregar complejidad innecesaria si cada operación necesita asesoramiento. Una plataforma hecha a medida puede convertirse en una ventaja competitiva o en una inversión excesiva para un proceso que todavía no fue validado.
+
+Elegir mal no solo cuesta dinero. También puede provocar meses de desarrollo innecesario, una web difícil de mantener, pérdida de consultas, herramientas que no se conectan, dependencia de tareas manuales y la necesidad de reconstruir todo cuando el negocio crece.
+
+Por eso, antes de hablar de diseño o tecnología hay que decidir qué trabajo debe hacer la web dentro del negocio.
+
+Esta guía te ayudará a elegir entre una landing page, una web corporativa, una tienda online, un sitio de contenidos, una membresía, un portal o una solución a medida. También vamos a ver qué plataforma puede convenir y cuándo tiene sentido agregar CRM, automatizaciones o inteligencia artificial.
+
+## Paso 1: definir el resultado que debe producir
+
+Una web no debería comenzar con un listado de secciones. Debería comenzar con un objetivo.
+
+### ¿Cuál es la acción principal que querés que realice el visitante?
+
+Puede ser solicitar información, reservar una reunión o turno, comprar un producto, pedir un presupuesto, registrarse, descargar un recurso, escuchar una demostración, acceder a una plataforma, comparar servicios o visitar un local.
+
+Si hay cinco acciones principales, probablemente todavía no exista una prioridad clara.
+
+### ¿Cómo se produce hoy una venta?
+
+No todos los negocios venden igual. Algunos necesitan que la persona compre directamente. Otros requieren una llamada, diagnóstico, demostración, visita o presupuesto personalizado. La web debe acompañar ese proceso real.
+
+### ¿Qué necesita saber alguien antes de avanzar?
+
+Pensá en las preguntas que aparecen repetidamente: ¿cómo funciona?, ¿cuánto cuesta?, ¿para quién es?, ¿qué incluye?, ¿cuánto demora?, ¿qué resultados puedo esperar?, ¿qué sucede después de contactarlos?, ¿por qué debería confiar? Estas preguntas deberían influir sobre la estructura y el contenido.
+
+### ¿Qué ocurre después de que alguien deja sus datos?
+
+Una web puede generar formularios y aun así perder oportunidades si nadie responde, registra ni hace seguimiento. Definí dónde se guarda el contacto, quién recibe la notificación, cuánto debería tardar la respuesta, qué información necesita el responsable, qué seguimiento se realiza y cómo se registra el resultado.
+
+### ¿Quién actualizará la web?
+
+Una tienda necesita productos actualizados. Un blog necesita publicaciones. Una membresía necesita contenido y soporte. Una web corporativa puede cambiar con menor frecuencia. La solución debe adaptarse a la capacidad real del equipo.
+
+### ¿Qué podría necesitar el negocio dentro de doce meses?
+
+No hace falta construir hoy todo lo que quizá se use en el futuro. Sí conviene evitar decisiones que impidan crecer razonablemente.
+
+## Paso 2: reconocer qué tipo de sitio necesitás
+
+### 1. Landing page
+
+Una landing page es una página enfocada en una oferta, un público y una acción principal.
+
+**Es ideal para:** campañas publicitarias, lanzamiento de un servicio, validación de una oferta, inscripción a un evento, descarga de un recurso, reserva de una demostración o captación de leads.
+
+**Suele incluir:** una promesa clara, problema y solución, beneficios, explicación del servicio, evidencia o demostraciones, preguntas frecuentes, llamada a la acción y formulario o agenda.
+
+**Ventajas:** rápida de construir, mensaje concentrado, fácil de medir, adecuada para campañas específicas y de menor inversión inicial.
+
+**Limitaciones:** poco espacio para muchas líneas de negocio, limitada para estrategias amplias de contenido, puede quedar corta cuando la empresa necesita posicionarse sobre varios problemas y no sustituye necesariamente una presencia corporativa completa.
+
+**Elegila si:** tenés una oferta concreta y querés que casi todos los visitantes realicen la misma acción.
+
+### 2. Sitio web corporativo o de servicios
+
+Es una web con varias páginas destinada a presentar la empresa, sus servicios, metodología, proyectos y formas de contacto.
+
+**Es ideal para:** agencias, clínicas, estudios profesionales, empresas B2B, consultores con distintas soluciones, hoteles y negocios con varias áreas de información.
+
+**Suele incluir:** inicio, servicios, páginas individuales por solución, sobre la empresa, proyectos o casos, preguntas frecuentes, blog o recursos y contacto.
+
+**Ventajas:** comunica una oferta más amplia, construye una presencia profesional, permite trabajar distintas búsquedas en SEO, puede crecer con nuevas páginas y ofrece más contexto antes del contacto.
+
+**Limitaciones:** requiere una arquitectura clara, necesita más contenido que una landing, puede convertirse en un catálogo confuso si no existe jerarquía y demanda mayor inversión inicial.
+
+**Elegilo si:** necesitás posicionar la empresa, explicar varios servicios y construir confianza antes de una conversación comercial.
+
+### 3. Tienda online o e-commerce
+
+Una tienda online permite consultar productos, agregarlos al carrito, pagar y gestionar pedidos.
+
+**Es ideal para:** productos físicos, productos digitales, catálogos con compra directa, suscripciones de productos y servicios estandarizados que pueden adquirirse sin diagnóstico previo.
+
+**Puede necesitar:** catálogo, buscador y filtros, variantes, stock, carrito, pasarela de pago, envíos, facturación, cuentas de usuario, correos transaccionales, gestión de cambios y devoluciones e integración con inventario o ERP.
+
+**Ventajas:** permite vender durante todo el día, automatiza parte de la transacción, amplía el alcance geográfico, registra comportamiento y compras y facilita promociones y recompra.
+
+**Limitaciones:** mayor complejidad técnica y operativa, costos de medios de pago y aplicaciones, requisitos de seguridad y privacidad, necesidad de mantener catálogo, stock y logística, y soporte posterior a la compra.
+
+**Elegila si:** la persona puede comprender, seleccionar y comprar la oferta sin depender de una conversación personalizada para cada operación.
+
+### 4. Catálogo digital sin compra directa
+
+No todos los negocios con productos necesitan un carrito. Un catálogo permite mostrar productos, colecciones, fichas y disponibilidad, pero dirige la consulta hacia un vendedor o solicitud de presupuesto.
+
+**Es ideal para:** productos con precios variables, ventas mayoristas, fabricación a medida, maquinaria, propiedades y servicios paquetizados que requieren asesoramiento.
+
+**Ventajas:** presenta la oferta de forma ordenada, evita implementar una operación de e-commerce innecesaria, permite calificar la consulta según el producto y puede conectarse con WhatsApp o CRM.
+
+**Limitaciones:** no cierra la transacción por sí solo, necesita un proceso comercial posterior y requiere mantener la información actualizada.
+
+**Elegilo si:** querés facilitar la exploración, pero el precio o la venta dependen de variables que debe revisar una persona.
+
+### 5. Blog, medio o centro de recursos
+
+Un sitio de contenidos se construye para publicar información de manera constante, atraer búsquedas y desarrollar autoridad.
+
+**Es ideal para:** estrategias SEO, educación del mercado, medios especializados, marcas personales, empresas con procesos de compra largos y negocios que necesitan explicar soluciones complejas.
+
+**Puede incluir:** categorías, autores, buscador, newsletter, recursos descargables, videos o podcasts, enlaces hacia servicios y contenido relacionado.
+
+**Ventajas:** construye activos de largo plazo, responde preguntas antes de la venta, genera material reutilizable para redes y correo, puede atraer demanda orgánica y ayuda a demostrar experiencia.
+
+**Limitaciones:** necesita constancia y criterio editorial, los resultados suelen ser progresivos, requiere mantenimiento y actualización, y publicar volumen sin calidad no construye autoridad.
+
+**Elegilo si:** tu cliente investiga antes de comprar y tenés conocimiento útil que puede ayudarlo a decidir.
+
+### 6. Portfolio profesional
+
+Un portfolio está diseñado para demostrar capacidad mediante trabajos, casos y proceso.
+
+**Es ideal para:** diseñadores, desarrolladores, fotógrafos, arquitectos, productoras, agencias y profesionales creativos.
+
+**Ventajas:** convierte afirmaciones en evidencia, permite explicar decisiones y resultados, muestra estilo y especialización, y facilita que un prospecto determine si existe compatibilidad.
+
+**Limitaciones:** una galería sin contexto puede verse bien y vender poco, necesita proyectos bien presentados, los demos deben identificarse como tales, y requiere un CTA y un proceso de contacto claro.
+
+**Elegilo si:** la calidad del trabajo anterior es uno de los principales criterios de compra.
+
+### 7. Sitio de reservas o turnos
+
+Su objetivo principal es informar disponibilidad y permitir reservar.
+
+**Es ideal para:** salud, estética, gastronomía, alojamiento, consultoría, eventos, educación y servicios profesionales.
+
+**Puede incluir:** servicios y duraciones, disponibilidad, selección de profesional o recurso, pagos o señas, confirmaciones, recordatorios, cancelaciones, lista de espera e integración con calendarios.
+
+**Ventajas:** reduce coordinación manual, facilita reservar fuera de horario, permite enviar recordatorios y mejora la visibilidad sobre la ocupación.
+
+**Limitaciones:** las reglas de agenda deben estar bien configuradas, una mala sincronización puede generar conflictos, necesita políticas claras de cancelación y reprogramación, y algunos casos requieren validación humana.
+
+**Elegilo si:** la reserva es el paso principal para transformar interés en una oportunidad real.
+
+### 8. Membresía, comunidad o plataforma de cursos
+
+Estas plataformas restringen contenido o funciones según el usuario, el plan o el pago.
+
+**Es ideal para:** cursos online, bibliotecas de contenido, comunidades privadas, membresías profesionales, programas de acompañamiento y suscripciones.
+
+**Puede incluir:** registro e inicio de sesión, pagos recurrentes, niveles de acceso, clases y recursos, progreso, comunidad, notificaciones, soporte y certificados.
+
+**Ventajas:** habilita modelos de ingresos recurrentes, centraliza contenido y usuarios, mejora la continuidad de la experiencia y permite segmentar accesos.
+
+**Limitaciones:** mayor complejidad técnica, necesidad constante de entregar valor, gestión de pagos y permisos, soporte a usuarios, y cuidado especial de datos y accesos.
+
+**Elegila si:** la propuesta depende de acceso continuo, contenido protegido o interacción entre miembros.
+
+### 9. Portal de clientes o área privada
+
+Un portal permite que cada cliente consulte información, documentos, avances o acciones propias.
+
+**Es ideal para:** seguimiento de proyectos, documentación privada, reportes, soporte, pedidos recurrentes, gestión de cuentas y servicios con entregas periódicas.
+
+**Ventajas:** reduce consultas repetitivas, centraliza la comunicación, ofrece una experiencia diferenciada y permite autoservicio controlado.
+
+**Limitaciones:** requiere autenticación y permisos, aumenta la responsabilidad sobre seguridad, necesita integrarse con la operación y demanda soporte y evolución.
+
+**Elegilo si:** tus clientes necesitan consultar o gestionar información después de comprar.
+
+### 10. Aplicación o sistema web a medida
+
+Una aplicación web no se limita a comunicar o vender. Permite ejecutar procesos específicos del negocio.
+
+**Es ideal para:** operaciones que no encajan en herramientas existentes, sistemas internos, marketplaces, SaaS, cotizadores complejos, dashboards personalizados, gestión de inventario, recursos o pedidos, y experiencias digitales diferenciadoras.
+
+**Ventajas:** se adapta al proceso real, puede convertirse en propiedad intelectual, permite integrar reglas específicas y escala alrededor del modelo de negocio.
+
+**Limitaciones:** inversión y plazo mayores, mantenimiento continuo, necesidad de definir producto, usuarios y prioridades, riesgo de construir demasiado antes de validar, y seguridad y pruebas más exigentes.
+
+**Elegila si:** existe un proceso importante, validado y suficientemente particular como para justificar desarrollo propio.
+
+## La mayoría de los negocios necesita una solución híbrida
+
+Las categorías anteriores ayudan a decidir, pero las webs modernas suelen combinar funciones. Por ejemplo:
+
+* Una web corporativa con blog y agenda.
+* Una tienda con contenidos educativos.
+* Un portfolio con formulario de calificación.
+* Una landing conectada con CRM y seguimiento.
+* Una membresía con comunidad y tienda.
+* Un catálogo con agente de WhatsApp.
+* Una web de servicios con portal privado.
+
+La pregunta no es qué etiqueta usar. La pregunta es qué combinación mínima permite resolver el objetivo actual sin bloquear el crecimiento.
+
+## Paso 3: decidir si necesitás una web informativa o un sistema inteligente
+
+Dos páginas pueden verse casi iguales y funcionar de manera completamente distinta.
+
+Una web básica puede mostrar información y enviar formularios por correo. Una web inteligente puede calificar consultas, registrar contactos en un CRM, identificar el canal de origen, iniciar WhatsApp con contexto, activar una bienvenida, asignar responsables, crear tareas, reservar reuniones o turnos, enviar recordatorios, hacer seguimiento, mostrar métricas en un dashboard e incorporar agentes de chat o voz.
+
+| Si necesitás… | Función recomendable |
+| --- | --- |
+| Recibir consultas mejor preparadas | Formulario de calificación |
+| Saber de dónde proviene cada oportunidad | Analítica y atribución |
+| Evitar contactos olvidados | CRM y tareas automáticas |
+| Responder fuera de horario | Agente conversacional con límites |
+| Coordinar citas | Calendario conectado y recordatorios |
+| Captar a quien todavía no compra | Lead magnet y newsletter |
+| Recuperar oportunidades | Secuencias de seguimiento |
+| Medir el proceso completo | Dashboard comercial |
+
+No todas las webs necesitan todas estas funciones. Pero deberían poder integrarse con las que realmente aporten valor.
+
+## Paso 4: elegir la plataforma o tecnología
+
+La mejor plataforma no es la que tiene más funciones. Es la que resuelve el proyecto con un equilibrio razonable entre velocidad, personalización, mantenimiento, costo y crecimiento.
+
+| Plataforma o enfoque | Suele funcionar bien para | Facilidad de gestión | Personalización | Escalabilidad | Principal consideración |
+| --- | --- | --- | --- | --- | --- |
+| WordPress | Blogs, webs corporativas, contenido y tiendas con extensiones | Media | Alta | Media-alta | Requiere actualizaciones, seguridad y control de complementos |
+| Shopify | Comercio electrónico | Alta | Media-alta | Alta | Costos recurrentes, aplicaciones y reglas propias del ecosistema |
+| Wix / Wix Studio | Webs pequeñas y medianas, portfolios y reservas | Alta | Media-alta | Media | Comodidad a cambio de mayor dependencia de plataforma |
+| Webflow / Framer | Marketing, diseño visual y sitios de contenido moderado | Media-alta | Alta en presentación | Media | Funciones complejas pueden requerir integraciones externas |
+| Constructor con IA | Prototipos y sitios sencillos | Muy alta | Variable | Variable | La velocidad no reemplaza estrategia, revisión y mantenimiento |
+| Desarrollo moderno a medida | Experiencias avanzadas, integraciones y aplicaciones | Baja para usuario técnico | Muy alta | Alta | Necesita equipo de desarrollo y mantenimiento |
+| Plataforma SaaS especializada | Reservas, cursos, directorios o casos concretos | Alta | Baja-media | Media-alta | Conviene aceptar sus límites en lugar de personalizar sin fin |
+
+### WordPress
+
+Es una alternativa flexible para sitios que necesitan administrar contenido. Su sistema de temas, usuarios y complementos permite extender funciones, pero esa flexibilidad exige mantener versiones, seguridad y compatibilidad.
+
+### Shopify
+
+Está enfocada en comercio. Resulta especialmente útil cuando la prioridad es gestionar catálogo, pedidos, pagos y venta multicanal sin construir toda la infraestructura desde cero.
+
+### Wix, Webflow o Framer
+
+Permiten desarrollar sitios visuales con mayor velocidad y facilitar parte de la gestión. Son buenas alternativas cuando el proyecto encaja en sus capacidades y la dependencia del ecosistema no representa un problema.
+
+### Desarrollo a medida
+
+Ofrece control sobre diseño, rendimiento, integraciones y comportamiento. Tiene sentido cuando la personalización genera valor real, no solamente por el deseo de decir que la web fue hecha desde cero.
+
+## Paso 5: elegir entre plantilla, personalización o diseño desde cero
+
+### Plantilla prediseñada
+
+**Conviene cuando:** el presupuesto es limitado, el plazo es corto y la estructura necesaria es común.
+
+**Riesgo:** adaptar el negocio a la plantilla en lugar de adaptar la plantilla al objetivo.
+
+### Base existente personalizada
+
+Permite acelerar el desarrollo mientras se modifica estructura, identidad, contenido y funciones.
+
+**Conviene cuando:** el proyecto necesita diferenciación, pero no justifica reinventar cada componente.
+
+### Diseño completamente personalizado
+
+Se construye desde la estrategia, la arquitectura y la experiencia deseada.
+
+**Conviene cuando:** la marca, la oferta o el recorrido requieren una solución particular y existe presupuesto para desarrollarla bien.
+
+La originalidad visual no debería ser el único criterio. La claridad, la accesibilidad y la facilidad para avanzar suelen aportar más que una interacción espectacular pero confusa.
+
+## Paso 6: calcular el presupuesto completo
+
+El costo de una web no termina cuando se publica.
+
+### Inversión inicial
+
+Puede incluir estrategia, arquitectura, copywriting, identidad visual, UX/UI, desarrollo, carga o migración de contenido, integraciones, analítica, SEO técnico, pruebas y capacitación.
+
+### Costos recurrentes
+
+Pueden incluir dominio, hosting, licencias, mantenimiento, seguridad, copias de respaldo, soporte, actualizaciones, herramientas de email, CRM o automatización, consumo de mensajes, telefonía o inteligencia artificial, producción de contenido y optimización SEO.
+
+### Rangos orientativos
+
+Los siguientes valores son una referencia general en USD para proyectos profesionales dirigidos a pequeñas y medianas empresas. No representan una cotización.
+
+| Proyecto | Implementación orientativa | Continuidad posible |
+| --- | --- | --- |
+| Landing page estratégica | USD 800–1.500 | USD 100–300/mes |
+| Web corporativa | USD 1.500–5.000 | USD 150–600/mes |
+| Portfolio profesional | USD 1.000–3.500 | USD 100–400/mes |
+| Catálogo digital | USD 1.500–5.000 | USD 150–700/mes |
+| Tienda online | USD 2.000–10.000+ | USD 200–1.500+/mes |
+| Sitio con reservas | USD 1.500–6.000 | USD 150–800/mes |
+| Membresía o plataforma educativa | USD 3.000–15.000+ | USD 300–2.000+/mes |
+| Portal o aplicación a medida | USD 5.000–30.000+ | Según operación y soporte |
+
+El mercado presenta una dispersión mucho mayor según país, proveedor y complejidad. Compará siempre alcance, entregables y continuidad, no solamente el número final.
+
+## Paso 7: evaluar el retorno sin inventar promesas
+
+Una web no garantiza ventas. Su valor puede evaluarse mediante preguntas más concretas:
+
+* ¿Cuántas consultas genera actualmente?
+* ¿Qué porcentaje está calificado?
+* ¿Cuánto tarda la primera respuesta?
+* ¿Cuántas oportunidades se pierden sin seguimiento?
+* ¿Cuánto tiempo se dedica a coordinar turnos o copiar datos?
+* ¿Qué porcentaje de ventas podría realizarse directamente?
+* ¿Cuál es el margen de una venta?
+* ¿Cuánto cuesta depender únicamente de plataformas ajenas?
+
+El retorno puede aparecer por nuevas oportunidades, mayor conversión, ventas directas, tiempo operativo recuperado, menos errores, mejor aprovechamiento de campañas, información para decidir y construcción de un activo propio.
+
+La forma responsable de estimarlo es definir métricas antes del proyecto y compararlas después.
+
+## Errores frecuentes al elegir una web
+
+### Empezar por el diseño
+
+Elegir colores y efectos antes de definir el objetivo produce páginas atractivas sin dirección.
+
+### Comprar demasiada tecnología
+
+Un sistema complejo no compensa un proceso que todavía no fue validado.
+
+### Elegir únicamente por precio
+
+Dos presupuestos que dicen "página web" pueden incluir entregables completamente diferentes.
+
+### Ignorar la operación posterior
+
+Una tienda sin gestión de stock, una membresía sin contenido o un blog sin responsable editorial no funcionan por sí solos.
+
+### No conservar propiedad y acceso
+
+El negocio debería saber quién controla el dominio, hosting, cuentas, analítica y datos.
+
+### No planificar integraciones
+
+Si la web genera contactos que luego deben copiarse manualmente, se pierde parte de su valor.
+
+### No medir resultados comerciales
+
+Celebrar visitas sin observar consultas, reservas, propuestas o ventas impide saber si la inversión funciona.
+
+### Confundir IA con estrategia
+
+Un constructor puede generar una página rápidamente. Todavía hace falta decidir qué decir, a quién, para qué y qué sucede después.
+
+## Checklist antes de pedir presupuesto
+
+Respondé estas preguntas:
+
+* ¿Cuál es el objetivo principal?
+* ¿Quién es el público prioritario?
+* ¿Qué acción debería realizar?
+* ¿Qué información necesita para confiar?
+* ¿Qué páginas o contenidos son necesarios?
+* ¿Necesitás vender, reservar, captar o educar?
+* ¿Quién actualizará el contenido?
+* ¿Qué herramientas debe conectar?
+* ¿Necesitás CRM o seguimiento?
+* ¿Qué datos recopilará?
+* ¿Qué nivel de seguridad requiere?
+* ¿Qué podría necesitar dentro de un año?
+* ¿Cómo vas a medir si funciona?
+* ¿Qué presupuesto inicial y recurrente podés sostener?
+
+Si todavía no podés responder todo, no significa que no puedas comenzar. Significa que el diagnóstico debe formar parte del proyecto.
+
+## Entonces, ¿qué tipo de sitio web necesita tu negocio?
+
+* Si querés validar una oferta o ejecutar una campaña, comenzá por una landing page.
+* Si necesitás presentar varios servicios y construir autoridad, elegí una web corporativa.
+* Si la compra puede realizarse sin asesoramiento, evaluá una tienda online.
+* Si necesitás mostrar productos pero la venta requiere conversación, construí un catálogo conectado con el proceso comercial.
+* Si el cliente investiga antes de comprar, sumá un blog o centro de recursos.
+* Si tu trabajo anterior vende tu capacidad, priorizá un portfolio con casos explicados.
+* Si el negocio gira alrededor de citas, necesitás una web con agenda y recordatorios.
+* Si vendés acceso continuo, analizá una membresía o plataforma educativa.
+* Si los clientes necesitan gestionar información, considerá un portal privado.
+* Si el proceso es específico y validado, puede tener sentido una aplicación a medida.
+
+Y si necesitás varias cosas, no construyas todo de golpe: definí una primera versión que resuelva el problema más importante y permita evolucionar.
+
+## Una web debería crecer con el negocio, no frenarlo
+
+El sitio perfecto no es el que tiene más páginas, más animaciones o más herramientas. Es el que cumple una función clara dentro de la estrategia y la operación.
+
+En DeXa no comenzamos recomendando una plataforma. Primero analizamos qué querés conseguir, cómo se produce una venta, qué necesita el usuario, qué procesos ocurren después del contacto, qué puede automatizarse, qué debería seguir en manos humanas y qué conviene construir ahora y qué puede esperar.
+
+A partir de eso diseñamos webs de alta conversión, tiendas, landings, sistemas con CRM, automatizaciones, agentes inteligentes y soluciones a medida.
+
+## ¿No sabés qué tipo de web necesita tu negocio?
+
+Solicitá un diagnóstico inicial. Revisamos tu objetivo, tu proceso comercial y tus planes de crecimiento para recomendarte una solución proporcionada a lo que realmente necesitás.
+
+**[Quiero definir mi próxima web →](https://wa.me/542254538861?text=Hola%2C%20vi%20el%20art%C3%ADculo%20sobre%20qu%C3%A9%20tipo%20de%20sitio%20web%20necesita%20mi%20negocio%20y%20quiero%20un%20diagn%C3%B3stico%20para%20saber%20cu%C3%A1l%20me%20conviene.)**`,
+  },
 ];
