@@ -72,7 +72,11 @@ export default function Hero() {
             Ver soluciones
           </Link>
         </Reveal>
-        <p className="text-xs tracking-[0.18em] uppercase text-white/40">Captar · Atender · Convertir</p>
+        <Reveal style={{ transitionDelay: "650ms" }}>
+          <p className="text-[11px] sm:text-xs font-semibold tracking-[0.24em] uppercase text-white/75 [text-shadow:0_2px_10px_rgba(0,0,0,0.6)]">
+            Captar · Atender · Convertir
+          </p>
+        </Reveal>
       </div>
     </section>
   );
