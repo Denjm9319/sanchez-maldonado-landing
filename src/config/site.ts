@@ -28,15 +28,11 @@ export const PRICING = {
 
 export const NAV_LINKS = [
   { href: "/proyectos#servicios", label: "Servicios" },
-  { href: "/#sofia", label: "Sofia" },
   { href: "/proyectos#proyectos", label: "Proyectos" },
   { href: "/productos", label: "Productos" },
   { href: "/precios", label: "Precios" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/blog", label: "Blog" },
-  { href: "/nosotros#proceso", label: "Cómo trabajamos" },
-  { href: "/#faq", label: "FAQ" },
-  { href: "/#contacto", label: "Contacto" },
 ];
 
 export interface Project {

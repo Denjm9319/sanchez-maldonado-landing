@@ -35,9 +35,11 @@ export default function Navbar() {
         >
           <Link to="/#top" className="flex flex-col leading-[1.05] text-cream flex-none">
             <span className="font-heroDisplay text-base tracking-tight">DeXa</span>
-            <span className="text-[9.5px] tracking-[0.22em] uppercase text-cream/60 mt-0.5">
-              AI Solutions
-            </span>
+            {!narrow && (
+              <span className="text-[9.5px] tracking-[0.22em] uppercase text-cream/60 mt-0.5 whitespace-nowrap">
+                Diseño + Automatización
+              </span>
+            )}
           </Link>
           <div className="flex-1" />
           {!narrow && (
