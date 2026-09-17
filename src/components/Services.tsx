@@ -1,11 +1,43 @@
-import { useState } from "react";
 import Reveal from "./Reveal";
-import ServiceModal from "./ServiceModal";
-import DragRow from "./DragRow";
-import websiteImg from "../assets/services/websites.webp";
-import chatImg from "../assets/services/chat.webp";
-import voiceImg from "../assets/services/voice.webp";
-import automationImg from "../assets/services/automation.webp";
+import SpotlightBorder from "./SpotlightBorder";
+import { waLink } from "../config/site";
+
+function MonitorIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="3" y="4" width="18" height="13" rx="2" />
+      <path d="M8 21h8M12 17v4" />
+    </svg>
+  );
+}
+
+function ChatIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M4 5h16v11H8l-4 4V5Z" />
+      <path d="M8 9h8M8 12.5h5" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M6 3h3l1.5 4.5L8 9.5a11 11 0 0 0 6.5 6.5l2-2.5L21 15v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 5a2 2 0 0 1 2-2Z" />
+    </svg>
+  );
+}
+
+function NetworkIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="5" cy="6" r="2.4" />
+      <circle cx="19" cy="6" r="2.4" />
+      <circle cx="12" cy="18" r="2.4" />
+      <path d="M7 7.3 10.3 16M17 7.3 13.7 16M7.4 6h9.2" />
+    </svg>
+  );
+}
 
 const SERVICES = [
   {
@@ -14,7 +46,7 @@ const SERVICES = [
     eyebrow: "Web & Conversion",
     title: "Web de Conversión",
     tagline: "Una web premium diseñada para transformar visitas en consultas, reservas y oportunidades reales.",
-    image: websiteImg,
+    Icon: MonitorIcon,
     priceLines: ["Desde USD 599"],
     bullets: [
       "Diseño responsive y mobile-first",
@@ -37,7 +69,7 @@ const SERVICES = [
     title: "Un setter con IA que conversa como tu mejor setter.",
     tagline:
       "Responde, califica, hace seguimiento y lleva cada conversación hacia el siguiente paso — las 24 horas.",
-    image: chatImg,
+    Icon: ChatIcon,
     priceLines: ["USD 8.000/año", "Pago único", "o", "USD 839/mes"],
     bullets: [
       "CRM propio",
@@ -64,7 +96,7 @@ const SERVICES = [
     title: "Tu recepción telefónica con IA, funcionando 24/7.",
     tagline:
       "Atiende varias llamadas al mismo tiempo, entiende qué necesita cada persona, califica, agenda y hace seguimiento aunque tu equipo no pueda responder.",
-    image: voiceImg,
+    Icon: PhoneIcon,
     priceLines: ["USD 2.500 implementación", "Primeros 28 días de funcionamiento incluidos", "Luego: USD 800/mes"],
     bullets: [
       "Agente de voz personalizado",
@@ -91,7 +123,7 @@ const SERVICES = [
     title: "Todo conectado en un solo sistema comercial.",
     tagline:
       "Diseñamos la infraestructura completa para captar oportunidades, atenderlas y hacer seguimiento sin depender de herramientas desconectadas.",
-    image: automationImg,
+    Icon: NetworkIcon,
     priceLines: ["Proyecto personalizado"],
     bulletsLabel: "Puede incluir",
     bullets: [
@@ -116,61 +148,89 @@ const SERVICES = [
 ];
 
 export default function Services() {
-  const [openId, setOpenId] = useState<string | null>(null);
-  const active = SERVICES.find((s) => s.id === openId) ?? null;
-
   return (
-    <>
-      <Reveal id="servicios" className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)]">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Servicios</p>
-        <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] max-w-[20em] mb-[clamp(38px,5vw,64px)] [text-wrap:pretty]">
-          Un sistema, no una lista de servicios sueltos.
-        </h2>
-      </Reveal>
-      <Reveal className="w-screen relative left-1/2 -mx-[50vw] pb-[clamp(78px,11vw,150px)]">
-        <DragRow
-          items={SERVICES}
-          onOpen={(s) => setOpenId(s.id)}
-          renderCard={(s) => (
-            <>
-              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                  className="w-full h-full object-cover block pointer-events-none transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
-                />
-              </span>
-              <span className="block pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">
-                  {s.n} — {s.eyebrow}
-                </span>
-                <h3 className="text-[17px] mt-2 mb-1">{s.title}</h3>
-                <span className="text-[13.5px] text-cream/65 leading-[1.55] block">{s.tagline}</span>
-                <span className="text-[13px] text-gold mt-3 block group-hover:text-cream">Ver oferta →</span>
-              </span>
-            </>
-          )}
-        />
-      </Reveal>
+    <Reveal id="servicios" className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)]">
+      <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Servicios</p>
+      <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] max-w-[20em] mb-[clamp(48px,6vw,76px)] [text-wrap:pretty]">
+        Un sistema, no una lista de servicios sueltos.
+      </h2>
 
-      {active && (
-        <ServiceModal
-          eyebrow={active.eyebrow}
-          n={active.n}
-          title={active.title}
-          tagline={active.tagline}
-          priceLines={active.priceLines}
-          bulletsLabel={active.bulletsLabel}
-          bullets={active.bullets}
-          notes={active.notes}
-          ctaLabel={active.ctaLabel}
-          waMessage={active.waMessage}
-          onClose={() => setOpenId(null)}
-        />
-      )}
-    </>
+      <div className="grid gap-5 md:grid-cols-2">
+        {SERVICES.map((s, i) => (
+          <Reveal key={s.id} style={{ transitionDelay: `${i * 90}ms` }}>
+            <SpotlightBorder radius="rounded-[20px]" size={420} intensity={0.55} className="h-full">
+              <div className="h-full flex flex-col bg-white/[0.03] border border-white/10 rounded-[20px] p-[clamp(24px,3vw,34px)]">
+                <div className="flex items-center justify-between mb-5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 text-gold">
+                    <s.Icon />
+                  </span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-cream/45">
+                    {s.n} — {s.eyebrow}
+                  </span>
+                </div>
+
+                <h3 className="text-[19px] leading-[1.3] mb-2.5 text-cream">{s.title}</h3>
+                <p className="text-[13.5px] text-cream/65 leading-[1.6] mb-6">{s.tagline}</p>
+
+                <div className="rounded-[14px] border border-white/10 bg-black/20 p-[16px] mb-6">
+                  {s.priceLines.map((line, li) => {
+                    const isPrice = /USD/.test(line);
+                    const isSeparator = line.trim().toLowerCase() === "o";
+                    return (
+                      <p
+                        key={li}
+                        className={
+                          isSeparator
+                            ? "text-[11px] text-cream/40 uppercase tracking-[0.15em] my-0.5"
+                            : isPrice
+                              ? "text-[20px] text-gold font-medium leading-[1.3]"
+                              : "text-[12.5px] text-cream/55 leading-[1.4]"
+                        }
+                      >
+                        {line}
+                      </p>
+                    );
+                  })}
+                </div>
+
+                {s.bulletsLabel && (
+                  <p className="text-[10.5px] tracking-[0.15em] uppercase text-gold mb-2">{s.bulletsLabel}</p>
+                )}
+                <ul className="grid gap-[7px] text-[13.5px] mb-6">
+                  {s.bullets.map((b) => (
+                    <li key={b} className="flex gap-2.5 leading-[1.4] text-cream/80">
+                      <span className="text-gold shrink-0">✓</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {s.notes && s.notes.length > 0 && (
+                  <div className="grid gap-2.5 mb-6">
+                    {s.notes.map((note, ni) => (
+                      <p
+                        key={ni}
+                        className="text-[12.5px] leading-[1.55] text-cream/55 border-l-2 border-gold/40 pl-3.5"
+                      >
+                        {note}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                <a
+                  href={waLink(s.waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex justify-center bg-gold text-navy px-6 py-3.5 rounded-full text-[14px] font-medium hover:bg-cream transition-colors"
+                >
+                  {s.ctaLabel}
+                </a>
+              </div>
+            </SpotlightBorder>
+          </Reveal>
+        ))}
+      </div>
+    </Reveal>
   );
 }
