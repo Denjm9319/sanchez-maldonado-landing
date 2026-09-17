@@ -30,6 +30,7 @@ import estudioCobreShot from "../assets/projects/estudio-cobre-shot.png";
 import bentleyShot from "../assets/projects/bentley-shot.png";
 import costaSerenadeShot from "../assets/projects/costa-serenade-shot.webp";
 import velarShot from "../assets/projects/velar-shot.png";
+import yogaCoachShot from "../assets/projects/yoga-coach-shot.png";
 
 const REAL_PROJECTS = [
   {
@@ -286,6 +287,18 @@ const CONCEPTS = [
       "Landing inmobiliaria con preloader tipo máquina de escribir, una foto de mansión que flota sobre la página y escala mientras subís el scroll hasta fundirse con una sección oscura de estadísticas, y una galería de video que se expande al pasar el mouse por cada propiedad.",
     capabilities: ["Casa animada por scroll", "Preloader typewriter", "Galería de video hover-expand"],
     url: "https://velar-sable.vercel.app/",
+  },
+  {
+    id: "yoga-coach",
+    title: "Jessica — Coach de Yoga",
+    thumb: yogaCoachShot,
+    alt: "Concept de landing para una coach de yoga con sesiones privadas",
+    rubro: "Bienestar / Coaching de yoga",
+    objetivo: "Transmitir calma y cercanía, y llevar a reservar una sesión privada de yoga.",
+    description:
+      "Landing de pantalla completa sin scroll, con un video de fondo que se reproduce al hacer clic y una segunda pantalla tipo colección que sube desde abajo al terminar, con tres clases en video que al elegirlas abren una reserva real con confirmación.",
+    capabilities: ["Video de fondo bajo demanda", "Transición de pantalla completa", "Reserva de clase con confirmación"],
+    url: "https://yoga-coach-landing.vercel.app/",
   },
 ];
 
