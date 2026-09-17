@@ -427,7 +427,7 @@ Las principales variables son:
 
 Por eso conviene analizar primero el proceso actual y definir qué problema debe resolver. Implementar funciones que la clínica no necesita aumenta el costo y la complejidad sin mejorar necesariamente el resultado.
 
-## Cómo trabajamos en DeXa
+## Cómo trabajamos en Mimoru Systems
 
 Nuestro proceso comienza con un diagnóstico de la atención actual.
 
@@ -705,7 +705,7 @@ El servicio recurrente cubre la continuidad operativa:
 * Mantenimiento de integraciones.
 * Dashboard y métricas.
 
-En DeXa trabajamos mediante ciclos operativos anticipados. El ciclo comienza cuando el agente queda funcionando en producción y no durante los días previos de implementación.
+En Mimoru Systems trabajamos mediante ciclos operativos anticipados. El ciclo comienza cuando el agente queda funcionando en producción y no durante los días previos de implementación.
 
 ## Qué son los consumos
 
@@ -1001,7 +1001,7 @@ Si la clínica solamente automatiza respuestas, pero no registra lo que sucede n
 
 Por eso el precio debería evaluarse según el proceso que se construye, no únicamente según la herramienta utilizada.
 
-## Cómo trabajamos en DeXa
+## Cómo trabajamos en Mimoru Systems
 
 Comenzamos con un diagnóstico para entender qué sucede desde que una persona descubre la clínica hasta que confirma un turno.
 
@@ -1396,7 +1396,7 @@ Si estas respuestas no están claras, probablemente todavía no exista un sistem
 
 Un agente bien diseñado no intenta parecer humano a cualquier costo. Su objetivo es resolver con rapidez lo que está autorizado, obtener información confiable cuando la necesita y transferir el control cuando aparece una excepción.
 
-En DeXa trabajamos con un enfoque de autonomía controlada: definimos qué puede responder el agente, qué puede ejecutar, qué necesita validación y qué debe quedar en manos del equipo.
+En Mimoru Systems trabajamos con un enfoque de autonomía controlada: definimos qué puede responder el agente, qué puede ejecutar, qué necesita validación y qué debe quedar en manos del equipo.
 
 Sofía, nuestra agente de demostración para clínicas dentales, permite ver cómo puede atender consultas y acompañar oportunidades sin convertir cada conversación en una decisión autónoma sin límites.`,
   },
@@ -1888,7 +1888,7 @@ Una web puede atraer y convertir. Una automatización puede evitar tareas repeti
 
 Pero el verdadero valor aparece cuando todas esas piezas siguen una estrategia común.
 
-En DeXa diseñamos webs, agentes de IA, automatizaciones y sistemas de seguimiento para negocios de servicios. Comenzamos por entender cómo funciona tu operación, dónde se pierden oportunidades y qué solución tiene sentido implementar primero.
+En Mimoru Systems diseñamos webs, agentes de IA, automatizaciones y sistemas de seguimiento para negocios de servicios. Comenzamos por entender cómo funciona tu operación, dónde se pierden oportunidades y qué solución tiene sentido implementar primero.
 
 No se trata de sumar tecnología porque está de moda. Se trata de construir un sistema que ayude a tu equipo a responder mejor, dar seguimiento y convertir más consultas en clientes.`,
   },
@@ -2509,7 +2509,7 @@ Una empresa no necesita incorporar todas estas soluciones. Necesita identificar 
 
 A veces el mayor valor proviene de un agente de voz que atiende llamadas. Otras veces, de un seguimiento que evita que los prospectos desaparezcan. Y en muchos negocios, una automatización sencilla que conecta un formulario con el proceso comercial genera más impacto que un proyecto técnicamente espectacular.
 
-En DeXa analizamos el recorrido completo de cada consulta y diseñamos webs, agentes de IA, automatizaciones y dashboards alrededor de la operación real del negocio.
+En Mimoru Systems analizamos el recorrido completo de cada consulta y diseñamos webs, agentes de IA, automatizaciones y dashboards alrededor de la operación real del negocio.
 
 ## Fuentes de referencia
 
@@ -3034,7 +3034,7 @@ En ese caso, cambiar tipografías o fotografías puede mejorar la apariencia, pe
 
 Una web puede ser una tarjeta digital. También puede convertirse en el punto de entrada de todo el sistema comercial.
 
-En DeXa combinamos estrategia, copy, diseño, desarrollo, automatización, agentes de IA, analítica y seguimiento para construir páginas conectadas con la operación real del negocio.
+En Mimoru Systems combinamos estrategia, copy, diseño, desarrollo, automatización, agentes de IA, analítica y seguimiento para construir páginas conectadas con la operación real del negocio.
 
 No agregamos tecnología porque está de moda. Primero analizamos:
 
@@ -3608,7 +3608,7 @@ La comunidad ofrece formación sobre configuración de cuentas, subcuentas, mode
 
 Si no querés dedicar semanas a aprender la plataforma, diseñar workflows, conectar canales, probar casos y capacitar al equipo, podemos encargarnos de la implementación.
 
-En DeXa analizamos cómo llegan hoy tus consultas, diseñamos el pipeline, conectamos los canales necesarios y construimos las automatizaciones alrededor de tu operación.
+En Mimoru Systems analizamos cómo llegan hoy tus consultas, diseñamos el pipeline, conectamos los canales necesarios y construimos las automatizaciones alrededor de tu operación.
 
 Podemos ayudarte con:
 
@@ -3624,7 +3624,7 @@ Podemos ayudarte con:
 * Dashboards.
 * Capacitación y optimización.
 
-**[Quiero automatizar mi negocio con DeXa →](https://wa.me/542254538861?text=Hola%2C%20vi%20el%20art%C3%ADculo%20sobre%20GoHighLevel%20y%20quiero%20analizar%20c%C3%B3mo%20implementar%20un%20CRM%20y%20automatizaciones%20en%20mi%20negocio.)**
+**[Quiero automatizar mi negocio con Mimoru Systems →](https://wa.me/542254538861?text=Hola%2C%20vi%20el%20art%C3%ADculo%20sobre%20GoHighLevel%20y%20quiero%20analizar%20c%C3%B3mo%20implementar%20un%20CRM%20y%20automatizaciones%20en%20mi%20negocio.)**
 
 Podés aprender a construirlo o podés delegarnos su implementación. Lo importante es no seguir dejando que cada consulta dependa de mensajes dispersos y de la memoria del equipo.`,
   },
@@ -4069,7 +4069,7 @@ Y si necesitás varias cosas, no construyas todo de golpe: definí una primera v
 
 El sitio perfecto no es el que tiene más páginas, más animaciones o más herramientas. Es el que cumple una función clara dentro de la estrategia y la operación.
 
-En DeXa no comenzamos recomendando una plataforma. Primero analizamos qué querés conseguir, cómo se produce una venta, qué necesita el usuario, qué procesos ocurren después del contacto, qué puede automatizarse, qué debería seguir en manos humanas y qué conviene construir ahora y qué puede esperar.
+En Mimoru Systems no comenzamos recomendando una plataforma. Primero analizamos qué querés conseguir, cómo se produce una venta, qué necesita el usuario, qué procesos ocurren después del contacto, qué puede automatizarse, qué debería seguir en manos humanas y qué conviene construir ahora y qué puede esperar.
 
 A partir de eso diseñamos webs de alta conversión, tiendas, landings, sistemas con CRM, automatizaciones, agentes inteligentes y soluciones a medida.
 

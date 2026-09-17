@@ -34,7 +34,7 @@ export default function Navbar() {
           className="pointer-events-auto w-full max-w-[1180px] backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.35)] py-2.5 pl-5 pr-3 flex items-center gap-4"
         >
           <Link to="/#top" className="flex flex-col leading-[1.05] text-cream flex-none">
-            <span className="font-heroDisplay text-base tracking-tight">DeXa</span>
+            <span className="font-heroDisplay text-base tracking-tight">Mimoru Systems</span>
             {!narrow && (
               <span className="text-[9.5px] tracking-[0.22em] uppercase text-cream/60 mt-0.5 whitespace-nowrap">
                 Diseño + Automatización

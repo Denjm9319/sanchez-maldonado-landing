@@ -113,7 +113,7 @@ export default function BlogPostPage() {
   }
 
   const html = marked.parse(post.body, { async: false }) as string;
-  const demoMessage = `Hola, leí el artículo "${post.title}" en el blog de DeXa y quiero pedir un diagnóstico gratuito para mi negocio.`;
+  const demoMessage = `Hola, leí el artículo "${post.title}" en el blog de Mimoru Systems y quiero pedir un diagnóstico gratuito para mi negocio.`;
 
   return (
     <article className="pt-[64px]">

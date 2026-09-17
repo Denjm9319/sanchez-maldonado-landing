@@ -6,7 +6,7 @@ export default function ProyectosPage() {
   useSEO({
     title: "Servicios y proyectos",
     description:
-      "Sitios web, agentes de IA y automatizaciones que ya están en producción: proyectos reales y demos funcionales de DeXa por rubro.",
+      "Sitios web, agentes de IA y automatizaciones que ya están en producción: proyectos reales y demos funcionales de Mimoru Systems por rubro.",
     path: "/proyectos",
   });
 

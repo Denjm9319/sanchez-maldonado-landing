@@ -10,7 +10,7 @@ import heroVideo from "../assets/video/hero-aether.mp4";
 
 export default function Home() {
   useSEO({
-    title: "DeXa | Agentes de IA, WhatsApp y webs que atienden por vos",
+    title: "Mimoru Systems | Agentes de IA, WhatsApp y webs que atienden por vos",
     description:
       "Diseñamos sitios web, campañas, agentes de IA y automatizaciones que ayudan a negocios a atraer, atender y convertir más clientes.",
     path: "/",

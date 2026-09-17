@@ -21,7 +21,7 @@ export default function BlogPage() {
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "Blog de DeXa",
+      name: "Blog de Mimoru Systems",
       url: `${SITE_URL}/blog`,
     },
   });

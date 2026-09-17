@@ -14,7 +14,7 @@ export default function Footer() {
     >
       <div className="max-w-[1180px] mx-auto px-6 pt-[clamp(50px,7vw,84px)] pb-[clamp(30px,4vw,44px)] grid gap-[clamp(28px,4vw,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
         <div>
-          <p className="font-display text-xl text-cream">DeXa</p>
+          <p className="font-display text-xl text-cream">Mimoru Systems</p>
           <p className="text-[10.5px] tracking-[0.22em] uppercase text-gold mt-1.5">Diseño + Automatización</p>
           <p className="mt-[18px] leading-[1.7] text-[15px] max-w-[26em] text-cream/80">
             Diseño, marketing e inteligencia artificial para negocios que quieren crecer.
@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-cream/10">
         <div className="max-w-[1180px] mx-auto px-6 pt-5 pb-7 text-[12.5px] text-cream/45">
-          © 2026 DeXa
+          © 2026 Mimoru Systems
         </div>
       </div>
     </footer>

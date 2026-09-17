@@ -190,7 +190,7 @@ export default function Precios() {
   useSEO({
     title: "Precios",
     description:
-      "Cómo armamos cada proyecto en DeXa: webs premium, agentes de IA y sistemas de crecimiento a medida del negocio, sin paquetes cerrados ni letra chica.",
+      "Cómo armamos cada proyecto en Mimoru Systems: webs premium, agentes de IA y sistemas de crecimiento a medida del negocio, sin paquetes cerrados ni letra chica.",
     path: "/precios",
   });
 

@@ -268,11 +268,11 @@ const CONCEPTS = [
   {
     id: "calculadora-dexa",
     category: "saas",
-    title: "Calculadora DeXa",
+    title: "Calculadora Mimoru Systems",
     thumb: estudioCobreShot,
-    alt: "Calculadora de presupuesto de DeXa para sitios web",
+    alt: "Calculadora de presupuesto de Mimoru Systems para sitios web",
     rubro: "Calculadora de presupuesto propia",
-    objetivo: "Que un visitante calcule solo, en segundos, cuánto costaría su sitio con DeXa y vea por qué conviene frente a una agencia o un freelancer.",
+    objetivo: "Que un visitante calcule solo, en segundos, cuánto costaría su sitio con Mimoru Systems y vea por qué conviene frente a una agencia o un freelancer.",
     description:
       "Calculadora interactiva de presupuesto con selector de tipo de servicio, slider de cantidad de páginas, extras de contenido y SEO, y urgencia de entrega — recalcula el precio en vivo desde el piso de USD 599 y lo compara al instante con el costo típico de una agencia y de un freelancer.",
     capabilities: ["Calculadora interactiva", "Precio en vivo", "Web & Conversion"],
