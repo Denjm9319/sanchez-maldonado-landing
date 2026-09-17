@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Reveal from "./Reveal";
 import ConceptModal from "./ConceptModal";
+import DragRow from "./DragRow";
+import CategoryChips from "./CategoryChips";
 import zenithShot from "../assets/projects/zenith-shot.png";
 import auraShot from "../assets/projects/aura-shot.png";
 import securifyShot from "../assets/projects/securify-shot.png";
@@ -29,11 +31,19 @@ import bakeryFacilitiesShot from "../assets/projects/bakery-facilities-shot.webp
 import estudioCobreShot from "../assets/projects/estudio-cobre-shot.png";
 import bentleyShot from "../assets/projects/bentley-shot.png";
 import costaSerenadeShot from "../assets/projects/costa-serenade-shot.webp";
+import veloraShot from "../assets/projects/velora-shot.png";
 import velarShot from "../assets/projects/velar-shot.png";
+import aetherLaneShot from "../assets/projects/aether-lane-shot.webp";
+import bespokeArchitectureShot from "../assets/projects/bespoke-architecture-shot.png";
+import novaAiShot from "../assets/projects/nova-ai-shot.png";
+import viktorOddyShot from "../assets/projects/viktor-oddy-shot.png";
+import yogaCoachShot from "../assets/projects/yoga-coach-shot.png";
+import vitaraShot from "../assets/projects/vitara-shot.png";
 
 const REAL_PROJECTS = [
   {
     id: "sentido-diario",
+    category: "salud",
     title: "Sentido Diario",
     thumb: sentidoDiarioShot,
     alt: "Sitio real de Sentido Diario, clínica de estética facial",
@@ -46,6 +56,7 @@ const REAL_PROJECTS = [
   },
   {
     id: "dra-tania",
+    category: "salud",
     title: "Dra. Tania Mielnikowicz",
     thumb: draTaniaShot,
     alt: "Sitio real de la Dra. Tania Mielnikowicz, ginecóloga",
@@ -58,6 +69,7 @@ const REAL_PROJECTS = [
   },
   {
     id: "arcari-silvina",
+    category: "salud",
     title: "Silvina Arcari",
     thumb: arcariSilvinaShot,
     alt: "Sitio real de Silvina Arcari, psicóloga y sexóloga clínica",
@@ -70,6 +82,7 @@ const REAL_PROJECTS = [
   },
   {
     id: "marcela-brito",
+    category: "salud",
     title: "Dra. Marcela Brito",
     thumb: marcelaBritoShot,
     alt: "Sitio real de la Dra. Marcela Brito, odontóloga en Valeria del Mar",
@@ -85,6 +98,7 @@ const REAL_PROJECTS = [
 const CONCEPTS = [
   {
     id: "zenith",
+    category: "inmobiliaria",
     title: "Zenith Realty",
     thumb: zenithShot,
     alt: "Concept de landing para inmobiliaria de lujo",
@@ -97,6 +111,7 @@ const CONCEPTS = [
   },
   {
     id: "aura",
+    category: "salud",
     title: "Aura Wellness",
     thumb: auraShot,
     alt: "Concept de landing para telemedicina y bienestar",
@@ -109,6 +124,7 @@ const CONCEPTS = [
   },
   {
     id: "securify",
+    category: "saas",
     title: "Securify",
     thumb: securifyShot,
     alt: "Concept de landing para producto SaaS",
@@ -121,6 +137,7 @@ const CONCEPTS = [
   },
   {
     id: "dental2",
+    category: "salud",
     title: "Dental Health",
     thumb: dental2Shot,
     alt: "Concept de landing para clínica dental",
@@ -133,6 +150,7 @@ const CONCEPTS = [
   },
   {
     id: "certboost",
+    category: "edtech",
     title: "Design Rocket Certificates",
     thumb: certboostShot,
     alt: "Concept de landing para certificaciones online",
@@ -145,6 +163,7 @@ const CONCEPTS = [
   },
   {
     id: "blind-glamour",
+    category: "moda",
     title: "Blind by Glamour",
     thumb: blindGlamourShot,
     alt: "Concept de landing para marca de anteojos de alta gama",
@@ -157,6 +176,7 @@ const CONCEPTS = [
   },
   {
     id: "orven",
+    category: "moda",
     title: "Orven",
     thumb: orvenShot,
     alt: "Concept de landing para marca de anteojos de rendimiento",
@@ -169,6 +189,7 @@ const CONCEPTS = [
   },
   {
     id: "denta-web",
+    category: "salud",
     title: "Denta Estética",
     thumb: dentaWebShot,
     alt: "Concept de landing para clínica dental estética",
@@ -181,6 +202,7 @@ const CONCEPTS = [
   },
   {
     id: "cozy-paws-web",
+    category: "ecommerce",
     title: "CozyPaws Store",
     thumb: cozyPawsWebShot,
     alt: "Concept de landing e-commerce para tienda de mascotas",
@@ -193,6 +215,7 @@ const CONCEPTS = [
   },
   {
     id: "ui-rocket",
+    category: "saas",
     title: "UI Rocket",
     thumb: uiRocketShot,
     alt: "Concept de landing para SaaS educativo",
@@ -205,6 +228,7 @@ const CONCEPTS = [
   },
   {
     id: "learnly",
+    category: "edtech",
     title: "Learnly",
     thumb: learnlyShot,
     alt: "Concept de landing para plataforma educativa",
@@ -217,6 +241,7 @@ const CONCEPTS = [
   },
   {
     id: "nimbus-grid",
+    category: "saas",
     title: "Nimbus Grid",
     thumb: nimbusGridShot,
     alt: "Concept de landing para plataforma de almacenamiento en la nube",
@@ -229,6 +254,7 @@ const CONCEPTS = [
   },
   {
     id: "bakery-facilities",
+    category: "turismo",
     title: "Bakery Facilities",
     thumb: bakeryFacilitiesShot,
     alt: "Concept de landing para empresa B2B de soluciones de panadería",
@@ -241,6 +267,7 @@ const CONCEPTS = [
   },
   {
     id: "calculadora-dexa",
+    category: "saas",
     title: "Calculadora DeXa",
     thumb: estudioCobreShot,
     alt: "Calculadora de presupuesto de DeXa para sitios web",
@@ -253,6 +280,7 @@ const CONCEPTS = [
   },
   {
     id: "bentley",
+    category: "moda",
     title: "Beyond The Collection",
     thumb: bentleyShot,
     alt: "Concept de landing para colección de perfumes de lujo",
@@ -265,6 +293,7 @@ const CONCEPTS = [
   },
   {
     id: "costa-serenade",
+    category: "turismo",
     title: "Costa Serenade",
     thumb: costaSerenadeShot,
     alt: "Concept de landing para un grupo de nado en aguas abiertas en la costa de Liguria",
@@ -276,7 +305,21 @@ const CONCEPTS = [
     url: "https://costa-serenade.vercel.app/",
   },
   {
+    id: "velora",
+    category: "inmobiliaria",
+    title: "Velora",
+    thumb: veloraShot,
+    alt: "Concept de landing para inmobiliaria de lujo con galería scroll-driven",
+    rubro: "Inmobiliaria de lujo / Inversores internacionales",
+    objetivo: "Transmitir una identidad editorial de altísima gama y generar contacto calificado de inversores.",
+    description:
+      "Landing inmobiliaria de lujo con una intro animada, un menú inferior que se transforma de barra a botón circular, y una galería que se controla con el scroll: las fotos de propiedades escalan desde el centro una sobre otra hasta que la pantalla se funde de negro a blanco para cerrar con el mensaje de marca.",
+    capabilities: ["Galería scroll-driven", "Menú morphing animado", "Splash intro con video"],
+    url: "https://velora-orpin-psi.vercel.app/",
+  },
+  {
     id: "velar",
+    category: "inmobiliaria",
     title: "Velar.",
     thumb: velarShot,
     alt: "Concept de landing para marca inmobiliaria de lujo con casa animada por scroll",
@@ -287,11 +330,90 @@ const CONCEPTS = [
     capabilities: ["Casa animada por scroll", "Preloader typewriter", "Galería de video hover-expand"],
     url: "https://velar-sable.vercel.app/",
   },
+  {
+    id: "aether-lane",
+    category: "inmobiliaria",
+    title: "Aether Lane",
+    thumb: aetherLaneShot,
+    alt: "Concept de landing para inmobiliaria de lujo con parallax de profundidad y texto que se ilumina con el scroll",
+    rubro: "Inmobiliaria de lujo / Bienes raíces internacionales",
+    objetivo: "Transmitir una identidad aspiracional y despertar el deseo de agendar una consulta privada.",
+    description:
+      "Landing inmobiliaria con tres capas de imagen (cielo, torre y montaña) que se mueven a distinta velocidad con el scroll para generar profundidad cinematográfica, un párrafo que se ilumina letra por letra a medida que bajás, y dos cintas de logos que corren en loop infinito en direcciones opuestas.",
+    capabilities: ["Parallax multicapa", "Texto que se ilumina con el scroll", "Web & Conversion"],
+    url: "https://aether-lane-bice.vercel.app/",
+  },
+  {
+    id: "bespoke-architecture",
+    category: "inmobiliaria",
+    title: "Bespoke Architecture Studio",
+    thumb: bespokeArchitectureShot,
+    alt: "Concept de landing para estudio de arquitectura de residencias de lujo",
+    rubro: "Arquitectura / Residencias de lujo",
+    objetivo: "Transmitir una identidad minimalista y editorial, y generar consultas para diseñar un proyecto a medida.",
+    description:
+      "Landing minimalista en blanco y negro para un estudio de arquitectura, con una marquesina de imágenes de proyectos que se desliza sola y también se puede arrastrar con el mouse, con física de inercia real, enmarcada por máscaras curvas en la parte superior e inferior.",
+    capabilities: ["Marquesina arrastrable con inercia", "Menú a pantalla completa", "Web & Conversion"],
+    url: "https://bespoke-architecture-studio.vercel.app/",
+  },
+  {
+    id: "nova-ai",
+    category: "saas",
+    title: "NOVA_AI",
+    thumb: novaAiShot,
+    alt: "Concept de landing cinematográfica para un producto de IA creativa",
+    rubro: "SaaS / Herramienta de IA creativa",
+    objetivo: "Transmitir una identidad de producto premium y llevar de la propuesta de valor a un plan pago.",
+    description:
+      "Landing cinematográfica de una sola página con un video de fondo que se scrubea cuadro a cuadro con el scroll, secciones numeradas con navegación ancla, grid de funciones y planes con precios, todo con botones y CTAs realmente funcionales.",
+    capabilities: ["Scroll-video cuadro a cuadro", "Planes con precios", "Web & Conversion"],
+    url: "https://nova-ai-delta-eight.vercel.app/",
+  },
+  {
+    id: "viktor-oddy",
+    category: "saas",
+    title: "Viktor Oddy",
+    thumb: viktorOddyShot,
+    alt: "Concept de landing editorial para un estudio de diseño creativo",
+    rubro: "Estudio de diseño creativo / Servicios profesionales",
+    objetivo: "Transmitir prestigio editorial y llevar de la propuesta de valor a coordinar un proyecto pago.",
+    description:
+      "Landing editorial de una sola página para un estudio de diseño, con marquee infinito de trabajos, imagen con efecto parallax, carrusel de testimonios auto-scroll, cards de planes con precio y una sección final donde miniaturas de proyectos aparecen siguiendo al mouse.",
+    capabilities: ["Marquee infinito", "Carrusel de testimonios", "Web & Conversion"],
+    url: "https://viktor-oddy-mauve.vercel.app/",
+  },
+  {
+    id: "yoga-coach",
+    category: "salud",
+    title: "Jessica — Yoga Coach",
+    thumb: yogaCoachShot,
+    alt: "Concept de landing para una coach de yoga con sesiones privadas",
+    rubro: "Bienestar / Coaching de yoga",
+    objetivo: "Transmitir calma y cercanía, y llevar a agendar una sesión privada de yoga.",
+    description:
+      "Landing de pantalla completa sin scroll, con un video de fondo que se reproduce solo al hacer clic y una segunda pantalla tipo colección que sube desde abajo al terminar, mostrando tres tarjetas de video superpuestas que se reproducen al pasar el mouse.",
+    capabilities: ["Video de fondo bajo demanda", "Transición de pantalla completa", "Tarjetas de video hover-play"],
+    url: "https://yoga-coach-landing.vercel.app/",
+  },
+  {
+    id: "vitara",
+    category: "salud",
+    title: "Vitara",
+    thumb: vitaraShot,
+    alt: "Concept de e-commerce de salud para medicación compuesta con seguimiento médico",
+    rubro: "Salud / E-commerce de telemedicina",
+    objetivo: "Vender planes de tratamiento mensuales con precio fijo y llevar al visitante a empezar sin fricción.",
+    description:
+      "Landing de e-commerce de salud con catálogo de tratamientos compuestos, marquesinas verticales de producto en el hero, carrusel de planes destacados y un acordeón de preguntas frecuentes — con un botón de borde degradado animado como firma visual en toda la página.",
+    capabilities: ["Web & Conversion", "Catálogo de tratamientos", "FAQ con acordeón"],
+    url: "https://vitara-salud.vercel.app/",
+  },
 ];
 
 const APPS = [
   {
     id: "denta",
+    category: "salud",
     title: "Denta",
     thumb: dentaShot,
     alt: "Concept de app para clínica dental",
@@ -304,6 +426,7 @@ const APPS = [
   },
   {
     id: "terraelix",
+    category: "salud",
     title: "TerraElix",
     thumb: terraelixShot,
     alt: "Concept de app para venta de suplementos",
@@ -316,6 +439,7 @@ const APPS = [
   },
   {
     id: "soul-canvas",
+    category: "salud",
     title: "Soul Canvas",
     thumb: soulCanvasShot,
     alt: "Concept de app de bienestar mental y registro de ánimo",
@@ -328,6 +452,7 @@ const APPS = [
   },
   {
     id: "learn-hub",
+    category: "edtech",
     title: "Learn Hub",
     thumb: learnHubShot,
     alt: "Concept de app de cursos online",
@@ -340,6 +465,7 @@ const APPS = [
   },
   {
     id: "cozy-paws",
+    category: "ecommerce",
     title: "CozyPaws",
     thumb: cozyPawsShot,
     alt: "Concept de app de e-commerce para mascotas",
@@ -352,6 +478,7 @@ const APPS = [
   },
   {
     id: "nexar",
+    category: "saas",
     title: "Nexar",
     thumb: nexarAppShot,
     alt: "Concept de app de productividad",
@@ -364,6 +491,7 @@ const APPS = [
   },
   {
     id: "vitalis",
+    category: "salud",
     title: "Vitalis",
     thumb: vitalisShot,
     alt: "Concept de app de actividad física y bienestar",
@@ -376,6 +504,7 @@ const APPS = [
   },
   {
     id: "steary",
+    category: "edtech",
     title: "Steary",
     thumb: stearyShot,
     alt: "Concept de app de biblioteca digital",
@@ -388,137 +517,136 @@ const APPS = [
   },
 ];
 
+type CategoryId =
+  | "todos"
+  | "inmobiliaria"
+  | "salud"
+  | "ecommerce"
+  | "saas"
+  | "edtech"
+  | "moda"
+  | "turismo";
+
+const CATEGORIES: { id: CategoryId; label: string }[] = [
+  { id: "todos", label: "Todos" },
+  { id: "inmobiliaria", label: "Inmobiliaria & Arquitectura" },
+  { id: "salud", label: "Salud & Bienestar" },
+  { id: "ecommerce", label: "E-commerce" },
+  { id: "saas", label: "SaaS & Tecnología" },
+  { id: "edtech", label: "Edtech" },
+  { id: "moda", label: "Moda & Lujo" },
+  { id: "turismo", label: "Turismo & Gastronomía" },
+];
+
+const SHOWCASE = [
+  ...REAL_PROJECTS.map((p) => ({
+    ...p,
+    badge: "Proyecto real",
+    ctaLabel: "Ver sitio en vivo" as string | undefined,
+  })),
+  ...CONCEPTS.map((p) => ({ ...p, badge: "Concept / Demo", ctaLabel: undefined as string | undefined })),
+];
+
+type ShowcaseItem = (typeof SHOWCASE)[number];
+
+const APPS_SHOWCASE = APPS.map((p) => ({ ...p, badge: "App Demo", ctaLabel: undefined as string | undefined }));
+
+type AppShowcaseItem = (typeof APPS_SHOWCASE)[number];
+
+function categoriesFor<T extends { category: string }>(items: T[]) {
+  const present = new Set(items.map((i) => i.category));
+  return CATEGORIES.filter((c) => c.id === "todos" || present.has(c.id));
+}
+
+function renderShowcaseCard(item: ShowcaseItem | AppShowcaseItem) {
+  return (
+    <>
+      <span className="block aspect-[4/3] overflow-hidden bg-black/20">
+        <img
+          src={item.thumb}
+          alt={item.alt}
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+          className="w-full h-full object-cover object-top block pointer-events-none transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
+        />
+      </span>
+      <span className="block pt-[18px] px-5 pb-[22px]">
+        <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">{item.badge}</span>
+        <span className="text-[17px] mt-2 block">{item.title}</span>
+        <span className="text-[13.5px] text-cream/60 block mt-1">{item.rubro}</span>
+      </span>
+    </>
+  );
+}
+
 export default function Projects() {
-  const [openConceptId, setOpenConceptId] = useState<string | null>(null);
-  const [openRealId, setOpenRealId] = useState<string | null>(null);
+  const [openId, setOpenId] = useState<string | null>(null);
+  const activeItem = SHOWCASE.find((i) => i.id === openId) ?? null;
+  const [category, setCategory] = useState<CategoryId>("todos");
+  const filtered = useMemo(
+    () => (category === "todos" ? SHOWCASE : SHOWCASE.filter((item) => item.category === category)),
+    [category]
+  );
+
   const [openAppId, setOpenAppId] = useState<string | null>(null);
-  const activeConcept = CONCEPTS.find((c) => c.id === openConceptId) ?? null;
-  const activeReal = REAL_PROJECTS.find((r) => r.id === openRealId) ?? null;
-  const activeApp = APPS.find((a) => a.id === openAppId) ?? null;
+  const activeApp = APPS_SHOWCASE.find((a) => a.id === openAppId) ?? null;
+  const [appCategory, setAppCategory] = useState<CategoryId>("todos");
+  const appCategories = useMemo(() => categoriesFor(APPS_SHOWCASE), []);
+  const filteredApps = useMemo(
+    () => (appCategory === "todos" ? APPS_SHOWCASE : APPS_SHOWCASE.filter((a) => a.category === appCategory)),
+    [appCategory]
+  );
 
   return (
     <section id="proyectos" className="bg-white/[0.03] border-t border-b border-white/10">
-      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)] pb-[clamp(78px,11vw,150px)]">
+      <Reveal className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)]">
         <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Trabajo real</p>
         <h1 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] mb-5 max-w-[18em]">
           Proyectos que ya están en producción.
         </h1>
-        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(30px,4vw,48px)]">
           Sitios reales que armamos para nuestro propio negocio y para conocidos que confiaron en
-          nosotros, más demos funcionales que probamos por rubro. Todo construido desde código y ya
-          en producción — podés visitarlos ahora mismo.
+          nosotros, más demos funcionales que probamos por rubro. Arrastrá la fila o dejala correr
+          sola — todo construido desde código y ya en producción.
         </p>
-        <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:gap-[clamp(18px,2.4vw,26px)] sm:justify-center sm:overflow-visible sm:[grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
-          {REAL_PROJECTS.map((r) => (
-            <button
-              key={r.id}
-              type="button"
-              onClick={() => setOpenRealId(r.id)}
-              aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
-            >
-              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
-                <img
-                  src={r.thumb}
-                  alt={r.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
-                />
-              </span>
-              <span className="block pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">Proyecto real</span>
-                <span className="text-[17px] mt-2 block">{r.title}</span>
-                <span className="text-[13.5px] text-cream/60 block mt-1">{r.rubro}</span>
-              </span>
-            </button>
-          ))}
-          {CONCEPTS.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              onClick={() => setOpenConceptId(c.id)}
-              aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
-            >
-              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
-                <img
-                  src={c.thumb}
-                  alt={c.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
-                />
-              </span>
-              <span className="block pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">Concept / Demo</span>
-                <span className="text-[17px] mt-2 block">{c.title}</span>
-                <span className="text-[13.5px] text-cream/60 block mt-1">{c.rubro}</span>
-              </span>
-            </button>
-          ))}
-        </div>
+        <CategoryChips categories={CATEGORIES} active={category} onChange={setCategory} />
+      </Reveal>
+      <Reveal className="w-screen relative left-1/2 -mx-[50vw] pb-[clamp(78px,11vw,150px)]">
+        <DragRow items={filtered} key={category} onOpen={(item) => setOpenId(item.id)} renderCard={renderShowcaseCard} />
       </Reveal>
 
-      <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(78px,11vw,150px)]">
+      <Reveal className="max-w-[1180px] mx-auto px-6">
         <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Apps</p>
         <h2 className="text-[clamp(26px,3.6vw,42px)] leading-[1.15] mb-5 max-w-[18em]">
           También armamos apps, no solo webs.
         </h2>
-        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(38px,5vw,64px)]">
+        <p className="text-[16.5px] text-cream/70 leading-[1.75] max-w-[38em] mb-[clamp(30px,4vw,48px)]">
           Demos de apps completas por rubro — dashboards, e-commerce, salud, educación — para mostrar
           cómo se vería tu propio producto antes de construirlo.
         </p>
-        <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:gap-[clamp(18px,2.4vw,26px)] sm:justify-center sm:overflow-visible sm:[grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
-          {APPS.map((a) => (
-            <button
-              key={a.id}
-              type="button"
-              onClick={() => setOpenAppId(a.id)}
-              aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
-            >
-              <span className="block aspect-[4/3] overflow-hidden bg-black/20">
-                <img
-                  src={a.thumb}
-                  alt={a.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
-                />
-              </span>
-              <span className="block pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">App Demo</span>
-                <span className="text-[17px] mt-2 block">{a.title}</span>
-                <span className="text-[13.5px] text-cream/60 block mt-1">{a.rubro}</span>
-              </span>
-            </button>
-          ))}
-        </div>
+        <CategoryChips categories={appCategories} active={appCategory} onChange={setAppCategory} />
+      </Reveal>
+      <Reveal className="w-screen relative left-1/2 -mx-[50vw] pb-[clamp(78px,11vw,150px)]">
+        <DragRow
+          items={filteredApps}
+          key={appCategory}
+          onOpen={(item) => setOpenAppId(item.id)}
+          renderCard={renderShowcaseCard}
+        />
       </Reveal>
 
-      {activeConcept && (
+      {activeItem && (
         <ConceptModal
-          title={activeConcept.title}
-          rubro={activeConcept.rubro}
-          objetivo={activeConcept.objetivo}
-          description={activeConcept.description}
-          capabilities={activeConcept.capabilities}
-          url={activeConcept.url}
-          onClose={() => setOpenConceptId(null)}
-        />
-      )}
-      {activeReal && (
-        <ConceptModal
-          title={activeReal.title}
-          rubro={activeReal.rubro}
-          objetivo={activeReal.objetivo}
-          description={activeReal.description}
-          capabilities={activeReal.capabilities}
-          url={activeReal.url}
-          badge="Proyecto real"
-          ctaLabel="Ver sitio en vivo"
-          onClose={() => setOpenRealId(null)}
+          title={activeItem.title}
+          rubro={activeItem.rubro}
+          objetivo={activeItem.objetivo}
+          description={activeItem.description}
+          capabilities={activeItem.capabilities}
+          url={activeItem.url}
+          badge={activeItem.badge}
+          ctaLabel={activeItem.ctaLabel}
+          onClose={() => setOpenId(null)}
         />
       )}
       {activeApp && (
@@ -529,7 +657,8 @@ export default function Projects() {
           description={activeApp.description}
           capabilities={activeApp.capabilities}
           url={activeApp.url}
-          badge="App Demo"
+          badge={activeApp.badge}
+          ctaLabel={activeApp.ctaLabel}
           onClose={() => setOpenAppId(null)}
         />
       )}

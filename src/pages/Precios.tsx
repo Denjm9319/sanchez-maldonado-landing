@@ -38,9 +38,9 @@ const PLANS = [
 
 const MISSION_LINES = [
   {
-    pre: "No cobramos por hora. Cobramos por ",
-    pill: "resultados",
-    post: ": lo que tu negocio necesita para dejar de perder clientes.",
+    pre: "No vendemos horas de desarrollo. Construimos ",
+    pill: "una solución",
+    post: " alrededor del problema que necesitás resolver.",
   },
   {
     pre: "Cada presupuesto se arma después de entender tu ",
@@ -177,7 +177,7 @@ function Beat({
         playsInline
         preload="metadata"
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover [transform:translateZ(0)] [-webkit-backface-visibility:hidden] [backface-visibility:hidden]"
       />
       <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
       <div className="relative z-10 w-full px-6 py-16">{children}</div>
@@ -240,11 +240,11 @@ export default function Precios() {
       {/* Beat 2: plans — continues the same video from where the intro left off, through to the hand extending */}
       <Beat id="precios-planes" videoSrc={bloomVideo1} nextId="precios-mission-0" segment={[3.5, 8]}>
         <Reveal className="w-full">
-          <div className="flex sm:grid sm:grid-cols-3 sm:justify-items-center gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none px-6 sm:px-0 max-w-[940px] mx-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex sm:grid sm:grid-cols-3 sm:justify-items-center gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none px-6 sm:px-0 max-w-[940px] mx-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [touch-action:pan-x]">
             {PLANS.map((plan) => (
               <div
                 key={plan.title}
-                className={`w-[260px] sm:w-[280px] max-w-full shrink-0 snap-center rounded-[4px] p-6 flex flex-col gap-3 border shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur-lg ${
+                className={`w-[260px] sm:w-[280px] max-w-full shrink-0 snap-center rounded-[4px] p-6 flex flex-col gap-3 border shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur-lg [transform:translateZ(0)] [-webkit-backface-visibility:hidden] [backface-visibility:hidden] ${
                   plan.highlight ? "bg-black/50 border-gold/50" : "bg-black/50 border-white/15"
                 }`}
               >

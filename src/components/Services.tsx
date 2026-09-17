@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
 import ServiceModal from "./ServiceModal";
+import DragRow from "./DragRow";
 import websiteImg from "../assets/services/websites.webp";
 import adsImg from "../assets/services/ads.webp";
 import chatImg from "../assets/services/chat.webp";
@@ -90,27 +91,26 @@ export default function Services() {
 
   return (
     <>
-      <Reveal id="servicios" className="max-w-[1180px] mx-auto px-6 py-[clamp(78px,11vw,150px)]">
+      <Reveal id="servicios" className="max-w-[1180px] mx-auto px-6 pt-[clamp(78px,11vw,150px)]">
         <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-5">Servicios</p>
         <h2 className="text-[clamp(30px,4.2vw,50px)] leading-[1.12] max-w-[20em] mb-[clamp(38px,5vw,64px)] [text-wrap:pretty]">
           Un sistema, no una lista de servicios sueltos.
         </h2>
-        <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:gap-[clamp(18px,2.4vw,26px)] sm:overflow-visible sm:[grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),280px))]">
-          {SERVICES.map((s) => (
-            <button
-              key={s.id}
-              type="button"
-              onClick={() => setOpenId(s.id)}
-              aria-haspopup="dialog"
-              className="group text-left bg-white/5 rounded-[16px] overflow-hidden border border-white/15 p-0 cursor-pointer shrink-0 w-[78%] snap-start sm:w-auto sm:shrink"
-            >
+      </Reveal>
+      <Reveal className="w-screen relative left-1/2 -mx-[50vw] pb-[clamp(78px,11vw,150px)]">
+        <DragRow
+          items={SERVICES}
+          onOpen={(s) => setOpenId(s.id)}
+          renderCard={(s) => (
+            <>
               <span className="block aspect-[4/3] overflow-hidden bg-black/20">
                 <img
                   src={s.image}
                   alt={s.title}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover block transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
+                  draggable={false}
+                  className="w-full h-full object-cover block pointer-events-none transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.03]"
                 />
               </span>
               <span className="block pt-[18px] px-5 pb-[22px]">
@@ -119,9 +119,9 @@ export default function Services() {
                 <span className="text-[13.5px] text-cream/65 leading-[1.55] block">{s.text}</span>
                 <span className="text-[13px] text-gold mt-3 block group-hover:text-cream">Ver más →</span>
               </span>
-            </button>
-          ))}
-        </div>
+            </>
+          )}
+        />
       </Reveal>
 
       {active && (
