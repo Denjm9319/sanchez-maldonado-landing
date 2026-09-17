@@ -11,50 +11,107 @@ const SERVICES = [
   {
     id: "websites",
     n: "01",
-    title: "Websites",
-    text: "Sitios premium orientados a conversión: estructura clara, carga rápida y una narrativa que genera confianza antes del primer contacto.",
+    eyebrow: "Web & Conversion",
+    title: "Web de Conversión",
+    tagline: "Una web premium diseñada para transformar visitas en consultas, reservas y oportunidades reales.",
     image: websiteImg,
-    howItWorks:
-      "Diseñamos e implementamos el sitio completo — estructura, copy, velocidad y SEO técnico — desde una landing simple hasta un sitio con tienda online o en varios idiomas, listo para producción según el alcance.",
-    bestFor: "Negocios que todavía no tienen web, o cuya web actual no refleja lo que realmente ofrecen.",
-    notFor:
-      "Negocios que buscan la web más barata y rápida posible sin importar el resultado — nosotros construimos cada sitio a medida y lo probamos a fondo antes de entregarlo, no en serie.",
-    waMessage: "Hola, vi la web y quiero consultar sobre el servicio de Websites para mi negocio.",
+    priceLines: ["Desde USD 599"],
+    bullets: [
+      "Diseño responsive y mobile-first",
+      "Estructura orientada a conversión",
+      "Copy y estrategia según alcance",
+      "WhatsApp, formularios o agenda",
+      "Integraciones básicas",
+      "Publicación y puesta online",
+    ],
+    notes: [
+      "¿Ya tenés imágenes y copy listos? Podés armar una versión express desde USD 299 como complemento de otro sistema Mimoru.",
+    ],
+    ctaLabel: "Quiero mi web",
+    waMessage: "Hola, vi la web y quiero armar mi Web de Conversión.",
   },
   {
-    id: "chat",
+    id: "setter",
     n: "02",
-    title: "AI Chat Agents",
-    text: "WhatsApp, Instagram, Messenger y Telegram, con respuestas inmediatas y tono propio.",
+    eyebrow: "AI Conversational Setter",
+    title: "Un setter con IA que conversa como tu mejor setter.",
+    tagline:
+      "Responde, califica, hace seguimiento y lleva cada conversación hacia el siguiente paso — las 24 horas.",
     image: chatImg,
-    howItWorks:
-      "Un agente entrenado con la información real de tu negocio responde estos canales al instante, todo el día.",
-    bestFor: "Negocios con alto volumen de consultas repetitivas: turnos, precios, disponibilidad.",
-    notFor: "Reemplazar por completo a tu equipo — se ocupa de lo repetitivo, no de negociaciones complejas.",
-    waMessage: "Hola, vi la web y quiero consultar sobre un AI Chat Agent para mi negocio.",
+    priceLines: ["USD 8.000/año", "Pago único", "o", "USD 839/mes"],
+    bullets: [
+      "CRM propio",
+      "Conversaciones altamente personalizadas",
+      "Calificación automática de prospectos",
+      "Seguimiento de oportunidades",
+      "Puede enviar audios, imágenes y contenido",
+      "WhatsApp, Instagram, Messenger",
+      "Personalidad y tono adaptados a tu marca",
+      "Historial y contexto de cada prospecto",
+      "Automatización del proceso comercial",
+    ],
+    notes: [
+      "Con el plan anual ahorrás USD 2.068 frente al pago mensual.",
+      "No es un chatbot de preguntas frecuentes. Es una capa comercial que trabaja cada conversación como lo haría un setter.",
+    ],
+    ctaLabel: "Ver cómo conversa",
+    waMessage: "Hola, vi la web y quiero ver cómo conversa el AI Conversational Setter.",
   },
   {
     id: "voice",
     n: "03",
-    title: "AI Voice Agents",
-    text: "Atención telefónica, calificación, seguimiento y reservas sin llamadas perdidas.",
+    eyebrow: "AI Voice Reception",
+    title: "Tu recepción telefónica con IA, funcionando 24/7.",
+    tagline:
+      "Atiende varias llamadas al mismo tiempo, entiende qué necesita cada persona, califica, agenda y hace seguimiento aunque tu equipo no pueda responder.",
     image: voiceImg,
-    howItWorks: "Un agente de voz atiende llamadas, califica a quien llama y agenda o deriva según corresponda.",
-    bestFor: "Negocios donde el teléfono sigue siendo un canal fuerte: clínicas, hoteles, inmobiliarias.",
-    notFor: "Negocios que casi no reciben llamadas — ahí el chat rinde más.",
-    waMessage: "Hola, vi la web y quiero consultar sobre un AI Voice Agent para mi negocio.",
+    priceLines: ["USD 2.500 implementación", "Primeros 28 días de funcionamiento incluidos", "Luego: USD 800/mes"],
+    bullets: [
+      "Agente de voz personalizado",
+      "Llamadas entrantes y flujos salientes",
+      "Calificación de consultas",
+      "Agenda, recordatorios y reprogramación",
+      "Integración con GoHighLevel",
+      "CRM + pipeline",
+      "Automatizaciones de seguimiento",
+      "Registro de llamadas y resultados",
+      "Testing antes de salir en producción",
+      "Optimización durante los primeros 28 días",
+    ],
+    notes: [
+      "Solo 4 nuevas implementaciones por mes. Cada agente requiere configuración, pruebas e integración personalizada.",
+    ],
+    ctaLabel: "Pedir una demo",
+    waMessage: "Hola, vi la web y quiero pedir una demo de AI Voice Reception.",
   },
   {
-    id: "automation",
+    id: "growth",
     n: "04",
-    title: "Automatizaciones",
-    text: "Integraciones y sistemas que reducen el trabajo manual del equipo.",
+    eyebrow: "Growth System",
+    title: "Todo conectado en un solo sistema comercial.",
+    tagline:
+      "Diseñamos la infraestructura completa para captar oportunidades, atenderlas y hacer seguimiento sin depender de herramientas desconectadas.",
     image: automationImg,
-    howItWorks:
-      "Conectamos las herramientas que ya usás — agenda, CRM, planillas, WhatsApp — para que la información fluya sola, sin carga manual.",
-    bestFor: "Negocios que ya identificaron una tarea repetitiva puntual que les come tiempo.",
-    notFor: "Un punto de partida — rinde más una vez que la web o el agente ya están funcionando.",
-    waMessage: "Hola, vi la web y quiero consultar sobre Automatizaciones para mi negocio.",
+    priceLines: ["Proyecto personalizado"],
+    bulletsLabel: "Puede incluir",
+    bullets: [
+      "Web de conversión",
+      "AI Conversational Setter",
+      "AI Voice Reception",
+      "GoHighLevel",
+      "CRM y pipelines",
+      "Automatizaciones",
+      "WhatsApp y seguimiento",
+      "Agenda y reservas",
+      "Meta Ads",
+      "Creatividades con IA",
+      "Tracking e integraciones",
+    ],
+    notes: [
+      "No te vendemos herramientas sueltas. Analizamos dónde se están perdiendo oportunidades y construimos el sistema alrededor de ese problema.",
+    ],
+    ctaLabel: "Diseñar mi Growth System",
+    waMessage: "Hola, vi la web y quiero diseñar mi Growth System.",
   },
 ];
 
@@ -87,10 +144,12 @@ export default function Services() {
                 />
               </span>
               <span className="block pt-[18px] px-5 pb-[22px]">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">{s.n}</span>
+                <span className="text-[10px] tracking-[0.2em] uppercase text-gold block">
+                  {s.n} — {s.eyebrow}
+                </span>
                 <h3 className="text-[17px] mt-2 mb-1">{s.title}</h3>
-                <span className="text-[13.5px] text-cream/65 leading-[1.55] block">{s.text}</span>
-                <span className="text-[13px] text-gold mt-3 block group-hover:text-cream">Ver más →</span>
+                <span className="text-[13.5px] text-cream/65 leading-[1.55] block">{s.tagline}</span>
+                <span className="text-[13px] text-gold mt-3 block group-hover:text-cream">Ver oferta →</span>
               </span>
             </>
           )}
@@ -99,11 +158,15 @@ export default function Services() {
 
       {active && (
         <ServiceModal
+          eyebrow={active.eyebrow}
+          n={active.n}
           title={active.title}
-          text={active.text}
-          howItWorks={active.howItWorks}
-          bestFor={active.bestFor}
-          notFor={active.notFor}
+          tagline={active.tagline}
+          priceLines={active.priceLines}
+          bulletsLabel={active.bulletsLabel}
+          bullets={active.bullets}
+          notes={active.notes}
+          ctaLabel={active.ctaLabel}
           waMessage={active.waMessage}
           onClose={() => setOpenId(null)}
         />
