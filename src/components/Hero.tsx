@@ -66,7 +66,7 @@ export default function Hero() {
             Hablemos de tu negocio
           </a>
           <Link
-            to="/proyectos#servicios"
+            to="/servicios"
             className="border border-white/30 text-white px-[26px] py-4 rounded-full text-[15px] text-center bg-white/5 hover:border-white hover:bg-white/10"
           >
             Ver soluciones

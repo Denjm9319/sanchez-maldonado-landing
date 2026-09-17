@@ -47,6 +47,7 @@ function resolveChromium() {
 
 const ROUTES = [
   "/",
+  "/servicios",
   "/proyectos",
   "/productos",
   "/precios",

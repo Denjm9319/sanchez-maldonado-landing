@@ -26,13 +26,13 @@ export default function Home() {
       <Sofia />
       <Reveal className="max-w-[1180px] mx-auto px-6 pb-[clamp(50px,6vw,76px)] flex flex-wrap gap-x-10 gap-y-3">
         <Link
-          to="/proyectos#servicios"
+          to="/servicios"
           className="font-heroDisplay text-[19px] text-white/70 hover:text-gold"
         >
           Ver servicios →
         </Link>
         <Link
-          to="/proyectos#proyectos"
+          to="/proyectos"
           className="font-heroDisplay text-[19px] text-white/70 hover:text-gold"
         >
           Ver proyectos y demos →

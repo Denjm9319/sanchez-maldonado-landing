@@ -3,11 +3,9 @@ import Reveal from "./Reveal";
 import ServiceModal from "./ServiceModal";
 import DragRow from "./DragRow";
 import websiteImg from "../assets/services/websites.webp";
-import adsImg from "../assets/services/ads.webp";
 import chatImg from "../assets/services/chat.webp";
 import voiceImg from "../assets/services/voice.webp";
 import automationImg from "../assets/services/automation.webp";
-import creativeImg from "../assets/services/creative.webp";
 
 const SERVICES = [
   {
@@ -24,21 +22,8 @@ const SERVICES = [
     waMessage: "Hola, vi la web y quiero consultar sobre el servicio de Websites para mi negocio.",
   },
   {
-    id: "ads",
-    n: "02",
-    title: "Performance Ads",
-    text: "Campañas de Meta Ads pensadas para generar oportunidades reales, no impresiones.",
-    image: adsImg,
-    howItWorks:
-      "Planificamos, producimos las piezas y gestionamos las campañas, conectadas directamente al sistema que atiende esas consultas (WhatsApp, agente o formulario).",
-    bestFor: "Negocios que ya atienden bien una consulta y quieren más volumen de forma constante.",
-    notFor:
-      "Negocios que todavía no pueden responder rápido — ahí conviene primero un agente de IA antes de invertir en más tráfico.",
-    waMessage: "Hola, vi la web y quiero consultar sobre Performance Ads (Meta Ads) para mi negocio.",
-  },
-  {
     id: "chat",
-    n: "03",
+    n: "02",
     title: "AI Chat Agents",
     text: "WhatsApp, Instagram, Messenger y Telegram, con respuestas inmediatas y tono propio.",
     image: chatImg,
@@ -50,7 +35,7 @@ const SERVICES = [
   },
   {
     id: "voice",
-    n: "04",
+    n: "03",
     title: "AI Voice Agents",
     text: "Atención telefónica, calificación, seguimiento y reservas sin llamadas perdidas.",
     image: voiceImg,
@@ -61,7 +46,7 @@ const SERVICES = [
   },
   {
     id: "automation",
-    n: "05",
+    n: "04",
     title: "Automatizaciones",
     text: "Integraciones y sistemas que reducen el trabajo manual del equipo.",
     image: automationImg,
@@ -70,18 +55,6 @@ const SERVICES = [
     bestFor: "Negocios que ya identificaron una tarea repetitiva puntual que les come tiempo.",
     notFor: "Un punto de partida — rinde más una vez que la web o el agente ya están funcionando.",
     waMessage: "Hola, vi la web y quiero consultar sobre Automatizaciones para mi negocio.",
-  },
-  {
-    id: "creative",
-    n: "06",
-    title: "AI Creative",
-    text: "Imágenes y contenido visual generado con IA, consistente con tu marca.",
-    image: creativeImg,
-    howItWorks:
-      "Generamos imágenes y piezas visuales con IA, ajustadas a la identidad de tu marca, para redes o campañas.",
-    bestFor: "Negocios que necesitan piezas frecuentes (posteos, anuncios) y no tienen diseñador propio.",
-    notFor: "Reemplazar fotografía real de tu local, productos o equipo — eso siempre suma más confianza.",
-    waMessage: "Hola, vi la web y quiero consultar sobre AI Creative para mi negocio.",
   },
 ];
 

@@ -27,8 +27,8 @@ export const PRICING = {
 };
 
 export const NAV_LINKS = [
-  { href: "/proyectos#servicios", label: "Servicios" },
-  { href: "/proyectos#proyectos", label: "Proyectos" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/proyectos", label: "Proyectos" },
   { href: "/productos", label: "Productos" },
   { href: "/precios", label: "Precios" },
   { href: "/nosotros", label: "Nosotros" },
@@ -58,7 +58,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "¿También administran Meta Ads?",
-    a: "Sí. Planificamos, producimos las piezas y gestionamos las campañas, siempre conectadas al sistema que atiende esas consultas.",
+    a: "Lo sumamos en proyectos con presupuesto mensual de más de USD 2.000 — no tiene sentido generar leads si después nadie los atiende a tiempo, así que siempre va conectado al sistema de agentes.",
   },
   {
     q: "¿Puedo contratar solo una web?",

@@ -6,6 +6,7 @@ const SITE_URL = "https://mimorusystems.vercel.app";
 
 const staticRoutes = [
   { path: "/", priority: "1.0" },
+  { path: "/servicios", priority: "0.8" },
   { path: "/proyectos", priority: "0.8" },
   { path: "/productos", priority: "0.8" },
   { path: "/precios", priority: "0.8" },

@@ -5,6 +5,7 @@ import WhatsAppFloat from "./components/WhatsAppFloat";
 import ScrollManager from "./components/ScrollManager";
 import AmbientBackground from "./components/AmbientBackground";
 import Home from "./pages/Home";
+import Servicios from "./pages/Servicios";
 import Proyectos from "./pages/Proyectos";
 import Nosotros from "./pages/Nosotros";
 import Productos from "./pages/Productos";
@@ -21,6 +22,7 @@ export default function App() {
       <main id="top">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<Servicios />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/precios" element={<Precios />} />
