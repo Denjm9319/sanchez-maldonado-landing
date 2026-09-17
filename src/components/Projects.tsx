@@ -35,6 +35,7 @@ import veloraShot from "../assets/projects/velora-shot.png";
 import velarShot from "../assets/projects/velar-shot.png";
 import aetherLaneShot from "../assets/projects/aether-lane-shot.webp";
 import bespokeArchitectureShot from "../assets/projects/bespoke-architecture-shot.png";
+import hungryTigerShot from "../assets/projects/hungry-tiger-shot.png";
 import novaAiShot from "../assets/projects/nova-ai-shot.png";
 import viktorOddyShot from "../assets/projects/viktor-oddy-shot.png";
 import yogaCoachShot from "../assets/projects/yoga-coach-shot.png";
@@ -355,6 +356,19 @@ const CONCEPTS = [
       "Landing minimalista en blanco y negro para un estudio de arquitectura, con una marquesina de imágenes de proyectos que se desliza sola y también se puede arrastrar con el mouse, con física de inercia real, enmarcada por máscaras curvas en la parte superior e inferior.",
     capabilities: ["Marquesina arrastrable con inercia", "Menú a pantalla completa", "Web & Conversion"],
     url: "https://bespoke-architecture-studio.vercel.app/",
+  },
+  {
+    id: "hungry-tiger",
+    category: "ecommerce",
+    title: "Hungry Tiger",
+    thumb: hungryTigerShot,
+    alt: "Concept de landing para marca de salsas picantes fire-roasted",
+    rubro: "Condimentos artesanales / DTC e-commerce",
+    objetivo: "Que la tipografía gigante y el pote de salsa hagan de vidriera: la marca se lee como un cartel de mercado de especias antes de mirar el producto.",
+    description:
+      "Landing maximalista para una marca de salsas fire-roasted, con una sola paleta dorado sobre marrón quemado, tipografía de póster que ocupa toda la pantalla, botones pill, divisores punteados y fichas de producto con nivel de picor.",
+    capabilities: ["Sistema tipográfico a escala póster", "Paleta mono-cromática con un acento", "Web & Conversion"],
+    url: "https://hungry-tiger-lime.vercel.app/",
   },
   {
     id: "nova-ai",

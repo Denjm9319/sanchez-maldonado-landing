@@ -1,4 +1,4 @@
-export const SITE_URL = "https://dexasolutions.vercel.app";
+export const SITE_URL = "https://mimorusystems.vercel.app";
 export const SITE_NAME = "Mimoru Systems";
 
 export const WHATSAPP_NUMBER = "542254538861";

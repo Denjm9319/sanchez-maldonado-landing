@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dexasolutions.vercel.app/sitemap.xml
+Sitemap: https://mimorusystems.vercel.app/sitemap.xml

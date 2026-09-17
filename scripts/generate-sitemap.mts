@@ -2,7 +2,7 @@ import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { BLOG_POSTS } from "../src/content/blog";
 
-const SITE_URL = "https://dexasolutions.vercel.app";
+const SITE_URL = "https://mimorusystems.vercel.app";
 
 const staticRoutes = [
   { path: "/", priority: "1.0" },
