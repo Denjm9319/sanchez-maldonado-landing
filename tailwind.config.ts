@@ -6,14 +6,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: "#142B3D",
-        navyDeep: "#0F2130",
+        // Brand palette taken from the logo mark (cream / ink / ember).
+        // "navy" and "gold" keep their old names so every existing bg-navy /
+        // text-gold / hover:bg-cream usage across the site repaints for free.
+        navy: "#1B1714",
+        navyDeep: "#121010",
         teal: "#0E7C7B",
-        cream: "#FAF7F2",
-        creamDeep: "#F3EDE4",
+        cream: "#F7F3EA",
+        creamDeep: "#E7DCC3",
         secondary: "#6B7280",
         body: "#445468",
-        gold: "#D6A75C",
+        gold: "#F3684E",
+        goldDeep: "#D14E33",
         whatsapp: "#25D366",
         ink: "#0a0a0a",
       },

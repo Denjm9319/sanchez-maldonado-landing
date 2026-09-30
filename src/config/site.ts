@@ -1,4 +1,4 @@
-export const SITE_URL = "https://mimorusystems.vercel.app";
+export const SITE_URL = "https://mimoru.com.ar";
 export const SITE_NAME = "Mimoru Systems";
 
 export const WHATSAPP_NUMBER = "542254538861";
@@ -21,16 +21,22 @@ export const SOCIAL_LINKS = {
   linkedin: "#",
 };
 
+export const GOOGLE_REVIEW_LINK =
+  "https://www.google.com/search?kgmid=/g/11x_bxgxpt&hl=es-419&q=Mimoru+Systems&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=907fe00d31e015a1&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m5/1#irp=&lrd=0x898e9a4d4500198b:0x560b3f860747f8e,3,,,,";
+
 export const PRICING = {
-  web: "Desde USD 599",
+  // "web" kept for the still-committed Precios.tsx, which this session's
+  // uncommitted rewrite doesn't touch — remove once that lands for real.
+  web: "Desde USD 700",
+  webEntry: "Desde USD 700",
+  webStandard: "Desde USD 1.200",
+  webTop: "Hasta USD 15.000",
+  seoMonthly: "Desde USD 250/mes",
   agents: "Desde USD 330/mes + implementación",
 };
 
 export const NAV_LINKS = [
-  { href: "/servicios", label: "Servicios" },
   { href: "/proyectos", label: "Proyectos" },
-  { href: "/productos", label: "Productos" },
-  { href: "/precios", label: "Precios" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/blog", label: "Blog" },
 ];
@@ -45,31 +51,35 @@ export interface Project {
 
 export const FAQ_ITEMS = [
   {
-    q: "¿Trabajan solo con clínicas?",
-    a: "No. Sofia está especializada en clínicas dentales y estéticas, pero trabajamos con inmobiliarias, gimnasios, hoteles, concesionarias y servicios profesionales.",
+    q: "¿Cuánto cuesta una web?",
+    a: "Desde USD 700 si ya tenés tus textos y fotos listos, hasta USD 15.000 para un proyecto complejo y a medida. El número exacto depende del alcance — te lo damos por WhatsApp después de entender tu proyecto, sin sorpresas ni letra chica.",
   },
   {
-    q: "¿Un agente de IA reemplaza a mi equipo?",
-    a: "No. Se ocupa de lo repetitivo y de los horarios sin cobertura, para que tu equipo dedique tiempo a las conversaciones que realmente lo necesitan.",
+    q: "¿Cuánto tarda la entrega?",
+    a: "Depende de la necesidad del cliente y la complejidad del proyecto. Después de definir el alcance te damos un plazo concreto, sin sorpresas.",
   },
   {
-    q: "¿Se integra con WhatsApp?",
-    a: "Sí, además de Instagram, Messenger y Telegram. También podemos conectar tu agenda y las herramientas que ya usás.",
+    q: "¿Qué necesito mandarles para empezar?",
+    a: "Textos (o una idea de qué querés decir), tu logo si tenés, y fotos si las tenés. Si no tenés nada armado, te ayudamos a definirlo igual.",
   },
   {
-    q: "¿También administran Meta Ads?",
-    a: "Lo sumamos en proyectos con presupuesto mensual de más de USD 2.000 — no tiene sentido generar leads si después nadie los atiende a tiempo, así que siempre va conectado al sistema de agentes.",
+    q: "¿Incluye hosting y dominio?",
+    a: "El hosting queda resuelto por nosotros. Del dominio nos encargamos nosotros también — compra, configuración y conexión — para que no tengas que preocuparte por nada técnico.",
   },
   {
-    q: "¿Puedo contratar solo una web?",
-    a: "Sí. Muchos proyectos empiezan por la web y suman agentes o automatizaciones más adelante.",
+    q: "¿Hacen tiendas online?",
+    a: "Sí, armamos e-commerce con catálogo, pagos y envíos configurados para vender de verdad, no solo mostrar productos.",
   },
   {
-    q: "¿Puedo probar Sofia?",
-    a: "Sí. Escribinos por WhatsApp y coordinamos una demo con un escenario parecido al de tu negocio.",
+    q: "¿Puedo pedir cambios después de entregada?",
+    a: "Sí, incluimos las rondas de revisión acordadas en la propuesta antes de la entrega final. Ajustes posteriores se cotizan aparte o entran en un plan de mantenimiento mensual.",
   },
   {
-    q: "¿Cuánto demora una implementación?",
-    a: "Depende del alcance y de las integraciones. Después de entender el proyecto te damos un plazo concreto, sin sorpresas.",
+    q: "¿Cómo es la forma de pago?",
+    a: "El pago es 100% por adelantado, antes de arrancar con el proyecto.",
+  },
+  {
+    q: "¿También hacen SEO o me ayudan a aparecer en las respuestas de la IA (ChatGPT, Google AI)?",
+    a: "Sí — es un trabajo aparte del armado de la web, porque implica ajustes técnicos y seguimiento mes a mes, no algo que se termina el día de la entrega. Se cotiza por separado, desde USD 250/mes con un mínimo de 3 meses de trabajo y reporte mensual de resultados.",
   },
 ];
