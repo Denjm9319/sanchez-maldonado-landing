@@ -37,7 +37,7 @@ export default function Navbar() {
             <span className="font-heroDisplay text-base tracking-tight">Mimoru Systems</span>
             {!narrow && (
               <span className="text-[9.5px] tracking-[0.22em] uppercase text-cream/60 mt-0.5 whitespace-nowrap">
-                Diseño + Automatización
+                Diseño web
               </span>
             )}
           </Link>
