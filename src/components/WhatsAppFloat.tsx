@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { WHATSAPP_LINK } from "../config/site";
+import { useLocation } from "react-router-dom";
+import { WHATSAPP_LINK, PAGINA_MESSAGE, waLink } from "../config/site";
 
 export default function WhatsAppFloat() {
   const [tip, setTip] = useState(false);
   const [tipDone, setTipDone] = useState(false);
+  const focused = useLocation().pathname === "/consultorios";
+  const link = focused ? waLink(PAGINA_MESSAGE) : WHATSAPP_LINK;
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -40,7 +43,7 @@ export default function WhatsAppFloat() {
         </span>
       )}
       <a
-        href={WHATSAPP_LINK}
+        href={link}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Hablar por WhatsApp"

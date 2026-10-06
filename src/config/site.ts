@@ -9,6 +9,8 @@ export const WHATSAPP_DEFAULT_MESSAGE =
 export const SOFIA_MESSAGE =
   "Hola, vi la web de Mimoru Systems y quiero conocer la demo de Sofia para mi negocio.";
 
+export const PAGINA_MESSAGE = "Hola Denis! Quiero ver cómo me quedaría la página de mi consultorio.";
+
 export function waLink(message: string = WHATSAPP_DEFAULT_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

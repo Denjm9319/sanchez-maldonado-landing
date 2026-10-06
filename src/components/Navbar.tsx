@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { NAV_LINKS, WHATSAPP_LINK } from "../config/site";
+import { Link, useLocation } from "react-router-dom";
+import { NAV_LINKS, WHATSAPP_LINK, PAGINA_MESSAGE, waLink } from "../config/site";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [narrow, setNarrow] = useState(false);
+  // Offer pages sent by WhatsApp hide the site links so nothing pulls the visitor away.
+  const focused = useLocation().pathname === "/consultorios";
+  const waLinkHere = focused ? waLink(PAGINA_MESSAGE) : WHATSAPP_LINK;
 
   useEffect(() => {
     const onResize = () => {
@@ -30,19 +33,22 @@ export default function Navbar() {
       <header className="fixed top-3.5 inset-x-0 z-[60] flex justify-center px-3.5 pointer-events-none">
         <nav
           aria-label="Principal"
-          style={{ backgroundColor: "rgba(10,10,10,0.55)" }}
-          className="pointer-events-auto w-full max-w-[1180px] backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.35)] py-2.5 pl-5 pr-3 flex items-center gap-4"
+          style={{ backgroundColor: focused ? "rgba(255,255,255,0.72)" : "rgba(10,10,10,0.55)" }}
+          className={`pointer-events-auto w-full max-w-[1180px] backdrop-blur-2xl border rounded-full py-2.5 pl-5 pr-3 flex items-center gap-4 ${focused ? "border-black/10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]" : "border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.35)]"}`}
         >
-          <Link to="/#top" className="flex flex-col leading-[1.05] text-cream flex-none">
-            <span className="font-heroDisplay text-base tracking-tight">Mimoru Systems</span>
-            {!narrow && (
-              <span className="text-[9.5px] tracking-[0.22em] uppercase text-cream/60 mt-0.5 whitespace-nowrap">
-                Diseño web
-              </span>
-            )}
-          </Link>
+          {focused ? (
+            <span className="flex flex-col leading-[1.05] flex-none text-navy">
+              <span className="font-heroDisplay text-base tracking-tight">Mimoru Systems</span>
+              {!narrow && <span className="text-[9.5px] tracking-[0.22em] uppercase mt-0.5 whitespace-nowrap text-navy/55">Diseño web</span>}
+            </span>
+          ) : (
+            <Link to="/#top" className="flex flex-col leading-[1.05] flex-none text-cream">
+              <span className="font-heroDisplay text-base tracking-tight">Mimoru Systems</span>
+              {!narrow && <span className="text-[9.5px] tracking-[0.22em] uppercase mt-0.5 whitespace-nowrap text-cream/60">Diseño web</span>}
+            </Link>
+          )}
           <div className="flex-1" />
-          {!narrow && (
+          {!narrow && !focused && (
             <div className="flex gap-5 items-center text-[13.5px] text-cream">
               {NAV_LINKS.map((link) => (
                 <Link key={link.href} to={link.href} className="text-cream hover:text-gold">
@@ -52,14 +58,14 @@ export default function Navbar() {
             </div>
           )}
           <a
-            href={WHATSAPP_LINK}
+            href={waLinkHere}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-none bg-gold text-navy px-5 py-2.5 rounded-full text-[13.5px] font-medium hover:bg-cream"
           >
             Hablemos
           </a>
-          {narrow && (
+          {narrow && !focused && (
             <button
               type="button"
               aria-label="Abrir menú"

@@ -1,9 +1,31 @@
 import { Link, useLocation } from "react-router-dom";
-import { SOCIAL_LINKS, WHATSAPP_LINK } from "../config/site";
+import { SOCIAL_LINKS, WHATSAPP_LINK, PAGINA_MESSAGE, waLink } from "../config/site";
 
 export default function Footer() {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
+  // Offer page sent by WhatsApp: no links out, nothing pulls the visitor away mid-decision.
+  const focused = pathname === "/consultorios";
+
+  if (focused) {
+    return (
+      <footer className="bg-[#0a0a0a] text-cream/70">
+        <div className="max-w-[1180px] mx-auto px-6 pt-[clamp(40px,6vw,64px)] pb-[clamp(24px,3vw,36px)]">
+          <p className="font-display text-xl text-cream">Mimoru Systems</p>
+          <p className="text-[10.5px] tracking-[0.22em] uppercase text-gold mt-1.5">Diseño web</p>
+          <a href={waLink(PAGINA_MESSAGE)} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[14.5px] text-cream/85 hover:text-gold">
+            Hablar por WhatsApp
+          </a>
+        </div>
+        <div className="border-t border-cream/10">
+          <div className="max-w-[1180px] mx-auto px-6 pt-5 pb-7 text-[12.5px] text-cream/45">
+            © 2026 Mimoru Systems
+          </div>
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer
       className={

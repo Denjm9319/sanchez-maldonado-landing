@@ -12,6 +12,7 @@ import Productos from "./pages/Productos";
 import Precios from "./pages/Precios";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Consultorios from "./pages/Consultorios";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/consultorios" element={<Consultorios />} />
         </Routes>
       </main>
       <Footer />

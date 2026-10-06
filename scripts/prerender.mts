@@ -54,6 +54,7 @@ const ROUTES = [
   "/nosotros",
   "/blog",
   ...BLOG_POSTS.map((p) => `/blog/${p.slug}`),
+  "/consultorios",
 ];
 
 async function main() {

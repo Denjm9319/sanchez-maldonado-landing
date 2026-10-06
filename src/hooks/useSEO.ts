@@ -9,6 +9,8 @@ interface SEOInput {
   image?: string;
   type?: "website" | "article";
   jsonLd?: object | object[];
+  /** Keep the page out of search results (offer pages sent by WhatsApp). */
+  noindex?: boolean;
 }
 
 /**
@@ -18,7 +20,7 @@ interface SEOInput {
  * headless browser after JS executes, so effect-set tags end up in the static
  * HTML each route ships (see scripts/prerender.mts).
  */
-export function useSEO({ title, description, path, image, type = "website", jsonLd }: SEOInput) {
+export function useSEO({ title, description, path, image, type = "website", jsonLd, noindex = false }: SEOInput) {
   useEffect(() => {
     const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
     document.title = fullTitle;
@@ -58,6 +60,14 @@ export function useSEO({ title, description, path, image, type = "website", json
     }
     canonical.setAttribute("href", url);
 
+    if (noindex) {
+      const robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      robots.setAttribute("content", "noindex, nofollow");
+      document.head.appendChild(robots);
+      created.push(robots);
+    }
+
     const scripts: HTMLScriptElement[] = [];
     if (jsonLd) {
       for (const item of Array.isArray(jsonLd) ? jsonLd : [jsonLd]) {
@@ -74,5 +84,5 @@ export function useSEO({ title, description, path, image, type = "website", json
       scripts.forEach((el) => el.remove());
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [title, description, path, image, type, JSON.stringify(jsonLd)]);
+  }, [title, description, path, image, type, noindex, JSON.stringify(jsonLd)]);
 }
